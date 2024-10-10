@@ -1,0 +1,49 @@
+.vacancy{
+  display: flex;
+  padding: 32px 0;
+  border-bottom: 1px solid #F3F3F3;
+  .col-left{
+    padding-right: 16px;
+  }
+  .col-right{
+    max-width: 283px;
+    width: 60%;
+    color: $serena-green-60;
+    text-align: center;
+    padding-left: 16px;
+  }
+  .btn_stroke{
+    width: 100%;
+  }
+  &__salary{
+    margin-bottom: 16px;
+  }
+  &__name{
+    color: $modern-black-80;
+    margin-bottom: 16px;
+  }
+  &__requirements{
+    color: $serena-green-60;
+  }
+  &__req-item{
+    position: relative;
+    padding-right: 20px;
+    display: inline-block;
+    margin-bottom: 4px;
+    &:after{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 4px;
+      height: 4px;
+      background-color: $serena-green-5;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 8px;
+      z-index: 1;
+      &:last-child{
+        display: none;
+      }
+    }
+  }
+}

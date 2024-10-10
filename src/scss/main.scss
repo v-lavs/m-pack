@@ -13,6 +13,7 @@
 @import 'components/pagination';
 @import 'components/tabs';
 @import 'components/list-col2';
+@import 'components/characteristics';
 
 @import "layout/layout";
 @import "layout/footer";
@@ -26,4 +27,5 @@
 //@import "layout/section/t";
 //@import "layout/section/";
 
-
+@import "pages/page-blog";
+@import "pages/vacancies";

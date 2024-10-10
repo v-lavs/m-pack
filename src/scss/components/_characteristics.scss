@@ -1,0 +1,28 @@
+.tech-charact {
+  color: #677369;
+
+  &__row {
+    display: flex;
+    padding: 16px 8px;
+    background-image: linear-gradient(to right, #DFE5DF 58%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 18px 1px;
+    background-repeat: repeat-x;
+  }
+
+  &__col {
+    width: 50%;
+
+    &:first-child {
+      font-weight: 500;
+      color: #1A1F1A;
+      padding-left: 0;
+    }
+  }
+}
+
+.btn_more {
+  max-width: 100%;
+  width: 100%;
+  margin-top: 24px;
+}

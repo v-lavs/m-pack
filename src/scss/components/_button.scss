@@ -6,10 +6,13 @@
   line-height: 1;
   letter-spacing: 0.0015em;
   text-align: center;
+  border: none;
+  appearance: none;
   transition: .5s;
   justify-content: center;
   align-items: center;
-
+  padding: 24px;
+  height: 72px;
   &_main {
     background: $medium-green;
     color: $modern-black-5;
@@ -68,15 +71,15 @@
     }
 
     &:disabled {
-      background-color:$serena-green-5;
+      background-color: $serena-green-5;
       color: $serena-green-20;
     }
   }
 
-  &_call{
+  &_more,
+  &_call {
     max-width: 326px;
-    padding: 24px;
-    height: 72px;
+
   }
 }
 

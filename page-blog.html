@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>UI-kit</title>
+    <title>Блог</title>
     <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="./dist/main.css">
@@ -13,22 +13,7 @@
 </head>
 
 <body>
-<style>
-    .main {
-        padding-bottom: 100px;
-    }
 
-    .description {
-        padding: 5px 0;
-        margin: 32px 0;
-        background-color: wheat;
-    }
-
-    body::-webkit-scrollbar-thumb {
-        background-color: #A2B2AE;
-    }
-
-</style>
 <div class="wrapper">
     <header class="header header_site">
         <a href="index.html" class="header__logo">
@@ -269,7 +254,7 @@
                     <ul class="menu menu_bottom">
                         <li class="menu__item"><a href="#" class="menu__link">Про нас</a></li>
                         <li class="menu__item"><a href="page-blog.html" class="menu__link">Блог</a></li>
-                        <li class="menu__item"><a href="page-vacancies.html" class="menu__link">Вакансії</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Вакансії</a></li>
                         <li class="menu__item"><a href="#" class="menu__link">Контакти</a></li>
                     </ul>
                 </div>
@@ -280,16 +265,14 @@
         </div>
     </div>
     <div class="backdrop"></div>
-    <main class="main">
+    <main class="main blog">
         <section class="section-banner">
             <div class="section-banner__thumb">
-                <!--     ------ block video or img or empty------           -->
-                <video class="background-video" autoplay="" loop="" muted="" poster="assets/video/P1390001.mp4">
-                    <source src="assets/video/P1390001.mp4" type="video/mp4">
-                </video>
+                <!--                <video class="background-video" autoplay="" loop="" muted="" poster="assets/video/P1390001.mp4">-->
+                <!--                    <source src="assets/video/P1390001.mp4" type="video/mp4">-->
+                <!--                </video>-->
                 <!--                <img src="assets/img/banner-home.jpg" alt="">-->
             </div>
-
             <div class="page__header">
                 <div class="container">
                     <ul class="breadcrumbs">
@@ -297,468 +280,42 @@
                             <a href="index.html">Головна</a>
                         </li>
                     </ul>
-                    <h1 class="page-title">Формуємо культуру пакування</h1>
+
+                    <h1 class="page-title">Блог</h1>
                 </div>
             </div>
         </section>
-
-        <div class="description">section-banner</div>
-        <!---------------------------------------------------------------->
         <div class="container">
-            <div class="description">product card</div>
-
-            <div class="products__item">
-                <a href="#" class="products__card">
-                    <div class="products__thumb">
-                        <img src="assets/img/pack-material/image-product.jpg" alt="Піддони">
-                    </div>
-                    <h2 class="products__title title-md">Піддони</h2>
-                </a>
-            </div>
-            <!---------------------------------------------------------------->
-            <div class="description">product slider</div>
-
-            <div class="swiper product-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="#" class="products__card">
-                            <div class="products__thumb">
-                                <img src="assets/img/pack-material/image-product.jpg" alt="Піддони">
-                            </div>
-                            <h2 class="products__title title-md">Піддони</h2>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="products__card">
-                            <div class="products__thumb">
-                                <img src="assets/img/pack-material/image-product1.jpg" alt="Піддони">
-                            </div>
-                            <h2 class="products__title title-md">Стретч-плівка</h2>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="products__card">
-                            <div class="products__thumb">
-                                <img src="assets/img/pack-material/image-product2.jpg" alt="Піддони">
-                            </div>
-                            <h2 class="products__title title-md">Термозбіжна плівка ПОФ</h2>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="products__card">
-                            <div class="products__thumb">
-                                <img src="assets/img/pack-material/image-product3.jpg" alt="Піддони">
-                            </div>
-                            <h2 class="products__title title-md">Гофро-упаковка/тара</h2>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="products__card">
-                            <div class="products__thumb">
-                                <img src="assets/img/pack-material/image-product4.jpg" alt="Піддони">
-                            </div>
-                            <h2 class="products__title title-md">Скотч</h2>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="swiper-pagination"></div>
-
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-            <!--------------------------------------------------------------->
-            <div class="description">card-text slider</div>
-
-            <div class="swiper cards-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <div class="card__icon"
-                                 style="background-image: url(assets/img/iconmonstr-accessibility-circle-filled.svg);"></div>
-                            <h3 class="title-md">Доступність</h3>
-                            <div class="text-md">
-                                Оскільки ми безпосередньо займаємось і виготовленням, і продажем пакувальних товарів, ми
-                                не завищуємо вартість і пропонуємо своїм клієнтам оптимальне співвідношення ціни та
-                                якості у кожному продукті.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card__icon"
-                             style="background-image: url(assets/img/iconmonstr-loading-10.svg);"></div>
-                        <h3 class="title-md">Індивідуальний підхід</h3>
-                        <div class="text-md">
-                            Ми допомагаємо з професійної точки зору реалізувати будь-яке пакувальне замовлення, втілюючи
-                            в життя нестандартні запити та орієнтуючись на особисті потреби кожного покупця.
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card__icon"
-                             style="background-image: url(assets/img/iconmonstr-accessibility-circle-filled.svg);"></div>
-                        <h3 class="title-md">Lorem ipsum </h3>
-                        <div class="text-md">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad aliquam amet consequuntur
-                            dolore eum facere incidunt inventore, magni, obcaecati odio perferendis repellat soluta
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card__icon"
-                             style="background-image: url(assets/img/iconmonstr-loading-10.svg);"></div>
-                        <h3 class="title-md">Lorem.</h3>
-                        <div class="text-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, culpa.</div>
-                    </div>
-                </div>
-
-                <div class="swiper-pagination"></div>
-
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-            <!---------------------------------------------------------------->
-            <div class="description"> green-bg slider</div>
-
-            <div class="wrap-green-slider">
-                <div class="swiper green-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            Бурі (крафтові) коробки. Це найбільш економічний вибір, який часто використовується “Новою
-                            Поштою” та “Укрпоштою”. Вони виготовлені з натурального картону і є бюджетним, екологічним
-                            варіантом.
-                        </div>
-                        <div class="swiper-slide">
-                            At consectetur, in ipsa neque
-                            recusandae temporibus voluptatibus! Aliquam amet atque, autem ea eum facere, magnam
-                            necessitatibus nulla obcaecati omnis perferendis praesentium similique soluta ullam ut.
-
-                        </div>
-                        <div class="swiper-slide">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae blanditiis
-                            consectetur delectus dignissimos, doloremque ducimus eaque error id illum inventore ipsa
-                            laudantium magnam molestias mollitia necessitatibus nihil omnis perferendis perspiciatis
-                            porro qui quidem!
-                        </div>
-                    </div>
-
-                    <div class="swiper-pagination"></div>
-
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-            </div>
-            <!---------------------------------------------------------------->
-            <div class="description">tabs : в середині табу може бути блок з іконками, блок з картинками чи слайдери.
-                також внутрішні блоки можуть бути самостійними одиницями
-            </div>
-
-            <div class="tabs">
-                <div class="tabs__nav">
-
-                    <a href="#tab1" class="tabs__nav-link  active">Промислові товари</a>
-
-                    <a href="#tab2" class="tabs__nav-link">Споживчі товари</a>
-
-                    <a href="#tab3" class="tabs__nav-link">Харчова продукція</a>
-
-                </div>
-                <div class="tabs__content">
-                    <div class="tab-content active" id="tab1">
-                        <ul class="list-col2 block-icon-text">
-                            <li class="list-col2__item">
-                                <div class="" style="background-image: url(assets/img/icon-text/car.svg);"></div>
-                                <div>Автомобільна промисловість</div>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="icon" style="background-image: url(assets/img/icon-text/liquid.svg);"></div>
-                                <div>Рідини</div>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="icon" style="background-image: url(assets/img/icon-text/wrench.svg);"></div>
-                                <div>Інструменти</div>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="icon"
-                                     style="background-image: url(assets/img/icon-text/industry.svg);"></div>
-                                <span>Промислове обладнання та верстати</span>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="icon" style="background-image: url(assets/img/icon-text/pharma.svg);"></div>
-                                <div>Фармацевтика</div>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="icon" style="background-image: url(assets/img/icon-text/chain.svg);"></div>
-                                <div>Ланцюги та кабелі</div>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="icon" style="background-image: url(assets/img/icon-text/wood.svg);"></div>
-                                <div>Деревообробні підприємства</div>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="icon"
-                                     style="background-image: url(assets/img/icon-text/details.svg);"></div>
-                                <div>Запчастини, агрегати та деталі</div>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="icon"
-                                     style="background-image: url(assets/img/icon-text/logistic.svg);"></div>
-                                <div>Логістика та транспортування</div>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="icon" style="background-image: url(assets/img/icon-text/sand.svg);"></div>
-                                <div>Сипучі вантажі</div>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="icon"
-                                     style="background-image: url(assets/img/icon-text/chemistry.svg);"></div>
-                                <div>Хімія</div>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="icon"
-                                     style="background-image: url(assets/img/icon-text/electric.svg);"></div>
-                                <div>Електроустаткування, електронні прилади</div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="tab-content" id="tab2">
-                        <ul class="list-col2 block-img-text">
-                            <li class="list-col2__item">
-                                <div class="wrap-img">
-                                    <img src="assets/img/img-pack1.jpg" alt="">
-                                </div>
-                                <div class="text-md">
-                                    <h3 class="title-md">Коробки 0,5 кг</h3>
-                                    <p>170*120*100 мм, +- 5 мм</p>
-                                    <p>170*120*90 мм, +- 5 мм</p>
-                                </div>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="wrap-img">
-                                    <img src="assets/img/img-pack2.jpg" alt="">
-                                </div>
-                                <div class="text-md">
-                                    <h3 class="title-md">Коробки 0,5 кг</h3>
-                                    <p>170*120*100 мм, +- 5 мм</p>
-                                    <p>170*120*90 мм, +- 5 мм</p>
-                                </div>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="wrap-img">
-                                    <img src="assets/img/img-pack3.jpg" alt="">
-                                </div>
-                                <div class="text-md">
-                                    <h3 class="title-md">Коробки 0,5 кг</h3>
-                                    <p>170*120*100 мм, +- 5 мм</p>
-                                    <p>170*120*90 мм, +- 5 мм</p>
-                                </div>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="wrap-img">
-                                    <img src="assets/img/img-pack1.jpg" alt="">
-                                </div>
-                                <div class="text-md">
-                                    <h3 class="title-md">Коробки 0,5 кг</h3>
-                                    <p>170*120*100 мм, +- 5 мм</p>
-                                    <p>170*120*90 мм, +- 5 мм</p>
-                                </div>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="wrap-img">
-                                    <img src="assets/img/img-pack2.jpg" alt="">
-                                </div>
-                                <div class="text-md">
-                                    <h3 class="title-md">Коробки 0,5 кг</h3>
-                                    <p>170*120*100 мм, +- 5 мм</p>
-                                    <p>170*120*90 мм, +- 5 мм</p>
-                                </div>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="wrap-img">
-                                    <img src="assets/img/img-pack3.jpg" alt="">
-                                </div>
-                                <div class="text-md">
-                                    <h3 class="title-md">Коробки 0,5 кг</h3>
-                                    <p>170*120*100 мм, +- 5 мм</p>
-                                    <p>170*120*90 мм, +- 5 мм</p>
-                                </div>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="wrap-img">
-                                    <img src="assets/img/img-pack1.jpg" alt="">
-                                </div>
-                                <div class="text-md">
-                                    <h3 class="title-md">Коробки 0,5 кг</h3>
-                                    <p>170*120*100 мм, +- 5 мм</p>
-                                    <p>170*120*90 мм, +- 5 мм</p>
-                                </div>
-                            </li>
-                            <li class="list-col2__item">
-                                <div class="wrap-img">
-                                    <img src="assets/img/img-pack2.jpg" alt="">
-                                </div>
-                                <div class="text-md">
-                                    <h3 class="title-md">Коробки 0,5 кг</h3>
-                                    <p>170*120*100 мм, +- 5 мм</p>
-                                    <p>170*120*90 мм, +- 5 мм</p>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
-                    <div class="tab-content" id="tab3">
-                        <div class="swiper product-slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="#" class="products__card">
-                                        <div class="products__thumb">
-                                            <img src="assets/img/pack-material/image-product.jpg" alt="Піддони">
-                                        </div>
-                                        <h2 class="products__title title-md">Піддони</h2>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#" class="products__card">
-                                        <div class="products__thumb">
-                                            <img src="assets/img/pack-material/image-product1.jpg" alt="Піддони">
-                                        </div>
-                                        <h2 class="products__title title-md">Стретч-плівка</h2>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#" class="products__card">
-                                        <div class="products__thumb">
-                                            <img src="assets/img/pack-material/image-product2.jpg" alt="Піддони">
-                                        </div>
-                                        <h2 class="products__title title-md">Термозбіжна плівка ПОФ</h2>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#" class="products__card">
-                                        <div class="products__thumb">
-                                            <img src="assets/img/pack-material/image-product3.jpg" alt="Піддони">
-                                        </div>
-                                        <h2 class="products__title title-md">Гофро-упаковка/тара</h2>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#" class="products__card">
-                                        <div class="products__thumb">
-                                            <img src="assets/img/pack-material/image-product4.jpg" alt="Піддони">
-                                        </div>
-                                        <h2 class="products__title title-md">Скотч</h2>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="swiper-pagination"></div>
-
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!---------------------------------------------------------------->
-            <div class="description">post</div>
-
             <div class="post-list">
                 <article class="post">
                     <a href="#" class="post__link">
                         <div class="post__thumb" style="background-image: url(assets/img/image5.jpg);"></div>
                         <div class="post__meta text-md">
-                            <span class="post__meta-item post__date">29.07.2024</span><span
-                                class="post__meta-item post__author">Admin</span>
+                            <span class="post__meta-item post__date">29.07.2024</span><span class="post__meta-item post__author">Admin</span>
                         </div>
                         <h2 class="post__title headline-lg">Коричневий скотч купити для пакування посилок</h2>
                     </a>
                 </article>
-            </div>
-            <!---------------------------------------------------------------->
-            <div class="description">характеристики виробу</div>
-
-            <div class="tech-charact">
-                <div class="tech-charact__row">
-                    <div class="tech-charact__col name">Кількість програм моделі</div>
-                    <div class="tech-charact__col value">Кількість програм моделі</div>
-                </div>
-                <div class="tech-charact__row">
-                    <div class="tech-charact__col name">Діаметр поворотної платформи</div>
-                    <div class="tech-charact__col value">1500 мм</div>
-                </div>
-                <div class="tech-charact__row">
-                    <div class="tech-charact__col name">Максимальне навантаження на платформу</div>
-                    <div class="tech-charact__col value">1500 кг</div>
-                </div>
-                <div class="tech-charact__row">
-                    <div class="tech-charact__col name">Швидкість обертання платформи</div>
-                    <div class="tech-charact__col value">Від 5 до 12 об/хв</div>
-                </div>
-                <div class="tech-charact__row">
-                    <div class="tech-charact__col name">Функція плавного пуску/зупинки</div>
-                    <div class="tech-charact__col value">Входить до базової комплектації</div>
-                </div>
-            </div>
-            <button class="btn btn_light btn_more">Більше інформації</button>
-
-            <!---------------------------------------------------------------->
-            <div class="description">вакансії</div>
-
-            <ul class="vacancies-list">
-                <li class="vacancy">
-                    <div class="col-left">
-                        <h2 class="vacancy__name headline-lg">Менеджер з продажу територіальний</h2>
-                        <div class="vacancy__requirements"><span class="vacancy__req-item">Повна зайнятість</span><span class="vacancy__req-item">Досвід роботи від 1 року</span><span class="vacancy__req-item">Вища освіта</span></div>
-                    </div>
-                    <div class="col-right">
-                        <div class="vacancy__salary headline-sm">20 - 60 тис.грн.</div>
-                        <a href="#" class="btn btn_stroke">Детальніше</a>
-                    </div>
-                </li>
-            </ul>
-            <!---------------------------------------------------------------->
-
-            <!---------------------------------------------------------------->
-
-            <div class="description">pages pagination</div>
-
-            <div class="pagination">
-                <div class="pagination__item">
-                    <a href="#" class="pagination__btn">
-                        <span class="number text-sm">01</span><span class="pagination__title">Стрейч-плівка</span>
+                <article class="post">
+                    <a href="#" class="post__link">
+                        <div class="post__thumb" style="background-image: url(assets/img/image6.jpg);"></div>
+                        <div class="post__meta text-md">
+                            <span class="post__meta-item post__date">29.07.2024</span><span class="post__meta-item post__author">Admin</span>
+                        </div>
+                        <h2 class="post__title headline-lg">Паперовий наповнювач для крихких товарів: Захист і безпека
+                            на першому місці</h2>
                     </a>
-                    <a href="#" class="pagination__btn-nav pagination__btn-prev">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_756_5721)">
-                                <path d="M7.99 13L20 13L20 11L7.99 11L7.99 8L4 12L7.99 16L7.99 13Z"
-                                      fill="currentColor"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_756_5721">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
+                </article>
+                <article class="post">
+                    <a href="#" class="post__link">
+                        <div class="post__thumb" style="background-image: url(assets/img/image5.jpg);"></div>
+                        <div class="post__meta text-md">
+                            <span class="post__meta-item post__date">29.07.2024</span><span class="post__meta-item post__author">Admin</span>
+                        </div>
+                        <h2 class="post__title headline-lg">Мікрогофрокартон: Технологія візуальної привабливості у
+                            сфері упаковки</h2>
                     </a>
-                </div>
-                <div class="pagination__item">
-                    <a href="#" class="pagination__btn">
-                        <span class="number text-sm">02</span><span class="pagination__title">Стрейч-плівка</span>
-                    </a>
-                    <a href="#" class="pagination__btn-nav pagination__btn-next">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_756_5721)">
-                                <path d="M7.99 13L20 13L20 11L7.99 11L7.99 8L4 12L7.99 16L7.99 13Z"
-                                      fill="currentColor"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_756_5721">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </a>
-                </div>
+                </article>
             </div>
         </div>
     </main>
