@@ -102,12 +102,6 @@
   }
 }
 
-@media screen and (min-width: 1921px) {
-  .products__card {
-    width: 32%;
-  }
-}
-
 @include respond-to($lg) {
   .products {
     &__thumb {

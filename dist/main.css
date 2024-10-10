@@ -1125,6 +1125,7 @@ body {
   bottom: auto;
   z-index: 100;
   transition: position 1s;
+  background-color: #27A737;
 }
 
 .page__header .text {
@@ -1256,12 +1257,6 @@ body {
   .container {
     max-width: 1340px;
     padding: 0 120px;
-  }
-}
-
-@media screen and (min-width: 1921px) {
-  .products__card {
-    width: 32%;
   }
 }
 
