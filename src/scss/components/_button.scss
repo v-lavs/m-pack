@@ -1,0 +1,151 @@
+.btn {
+  display: inline-flex;
+  font-family: $main-font;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.0015em;
+  text-align: center;
+  transition: .5s;
+  justify-content: center;
+  align-items: center;
+
+  &_main {
+    background: $medium-green;
+    color: $modern-black-5;
+
+    &:hover,
+    &:focus {
+      background-color: $medium-green-80;
+      color: $creative-green-5;
+    }
+
+    &:active {
+      background-color: $creative-green-100;
+      color: $creative-green-5;
+    }
+
+    &:disabled {
+      color: $serena-green-40;
+      background-color: $serena-green-20;
+    }
+  }
+
+  &_stroke {
+    border: 1px solid $medium-green;
+    color: $medium-green;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $medium-green-80;
+      color: $medium-green-80;
+    }
+
+    &:active {
+      border: 1px solid $creative-green-100;
+      color: $creative-green-100;
+    }
+
+    &:disabled {
+      border: 1px solid $serena-green-40;
+      color: $modern-black-20;
+    }
+  }
+
+  &_light {
+    background-color: $creative-green-5;
+    color: $serena-green-60;
+
+    &:hover,
+    &:focus {
+      background-color: $creative-green-5;
+      color: $serena-green-40;
+    }
+
+    &:active {
+      background-color: $creative-green-20;
+      color: $creative-green-100;
+    }
+
+    &:disabled {
+      background-color:$serena-green-5;
+      color: $serena-green-20;
+    }
+  }
+
+  &_call{
+    max-width: 326px;
+    padding: 24px;
+    height: 72px;
+  }
+}
+
+.btn_round {
+  //display: inline-block;
+  //cursor: pointer;
+  //appearance: none;
+  //right: 10px;
+  //width: 65px;
+  //height: 65px;
+  //border: none;
+  //padding: 0;
+  //z-index: 700;
+  //overflow: hidden;
+  //opacity: 0;
+  //visibility: hidden;
+  //transition: .5s;
+  //background-color: transparent;
+  //border-radius: 50%;
+
+  svg {
+    //display: inline-block;
+    //width: 100%;
+    //height: auto;
+  }
+
+  &:hover {
+    //stop-color: #FCA61A;
+  }
+
+
+  &:active {
+    //stop-color: #FC5111;
+  }
+
+}
+
+.fixed-btn {
+  //position: fixed;
+  //bottom: 18vh;
+  //right: 16px;
+  //z-index: 700;
+  //width: 64px;
+  //display: flex;
+  //flex-direction: column;
+  //gap: 16px;
+  //
+  //.show {
+  //  opacity: 1;
+  //  visibility: visible;
+  //}
+  //styleName: title/medium;
+
+}
+
+
+.btn_load-more {
+  //padding: 16px 32px;
+  //background-color: #ff7330;
+  //border: none;
+  //color: #fff;
+  //transition: .35s;
+  //
+  //&.hide {
+  //  opacity: 0;
+  //  visibility: hidden;
+  //}
+}
+
+@include respond-to($xs) {
+
+}

@@ -1,0 +1,133 @@
+body {
+  font: 400 16px/1.4 $main-font;
+  color: #2e3540;
+  background-color: #FFFFFF;
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-left: 300px;
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 200;
+
+  &.el-visible {
+    display: block !important;
+  }
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main {
+
+}
+
+.section {
+  padding: 32px 0;
+}
+
+.breadcrumbs {
+  margin-bottom: 10px;
+
+  &__item {
+    position: relative;
+    padding-left: 28px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.001em;
+
+    a {
+      transition: .35s;
+
+      &:hover {
+        color: #C1E1B5;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background-image: url(../assets/img/line-arrow-left.svg);
+      background-repeat: no-repeat;
+      background-size: inherit;
+      background-position: center;
+      z-index: 1;
+    }
+  }
+}
+
+.link {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 0.002em;
+  color: #27A737;
+  transition: .35s;
+
+  &:hover,
+  &:focus {
+    color: $medium-green-80;
+  }
+
+  &:active {
+    color: $creative-green-100;
+  }
+
+  &.link_whith-arrow {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+
+
+@include respond-to($xl) {
+
+}
+
+@include respond-to($lg) {
+  .wrapper {
+    padding-left: 0;
+  }
+  .main {
+    padding-top: 80px;
+  }
+}
+
+@include respond-to($sm) {
+
+}
+
+@include respond-to($xs) {
+
+}
+
+
+
+

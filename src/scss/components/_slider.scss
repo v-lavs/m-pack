@@ -1,0 +1,146 @@
+//pagination slider
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  width: auto;
+  text-align: left;
+  bottom: 17px;
+}
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 4px;
+  margin: 0 8px 0 0 !important;
+  border-radius: 0;
+  background-color: $medium-green-40;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $medium-green;
+}
+
+//navigation slider
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 24px;
+  height: 24px;
+  top: auto;
+  margin-top: 35px;
+}
+
+.swiper-button-next {
+  right: 20px;
+}
+
+.swiper-button-prev {
+  left: auto;
+  right: 72px;
+
+}
+
+.swiper-button-prev:before,
+.swiper-button-next:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../assets/img/slider-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.swiper-button-prev:before {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none;
+}
+
+.swiper {
+  position: relative;
+  padding-bottom: 72px;
+}
+
+.wrap-green-slider {
+  background-color: #F7FBF6;
+  padding: 24px;
+
+}
+
+.green-slider {
+  padding-bottom: 48px;
+
+  .swiper-wrapper {
+    counter-reset: section;
+  }
+
+  .swiper-slide {
+    position: relative;
+    padding-bottom: 16px;
+    padding-left: 48px;
+    counter-increment: section;
+
+    &:before {
+      content: counter(section, decimal-leading-zero);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $creative-green-100;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      left: 0;
+      top: 0;
+      font-size: 12px;
+      line-height: 16px;
+      border-radius: 50%;
+      letter-spacing: 0.005em;
+      color: #FFFFFF;
+    }
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 15px;
+  }
+
+  .swiper-pagination {
+    left: 48px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    margin-top: 13px;
+  }
+}
+
+.cards-slider {
+  color: #6A6A6A;
+
+  .card {
+    padding: 8px 0;
+
+    &__icon {
+      width: 64px;
+      height: 64px;
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: center;
+      margin-bottom: 8px;
+    }
+  }
+
+  .title-md {
+    font-weight: 500;
+    color: #6A6A6A;
+    margin-bottom: 8px;
+  }
+}

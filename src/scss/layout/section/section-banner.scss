@@ -1,0 +1,127 @@
+.section-banner {
+  position: relative;
+  padding-top: 30%;
+  min-height: 320px;
+  background-color: $medium-green;
+  color: $modern-black-5;
+
+  &__thumb {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 0;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background-color: transparent;
+      transition: 1s;
+      z-index: 1;
+    }
+
+    &.hide-thumb:before {
+      background-color: $medium-green;
+    }
+  }
+
+  &__thumb:empty {
+    display: none;
+  }
+}
+
+.section-banner__thumb img,
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.page__header {
+  position: absolute;
+  width: calc(100vw - 300px);
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  background-color: transparent;
+  padding: 32px 0;
+  min-height: 140px;
+  text-align: left;
+  font-size: 24px;
+  line-height: 32px;
+  color: $modern-black-5;
+  z-index: 2;
+  //transition: background .1s;
+
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    z-index: 100;
+    background-color: $medium-green;
+  }
+
+  .text {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 8px;
+  }
+}
+
+.page-title {
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 52px;
+  transition: 1s;
+  transform-origin: left;
+  margin-top: 0.089em;
+
+  &.small-title {
+    line-height: 40px;
+    font-size: 32px;
+    //transform: scale(.71);
+  }
+}
+
+.page-title:not(.home) {
+  margin-top: 0;
+}
+
+@include respond-to($lg) {
+  .page__header {
+    width: 100%;
+  }
+  .page__header.sticky {
+    top: 80px;
+  }
+}
+
+@include respond-to($sm) {
+  .page__header .text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  .page-title {
+    font-size: 32px;
+    line-height: 40px;
+
+    &.small-title {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}
