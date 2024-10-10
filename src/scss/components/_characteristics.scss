@@ -3,7 +3,7 @@
 
   &__row {
     display: flex;
-    padding: 16px 8px;
+    padding: 16px 0;
     background-image: linear-gradient(to right, #DFE5DF 58%, rgba(255, 255, 255, 0) 0%);
     background-position: bottom;
     background-size: 18px 1px;
@@ -12,6 +12,13 @@
 
   &__col {
     width: 50%;
+
+    &:first-child {
+      padding-right: 8px;
+    }
+    &:last-child {
+      padding-left: 8px;
+    }
 
     &:first-child {
       font-weight: 500;

@@ -774,7 +774,7 @@ body {
 
 .tech-charact__row {
   display: flex;
-  padding: 16px 8px;
+  padding: 16px 0;
   background-image: linear-gradient(to right, #DFE5DF 58%, rgba(255, 255, 255, 0) 0%);
   background-position: bottom;
   background-size: 18px 1px;
@@ -783,6 +783,14 @@ body {
 
 .tech-charact__col {
   width: 50%;
+}
+
+.tech-charact__col:first-child {
+  padding-right: 8px;
+}
+
+.tech-charact__col:last-child {
+  padding-left: 8px;
 }
 
 .tech-charact__col:first-child {
