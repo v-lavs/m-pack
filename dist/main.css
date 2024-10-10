@@ -1514,6 +1514,10 @@ body {
     width: 100%;
   }
 
+  .block-img-text .text-md {
+    font-size: 12px;
+  }
+
   .container {
     padding: 0 16px;
   }
