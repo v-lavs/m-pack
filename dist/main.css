@@ -1124,7 +1124,7 @@ body {
   top: 0;
   bottom: auto;
   z-index: 100;
-  background-color: #27A737;
+  transition: position 1s;
 }
 
 .page__header .text {
@@ -1254,8 +1254,8 @@ body {
 
 @media screen and (min-width: 1281px) {
   .container {
-    width: 100%;
-    padding: 0 5%;
+    max-width: 1340px;
+    padding: 0 120px;
   }
 }
 

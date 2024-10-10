@@ -71,7 +71,8 @@
     top: 0;
     bottom: auto;
     z-index: 100;
-    background-color: $medium-green;
+    transition: position 1s;
+    //background-color: $medium-green;
   }
 
   .text {
