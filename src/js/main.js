@@ -24,6 +24,7 @@ $(document).ready(function () {
             overlay.classList.remove('el-visible');
         });
     });
+
     overlay.addEventListener('click', function () {
         sidebar.classList.remove('open');
         overlay.classList.remove('el-visible');
@@ -31,27 +32,35 @@ $(document).ready(function () {
 
 //STICKY HEADER PAGE
     const stickyElement = document.querySelector('.page__header');
-    let stickyOffset = stickyElement.offsetTop;
+    let stickyOffset = 0; 
+    
+    function updateStickyBannerOffset() {
+        const pageBanner = document.querySelector('.section-banner');
+        if(pageBanner) {
+            const bannerH = pageBanner.offsetHeight;
+            const stickyH = stickyElement.offsetHeight;
 
-    function updateStickyOffset() {
-        stickyOffset = stickyElement.offsetTop;
+            stickyOffset = bannerH - stickyH; 
+            
+            if (window.pageYOffset >= stickyOffset) {
+                stickyElement.classList.add('sticky');
+                stickyOffset = stickyElement.offsetTop;
+            } else {
+                stickyElement.classList.remove('sticky');
+            }
+        }
     }
 
-    window.addEventListener('resize', updateStickyOffset);
-    window.addEventListener('load', updateStickyOffset);
-
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > stickyOffset) {
-            stickyElement.classList.add('sticky');
-        } else {
-            stickyElement.classList.remove('sticky');
-        }
-    });
+    window.addEventListener('resize', updateStickyBannerOffset);
+    window.addEventListener('load', updateStickyBannerOffset);
+    
 
     const bannerThumb = document.querySelector(".section-banner__thumb");
     const bannerTitle = document.querySelector('.page-title');
 
     window.addEventListener("scroll", () => {
+        updateStickyBannerOffset()
+
         if (window.scrollY > 0) {
             bannerThumb.classList.add("hide-thumb");
             bannerTitle.classList.add("small-title");
@@ -66,15 +75,15 @@ $(document).ready(function () {
 
     const swiperInfo = new Swiper('.swiper-info', {
         pagination: {
-            el: '.swiper-pagination',
+            el: '.swiper-info .swiper-pagination',
             clickable: true,
         },
     });
 
-    if ($('.product-slider').get(0)) {
+    if (document.querySelector('.product-slider')) {
         const productSlider = new Swiper('.product-slider ', {
             pagination: {
-                el: '.swiper-pagination',
+                el: '.product-slider .swiper-pagination',
                 clickable: true,
             },
             navigation: {
@@ -89,10 +98,10 @@ $(document).ready(function () {
             },
         });
     }
-    if ($('.cards-slider').get(0)) {
+    if (document.querySelector('.cards-slider')) {
         const cardSlider = new Swiper('.cards-slider ', {
             pagination: {
-                el: '.swiper-pagination',
+                el: '.cards-slider .swiper-pagination',
                 clickable: true,
             },
             navigation: {
@@ -107,10 +116,11 @@ $(document).ready(function () {
             },
         });
     }
-    if ($('.green-slider').get(0)) {
-        const greenSlider = new Swiper('.green-slider ', {
+
+    if (document.querySelector('.green-slider')) {
+        const greenSlider = new Swiper('.green-slider', {
             pagination: {
-                el: '.swiper-pagination',
+                el: '.green-slider .swiper-pagination',
                 clickable: true,
             },
             navigation: {
@@ -119,6 +129,31 @@ $(document).ready(function () {
             },
         });
     }
+
+    if (document.querySelector('.slider-4-col')){
+        const slider4Col = new Swiper('.slider-4-col', {
+            slidesPerView: 4,
+            pagination: {
+                el: '.slider-4-col .swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                577: {
+                    slidesPerView: 3,
+                    spaceBetween: 16
+                },
+                767: {
+                    slidesPerView: 4,
+                    spaceBetween: 16
+                }
+            },
+        });
+    }
+
     //TABS
     const tabLinks = document.querySelectorAll('.tabs__nav-link');
     const tabContents = document.querySelectorAll('.tab-content');
@@ -130,11 +165,11 @@ $(document).ready(function () {
             tabLinks.forEach(link => link.classList.remove('active'));
             tabContents.forEach(content => content.classList.remove('active'));
             link.classList.add('active');
+
             const targetId = link.getAttribute('href').substring(1);
             document.getElementById(targetId).classList.add('active');
         });
     });
-
 });
 
 
