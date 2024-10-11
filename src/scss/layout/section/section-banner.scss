@@ -26,10 +26,6 @@
       z-index: 1;
     }
 
-    &.empty:before {
-      display: none;
-    }
-
     &.hide-thumb:before {
       background-color: $medium-green;
     }
