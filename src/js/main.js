@@ -120,20 +120,15 @@ $(document).ready(function () {
         });
     }
     //TABS
-    // Отримуємо всі посилання-вкладки та всі елементи вмісту вкладок
     const tabLinks = document.querySelectorAll('.tabs__nav-link');
     const tabContents = document.querySelectorAll('.tab-content');
 
-// Додаємо обробник події для кожної вкладки
     tabLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
 
-            // Видаляємо клас 'active' з усіх посилань та вмісту
             tabLinks.forEach(link => link.classList.remove('active'));
             tabContents.forEach(content => content.classList.remove('active'));
-
-            // Додаємо клас 'active' до натиснутого посилання та відповідного вмісту
             link.classList.add('active');
             const targetId = link.getAttribute('href').substring(1);
             document.getElementById(targetId).classList.add('active');
