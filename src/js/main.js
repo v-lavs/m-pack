@@ -1,7 +1,7 @@
 /*
 * to include js file write: `//= include ./path-to-file`
 * */
-//= include ../../node_modules/jquery/dist/jquery.js
+
 // CUSTOM SCRIPTS
 
 $(document).ready(function () {
@@ -28,23 +28,6 @@ $(document).ready(function () {
         sidebar.classList.remove('open');
         overlay.classList.remove('el-visible');
     });
-
-// SMOOTH SCROLL TO ANCHOR
-// function smoothScrollToAnchor(selector) {
-//     $(selector).on('click', function (event) {
-//         let anchor = $.attr(this, 'href');
-//
-//         if (anchor.match(/^#/) && anchor !== '#') {
-//             event.preventDefault();
-//
-//             $('html, body').animate({
-//                 scrollTop: $($.attr(this, 'href')).offset().top
-//             }, 800);
-//         }
-//     });
-// }
-//
-// smoothScrollToAnchor('.menu__item a');
 
 //STICKY HEADER PAGE
     const stickyElement = document.querySelector('.page__header');
@@ -156,17 +139,6 @@ $(document).ready(function () {
             document.getElementById(targetId).classList.add('active');
         });
     });
-
-
-
-// //READ MORE TEXT
-// const btnReadMore = document.querySelector('.btn_load-more');
-// const textRead = document.querySelector(".text-read");
-//
-// btnReadMore.addEventListener("click", function (e) {
-//     textRead.classList.add("active");
-//     btnReadMore.classList.add("hide");
-// })
 
 });
 

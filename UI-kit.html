@@ -302,8 +302,9 @@
             </div>
         </section>
 
-        <div class="description">section-banner   якщо немає відео чи картинки додати клас empty до section-banner__thumb
-        щоб прибрати темний оверлей, який доданий через псевдоелемент</div>
+        <div class="description">section-banner якщо немає відео чи картинки додати клас empty до section-banner__thumb
+            щоб прибрати темний оверлей, який доданий через псевдоелемент
+        </div>
         <!---------------------------------------------------------------->
         <div class="container">
             <div class="description">product card</div>
@@ -709,7 +710,9 @@
                 <li class="vacancy">
                     <div class="col-left">
                         <h2 class="vacancy__name headline-lg">Менеджер з продажу територіальний</h2>
-                        <div class="vacancy__requirements"><span class="vacancy__req-item">Повна зайнятість</span><span class="vacancy__req-item">Досвід роботи від 1 року</span><span class="vacancy__req-item">Вища освіта</span></div>
+                        <div class="vacancy__requirements"><span class="vacancy__req-item">Повна зайнятість</span><span
+                                class="vacancy__req-item">Досвід роботи від 1 року</span><span
+                                class="vacancy__req-item">Вища освіта</span></div>
                     </div>
                     <div class="col-right">
                         <div class="vacancy__salary headline-sm">20 - 60 тис.грн.</div>
@@ -719,6 +722,86 @@
             </ul>
             <!---------------------------------------------------------------->
 
+            <div class="description">popup</div>
+            <div class="popup popup_contacts">
+                <div class="popup__header">
+                    <h3 class="popup__title">Замовити дзвінок</h3>
+                    <button aria-label="Закрити попап" class="popup_close"></button>
+                </div>
+                <form action="#" method="get" class="form form_contacts">
+                    <div class="progress-bar">
+                        <span class="bullet"></span>
+                        <span class="bullet"></span>
+                        <span class="bullet"></span>
+                    </div>
+                    <div class="form__content">
+
+                        <div id="1step" class="popup__step">
+                            <div class="popup__nav">
+                                <a href="#1step" class="popup__nav-link">Контактні дані</a>
+                                <a href="#2step" class="popup__nav-link">Продукція</a>
+                                <a href="#3step" class="popup__nav-link">Місто</a>
+                            </div>
+                            <div class="form__group">
+                                <label for="name">
+                                    <input type="text" name="name" id="name" placeholder="Ім’я" required/>
+                                </label>
+
+                                <label for="email">
+                                    <input type="email" name="email" id="email" placeholder="Email" required/>
+                                </label>
+                                <label for="phone">
+                                    <input type="email" name="email" id="phone" placeholder="Номер телефону" required/>
+                                </label>
+                                <button type="button" class="btn_next">Ім’я</button>
+                            </div>
+                        </div>
+                        <div id="2step" class="popup__step">
+                            <div class="popup__nav">
+                                <a href="#1step" class="popup__nav-link">Контактні дані</a>
+                            </div>
+                            <div class="form__group">
+                                <label for="pack-mat" class="label-checkmark">
+                                    <input type="checkbox" class="checkmark" id="pack-mat" name="pack-material"
+                                           value="Пакувальні матеріали">
+                                    <span class="check-mark"></span>
+                                    <span class="">Пакувальні матеріали</span>
+                                </label>
+                                <label for="equipment" class="label-checkmark">
+                                    <input type="checkbox" class="checkmark" id="equipment" name="equipment"
+                                           value="Обладнання">
+                                    <span class="check-mark"></span>
+                                    <span class="">Обладнання</span>
+                                </label>
+                                <button type="button" class="btn_next">Ім’я</button>
+                            </div>
+                        </div>
+                        <div id="3step" class="popup__step">
+                            <div class="popup__nav">
+                                <a href="#1step" class="popup__nav-link">Контактні дані</a>
+                                <a href="#2step" class="popup__nav-link">Продукція</a>
+                            </div>
+                            <div class="form__group">
+                                <label for="zhidachiv" class="label-checkmark">
+                                    <input type="radio" class="checkmark" id="zhidachiv" name="sity"
+                                           value="Жидачів">
+                                    <span class="check-mark"></span>
+                                    <span class="">Жидачів</span>
+                                </label>
+                                <label for="Kyiv" class="label-checkmark">
+                                    <input type="radio" class="checkmark" id="Kyiv" name="sity"
+                                           value="Київ">
+                                    <span class="check-mark"></span>
+                                    <span class="">Київ</span>
+                                </label>
+
+                                <button type="button" class="btn_next">Ім’я</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
             <!---------------------------------------------------------------->
 
             <div class="description">pages pagination</div>
@@ -900,7 +983,7 @@
         </div>
     </footer>
 </div>
-
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="./lib/swiper/swiper-bundle.min.js"></script>
 <script src="dist/main.js"></script>
 
