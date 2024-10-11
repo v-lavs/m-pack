@@ -41,7 +41,7 @@ $(document).ready(function () {
     window.addEventListener('load', updateStickyOffset);
 
     window.addEventListener('scroll', () => {
-        if (window.pageYOffset >= stickyOffset) {
+        if (window.pageYOffset > stickyOffset) {
             stickyElement.classList.add('sticky');
         } else {
             stickyElement.classList.remove('sticky');
