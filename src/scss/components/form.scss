@@ -1,0 +1,20 @@
+.form{
+  color: $modern-black-60;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.001em;
+
+  &__group label{
+    display: block;
+    margin-bottom: 8px;
+  }
+  input{
+    width: 100%;
+    padding: 13px 56px 13px 16px;
+    border: 1px solid #F3F3F3;
+  }
+}
+::placeholder{
+  color: $modern-black-40;
+}
