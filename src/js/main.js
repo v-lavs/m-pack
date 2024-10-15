@@ -32,16 +32,16 @@ $(document).ready(function () {
 
 //STICKY HEADER PAGE
     const stickyElement = document.querySelector('.page__header');
-    let stickyOffset = 0; 
-    
+    let stickyOffset = 0;
+
     function updateStickyBannerOffset() {
         const pageBanner = document.querySelector('.section-banner');
-        if(pageBanner) {
+        if (pageBanner) {
             const bannerH = pageBanner.offsetHeight;
             const stickyH = stickyElement.offsetHeight;
 
-            stickyOffset = bannerH - stickyH; 
-            
+            stickyOffset = bannerH - stickyH;
+
             if (window.pageYOffset >= stickyOffset) {
                 stickyElement.classList.add('sticky');
                 stickyOffset = stickyElement.offsetTop;
@@ -53,7 +53,7 @@ $(document).ready(function () {
 
     window.addEventListener('resize', updateStickyBannerOffset);
     window.addEventListener('load', updateStickyBannerOffset);
-    
+
 
     const bannerThumb = document.querySelector(".section-banner__thumb");
     const bannerTitle = document.querySelector('.page-title');
@@ -130,7 +130,7 @@ $(document).ready(function () {
         });
     }
 
-    if (document.querySelector('.slider-4-col')){
+    if (document.querySelector('.slider-4-col')) {
         const slider4Col = new Swiper('.slider-4-col', {
             slidesPerView: 4,
             pagination: {
@@ -153,6 +153,15 @@ $(document).ready(function () {
             },
         });
     }
+    window.addEventListener('load', function () {
+        if ($('.gallery').length > 0) {
+            $('.gallery a').click(function (e) {
+                e.preventDefault();
+            });
+            baguetteBox.run('.gallery', {});
+        }
+    })
+
 
     //TABS
     const tabLinks = document.querySelectorAll('.tabs__nav-link');
