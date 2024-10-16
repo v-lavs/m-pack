@@ -1323,6 +1323,11 @@ label.label-checkmark input {
   padding-top: 82px;
 }
 
+.sidebar__inner {
+  max-height: calc(100vh - 154px);
+  overflow: auto;
+}
+
 .sidebar__item {
   padding: 16px 24px;
   border-bottom: 1px solid #F3F3F3;
@@ -1331,10 +1336,6 @@ label.label-checkmark input {
 .sidebar__nav {
   height: 56%;
   overflow: auto;
-}
-
-.sidebar__nav-inner {
-  height: 100%;
 }
 
 .sidebar__nav .sidebar__item {
@@ -1357,6 +1358,7 @@ label.label-checkmark input {
 
 .sidebar .btn_call {
   width: 100%;
+  max-width: 100%;
 }
 
 .sidebar strong {
@@ -1786,6 +1788,8 @@ label.label-checkmark input {
   }
 
   .sidebar {
+    max-width: 360px;
+    width: 100%;
     transform: translateX(-100%);
     transition: .35s;
   }
