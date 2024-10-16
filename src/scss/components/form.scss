@@ -24,29 +24,28 @@
 label.label-checkmark {
   position: relative;
   display: inline-block;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.0015em;
-  text-align: center;
-  color: $serena-green-80;
-  transition: .35s;
   margin-right: 4px;
-  overflow: hidden;
-  border: 1px solid #A2B2AE;
-  border-radius: 8px;
-  padding: 12px 16px;
   margin-bottom: 4px;
-}
-.label-checkmark >*{
-  position: relative;
-  z-index: 1;
-}
-.checkmark {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  position: absolute;
-  opacity: 0;
+  cursor: pointer;
+
+  .text {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.0015em;
+    text-align: center;
+    transition: .35s;
+    padding: 12px 16px;
+    overflow: hidden;
+    border: 1px solid #A2B2AE;
+    border-radius: 8px;
+    color: $serena-green-80;
+  }
+
+  input {
+    display: none;
+  }
 }
 
 .check-mark {
@@ -64,6 +63,7 @@ label.label-checkmark {
 
 }
 
-.checkmark:checked + .check-mark {
+.checkmark:checked + .text {
   background-color: #27A737;
+  color: #FFFFFF;
 }

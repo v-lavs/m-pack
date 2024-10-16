@@ -185,27 +185,6 @@ $(document).ready(function () {
         });
     });
 
-    // ADDED COLOR LABEL CHECKED CHECKBOX END RADIOBUTTON
-    function setParentColor(input) {
-        if (input.checked) {
-            input.parentElement.style.color = '#FFFFFF';
-        } else {
-            input.parentElement.style.color = '#45655D';
-        }
-    }
-
-    document.querySelectorAll('input[type="checkbox"], input[type="radio"]').forEach(function (input) {
-        setParentColor(input);
-        input.addEventListener('click', function () {
-            if (input.type === 'radio') {
-                document.querySelectorAll(`input[name="${input.name}"]`).forEach(function (radio) {
-                    setParentColor(radio);
-                });
-            } else {
-                setParentColor(input);
-            }
-        });
-    });
 
 // POPUP
     const popupCont = document.querySelector(".popup_contacts");
@@ -218,55 +197,63 @@ $(document).ready(function () {
         backdrop.classList.toggle('el-visible');
     });
 
-    contactsClose.addEventListener('click', () => {
+    const closePopup = () => {
         popupCont.classList.remove('open_modal');
         backdrop.classList.remove('el-visible');
-    });
-    backdrop.addEventListener('click', () => {
-        popupCont.classList.remove('open_modal');
-    });
+    }
+
+    contactsClose.addEventListener('click', closePopup);
+    backdrop.addEventListener('click', closePopup);
 
 
 //    MULTI STEP FORM
     const msForm = document.querySelector('.multi-step-form');
     if (msForm) {
+        let activeIndex = 0;
         const stepsCircle = msForm.querySelectorAll('.progress-step');
         const stepContent = msForm.querySelectorAll('.form__step');
 
         const btnsNext = msForm.querySelectorAll('.btn_next');
         const prevBtns = msForm.querySelectorAll('.form__nav-link');
 
-        stepsCircle[0].classList.add('progress-step_active');
-        stepContent[0].classList.add('active');
-        prevBtns[0].classList.add('show')
+        stepsCircle[activeIndex].classList.add('progress-step_active');
+        stepContent[activeIndex].classList.add('active');
+        prevBtns[activeIndex].classList.add('show');
 
         btnsNext.forEach(btn => btn.addEventListener(
             'click', (e) => {
-                const activeIndex = Array.from(stepContent).findIndex(el => el.classList.contains('active'));
-                stepContent.forEach(el => el.classList.remove('active'))
+                if(activeIndex + 1 < stepContent.length) {
+                    activeIndex = activeIndex + 1;
+                    stepContent.forEach(el => el.classList.remove('active'))
 
-                const activeContent = stepContent[activeIndex + 1];
-                const activeCircle = stepsCircle[activeIndex + 1];
-                if (activeContent) {
-                    activeContent.classList.add('active')
-                }
-                if (activeCircle) {
-                    activeCircle.classList.add('progress-step_active')
-                }
-                prevBtns.forEach((el, index) => {
-                    if (index <= activeIndex + 1) {
-                        el.classList.add('show');
-                    } else {
-                        el.classList.remove('show');
+                    const activeContent = stepContent[activeIndex];
+                    const activeCircle = stepsCircle[activeIndex];
+                    if (activeContent) {
+                        activeContent.classList.add('active')
                     }
-                })
+                    if (activeCircle) {
+                        activeCircle.classList.add('progress-step_active')
+                    }
+                    prevBtns.forEach((el, index) => {
+                        if (index <= activeIndex) {
+                            el.classList.add('show');
+                        } else {
+                            el.classList.remove('show');
+                        }
+                    })
+                }
+
+                if(e.target.type === 'submit') {
+                    msForm.reset();
+                    closePopup();
+                }
             }
         ));
 
         prevBtns.forEach(btn => btn.addEventListener(
             'click', (e) => {
-                const activeIndex = Array.from(prevBtns).findIndex(el => el === e.target);
-                console.log(activeIndex)
+                activeIndex = Array.from(prevBtns).findIndex(el => el === e.target);
+
                 stepContent.forEach(el => el.classList.remove('active'))
 
                 stepsCircle.forEach((el, index) => {
@@ -292,7 +279,24 @@ $(document).ready(function () {
             }
         ));
 
+        msForm.querySelectorAll('.js-form-field').forEach(el => {
+            el.addEventListener('input', (e)=> {
+                const activeSetControls = stepContent[activeIndex].querySelectorAll('.js-form-field');
+                const submitBtn = stepContent[activeIndex].querySelector('.btn_next');
 
+                let disabled = true;
+                if(activeIndex === 0){
+                    disabled = Array.from(activeSetControls).filter(el => el.hasAttribute('required')).some(el => el.value ==='');
+                } else if(activeIndex === 1) {
+                    disabled = !Array.from(stepContent[activeIndex].querySelectorAll('[type="checkbox"]')).some(el => el.checked)
+                } else if(activeIndex === 2) {
+                    disabled = !Array.from(stepContent[activeIndex].querySelectorAll('[type="radio"]')).some(el => el.checked) &&
+                        msForm.querySelector('[name="other_city"]').value === '';
+                }
+
+                submitBtn.disabled = disabled
+            });
+        })
     }
 });
 

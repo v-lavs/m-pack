@@ -815,92 +815,84 @@
                                     </label>
                                 </div>
                                 <div class="form__footer">
-                                    <button type="button" class="btn_next btn btn_main" >Продовжити</button>
+                                    <button type="button" class="btn_next btn btn_main" disabled>Продовжити</button>
                                 </div>
                             </div>
 
                             <div id="2step" class="form__step">
                                 <div class="form__group">
                                     <label for="pack-mat" class="label-checkmark">
-                                        <input type="checkbox" class="checkmark" id="pack-mat" name="pack-material"
+                                        <input type="checkbox" class="checkmark js-form-field" id="pack-mat" name="pack-material"
                                                value="Пакувальні матеріали">
-                                        <span class="check-mark"></span>
                                         <span class="text">Пакувальні матеріали</span>
                                     </label>
                                     <label for="equipment" class="label-checkmark">
-                                        <input type="checkbox" class="checkmark" id="equipment" name="equipment"
+                                        <input type="checkbox" class="checkmark  js-form-field" id="equipment" name="equipment"
                                                value="Обладнання">
-                                        <span class="check-mark"></span>
                                         <span class="text">Обладнання</span>
                                     </label>
 
                                     <label for="solutions" class="label-checkmark">
-                                        <input type="checkbox" class="checkmark" id="solutions" name="solutions"
+                                        <input type="checkbox" class="checkmark  js-form-field" id="solutions" name="solutions"
                                                value="Рішення для бізнесу">
-                                        <span class="check-mark"></span>
                                         <span class="text">Рішення для бізнесу</span>
                                     </label>
                                     <label for="material" class="label-checkmark">
-                                        <input type="checkbox" class="checkmark" id="material" name="material"
+                                        <input type="checkbox" class="checkmark  js-form-field" id="material" name="material"
                                                value="Рішення для бізнесу">
-                                        <span class="check-mark"></span>
                                         <span class="text">Матеріали для поліграфії</span>
                                     </label>
                                 </div>
                                 <div class="form__footer">
-                                    <button type="button" class="btn_next btn btn_main" >Продовжити</button>
+                                    <button type="button" class="btn_next btn btn_main" disabled>Продовжити</button>
                                 </div>
                             </div>
+
                             <div id="3step" class="form__step">
                                 <div class="form__group">
                                     <label for="zhidachiv" class="label-checkmark">
-                                        <input type="radio" class="checkmark" id="zhidachiv" name="city"
+                                        <input type="radio" class="checkmark  js-form-field" id="zhidachiv" name="city"
                                                value="Жидачів">
-                                        <span class="check-mark"></span>
-                                        <span class="">Жидачів</span>
+                                        <span class="text">Жидачів</span>
                                     </label>
                                     <label for="Kyiv" class="label-checkmark">
-                                        <input type="radio" class="checkmark" id="Kyiv" name="city"
+                                        <input type="radio" class="checkmark  js-form-field" id="Kyiv" name="city"
                                                value="Київ">
-                                        <span class="check-mark"></span>
-                                        <span class="">Київ</span>
+                                        <span class="text">Київ</span>
                                     </label>
                                     <label for="lviv" class="label-checkmark">
-                                        <input type="radio" class="checkmark" id="lviv" name="city"
+                                        <input type="radio" class="checkmark  js-form-field" id="lviv" name="city"
                                                value="Львів">
-                                        <span class="check-mark"></span>
-                                        <span class="">Львів</span>
+                                        <span class="text">Львів</span>
                                     </label>
                                     <label for="kharkiv" class="label-checkmark">
-                                        <input type="radio" class="checkmark" id="kharkiv" name="city"
+                                        <input type="radio" class="checkmark  js-form-field" id="kharkiv" name="city"
                                                value="Харків">
-                                        <span class="check-mark"></span>
-                                        <span class="">Харків</span>
+                                        <span class="text">Харків</span>
                                     </label>
                                     <label for="lutsk" class="label-checkmark">
-                                        <input type="radio" class="checkmark" id="lutsk" name="city"
+                                        <input type="radio" class="checkmark  js-form-field" id="lutsk" name="city"
                                                value="Луцьк">
                                         <span class="check-mark"></span>
-                                        <span class="">Луцьк</span>
+                                        <span class="text">Луцьк</span>
                                     </label>
                                     <label for="uzhhorod" class="label-checkmark">
-                                        <input type="radio" class="checkmark" id="uzhhorod" name="city"
+                                        <input type="radio" class="checkmark  js-form-field" id="uzhhorod" name="city"
                                                value="Ужгород">
-                                        <span class="check-mark"></span>
-                                        <span class="">Ужгород</span>
+                                        <span class="text">Ужгород</span>
                                     </label>
                                     <label for="odesa" class="label-checkmark">
-                                        <input type="radio" class="checkmark" id="odesa" name="city"
+                                        <input type="radio" class="checkmark  js-form-field" id="odesa" name="city"
                                                value="Одеса">
-                                        <span class="check-mark"></span>
-                                        <span class="">Одеса</span>
+                                        <span class="text">Одеса</span>
                                     </label>
                                 </div>
-                                <div class="another-city">
-                                    <a href="#" class="btn-city">Інше місто</a><span class="city"></span>
-                                </div>
+
+                                <input type="input" class="input" name="other_city" placeholder="Інше місто">
+
                                 <div class="form__footer">
-                                    <button type="submit" class="btn_submit btn btn_main" >Відправити запит
+                                    <button type="submit" class="btn_next btn_submit btn btn_main" disabled>
+                                        Відправити запит
                                     </button>
                                 </div>
                             </div>
