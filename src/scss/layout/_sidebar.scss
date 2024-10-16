@@ -11,7 +11,7 @@
   letter-spacing: 0.0025em;
   padding-bottom: 88px;
   height: 100vh;
-  z-index: 300;
+  z-index: 200;
   padding-top: 82px;
 
   &__item {
@@ -111,6 +111,7 @@
     transition: .35s;
     &.open{
       transform: translateX(0);
+      z-index: 350;
     }
   }
 }

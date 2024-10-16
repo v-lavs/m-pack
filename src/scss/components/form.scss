@@ -1,20 +1,69 @@
-.form{
+.form {
   color: $modern-black-60;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0.001em;
 
-  &__group label{
+  &__group label {
     display: block;
     margin-bottom: 8px;
   }
-  input{
+
+  .input {
     width: 100%;
     padding: 13px 56px 13px 16px;
     border: 1px solid #F3F3F3;
   }
+
+  ::placeholder {
+    color: $modern-black-40;
+  }
 }
-::placeholder{
-  color: $modern-black-40;
+
+label.label-checkmark {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.0015em;
+  text-align: center;
+  color: $serena-green-80;
+  transition: .35s;
+  margin-right: 4px;
+  overflow: hidden;
+  border: 1px solid #A2B2AE;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 4px;
+}
+.label-checkmark >*{
+  position: relative;
+  z-index: 1;
+}
+.checkmark {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  opacity: 0;
+}
+
+.check-mark {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+   display: inline-block;
+  -webkit-transition: .35s;
+  -o-transition: .35s;
+  -moz-transition: .35s;
+  transition: .35s;
+  margin-left: -35px;
+
+}
+
+.checkmark:checked + .check-mark {
+  background-color: #27A737;
 }

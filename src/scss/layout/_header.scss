@@ -6,7 +6,7 @@
   padding: 16px 24px;
   background-color: #F4FBF5;
   border-bottom: 1px solid #F3F3F3;
-  z-index: 350;
+  z-index: 250;
 
   &__logo {
     max-width: 252px;
@@ -26,6 +26,10 @@
     &:active {
       color: $creative-green-100;
     }
+  }
+
+  &.open {
+    z-index: 360;
   }
 
   .btn-burger {

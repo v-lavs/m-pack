@@ -13,27 +13,26 @@ body {
 }
 
 .backdrop {
-  display: none;
+  opacity: 0;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.45);
+  visibility: hidden;
+  transition: .35s;
 
   &.el-visible {
-    display: block !important;
+    opacity: 1;
+    visibility: visible;
+    z-index: 300;
   }
 }
 
 .d-flex {
   display: flex;
   flex-wrap: wrap;
-}
-
-.main {
-
 }
 
 .section {

@@ -28,7 +28,8 @@
       color: $creative-green-5;
     }
 
-    &.disabled {
+    &.disabled,
+    &[disabled]{
       color: $serena-green-40;
       background-color: $serena-green-20;
     }
@@ -37,7 +38,7 @@
   &_stroke {
     border: 1px solid $medium-green;
     color: $medium-green;
-
+    background-color: transparent;
     &:hover,
     &:focus {
       border: 1px solid $medium-green-80;
@@ -49,7 +50,8 @@
       color: $creative-green-100;
     }
 
-    &:disabled {
+    &:disabled,
+    &[disabled]{
       border: 1px solid $serena-green-40;
       color: $modern-black-20;
     }
@@ -70,7 +72,8 @@
       color: $creative-green-100;
     }
 
-    &:disabled {
+    &:disabled,
+    &[disabled]{
       background-color: $serena-green-5;
       color: $serena-green-20;
     }

@@ -65,7 +65,7 @@
         <div class="sidebar__item">
             <div class="location">
                 <div class="location__factory">Жидачів</div>
-                <a href="#" class="location__chose link">інше місто</a>
+                <a href="#" class="location__chose link trigger-popup">інше місто</a>
             </div>
             <div class="location__contacts">
                 <a href="tel:+38(067)37-38-151">+38 (067) 37-38-151</a>
@@ -279,6 +279,7 @@
         <div class="sidebar__footer">
             <a href="#" class="btn btn_main btn_call">Замовити дзвінок</a>
         </div>
+
     </div>
     <div class="backdrop"></div>
     <main class="main">
@@ -782,81 +783,141 @@
                     <h3 class="popup__title">Замовити дзвінок</h3>
                     <button aria-label="Закрити попап" class="popup_close"></button>
                 </div>
-                <div class="popup__body">
-                    <form action="#" method="get" class="form popup__form">
+                <div class="popup__content">
+                    <form action="#" method="get" class="form popup__form multi-step-form">
                         <div class="progress-bar">
-                            <span class="bullet active">1</span>
-                            <span class="bullet">2</span>
-                            <span class="bullet">3</span>
+                            <span data-stepId="1" class="progress-step progress-step_active">1</span>
+                            <span data-stepId="2" class="progress-step">2</span>
+                            <span data-stepId="3" class="progress-step">3</span>
                         </div>
                         <div class="form__content">
+                            <div class="popup__nav">
+                                <a href="#" data-index="0" class="form__nav-link">Контактні дані</a>
+                                <a href="#" data-index="1" class="form__nav-link">Продукція</a>
+                                <a href="#" data-index="2" class="form__nav-link">Місто</a>
+                            </div>
 
-                            <div id="1step" class="popup__step">
-                                <div class="popup__nav">
-                                    <a href="#1step" class="popup__nav-link">Контактні дані</a>
-                                </div>
+                            <div id="1step" class="form__step active">
                                 <div class="form__group">
                                     <label for="name">
-                                        <input type="text" name="name" id="name" placeholder="Ім’я" required/>
+                                        <input class="input js-form-field" type="text" name="name" id="name" placeholder="Ім’я"
+                                               required/>
                                     </label>
 
                                     <label for="email">
-                                        <input type="email" name="email" id="email" placeholder="Email" required/>
-                                    </label>
-                                    <label for="phone">
-                                        <input type="email" name="email" id="phone" placeholder="Номер телефону"
+                                        <input class="input js-form-field" type="email" name="email" id="email" placeholder="Email"
                                                required/>
                                     </label>
-                                    <button type="button" class="btn_next btn btn_main disabled">Продовжити</button>
+                                    <label for="phone">
+                                        <input class="input js-form-field" type="email" name="email" id="phone"
+                                               placeholder="Номер телефону"
+                                               required/>
+                                    </label>
+                                </div>
+                                <div class="form__footer">
+                                    <button type="button" class="btn_next btn btn_main" >Продовжити</button>
                                 </div>
                             </div>
-                            <div id="2step" style="display: none;" class="popup__step">
-                                <div class="popup__nav">
-                                    <a href="#1step" class="popup__nav-link">Контактні дані</a>
-                                </div>
+
+                            <div id="2step" class="form__step">
                                 <div class="form__group">
                                     <label for="pack-mat" class="label-checkmark">
                                         <input type="checkbox" class="checkmark" id="pack-mat" name="pack-material"
                                                value="Пакувальні матеріали">
                                         <span class="check-mark"></span>
-                                        <span class="">Пакувальні матеріали</span>
+                                        <span class="text">Пакувальні матеріали</span>
                                     </label>
                                     <label for="equipment" class="label-checkmark">
                                         <input type="checkbox" class="checkmark" id="equipment" name="equipment"
                                                value="Обладнання">
                                         <span class="check-mark"></span>
-                                        <span class="">Обладнання</span>
+                                        <span class="text">Обладнання</span>
                                     </label>
-                                    <button type="button" class="btn_next btn btn_main disabled">Ім’я</button>
+
+                                    <label for="solutions" class="label-checkmark">
+                                        <input type="checkbox" class="checkmark" id="solutions" name="solutions"
+                                               value="Рішення для бізнесу">
+                                        <span class="check-mark"></span>
+                                        <span class="text">Рішення для бізнесу</span>
+                                    </label>
+                                    <label for="material" class="label-checkmark">
+                                        <input type="checkbox" class="checkmark" id="material" name="material"
+                                               value="Рішення для бізнесу">
+                                        <span class="check-mark"></span>
+                                        <span class="text">Матеріали для поліграфії</span>
+                                    </label>
+                                </div>
+                                <div class="form__footer">
+                                    <button type="button" class="btn_next btn btn_main" >Продовжити</button>
                                 </div>
                             </div>
-                            <div id="3step" style="display: none;" class="popup__step">
-                                <div class="popup__nav">
-                                    <a href="#1step" class="popup__nav-link">Контактні дані</a>
-                                    <a href="#2step" class="popup__nav-link">Продукція</a>
-                                </div>
+                            <div id="3step" class="form__step">
                                 <div class="form__group">
                                     <label for="zhidachiv" class="label-checkmark">
-                                        <input type="radio" class="checkmark" id="zhidachiv" name="sity"
+                                        <input type="radio" class="checkmark" id="zhidachiv" name="city"
                                                value="Жидачів">
                                         <span class="check-mark"></span>
                                         <span class="">Жидачів</span>
                                     </label>
                                     <label for="Kyiv" class="label-checkmark">
-                                        <input type="radio" class="checkmark" id="Kyiv" name="sity"
+                                        <input type="radio" class="checkmark" id="Kyiv" name="city"
                                                value="Київ">
                                         <span class="check-mark"></span>
                                         <span class="">Київ</span>
                                     </label>
-
-                                    <button type="button" class="btn_submit btn btn_main disabled">Відправити запит</button>
+                                    <label for="lviv" class="label-checkmark">
+                                        <input type="radio" class="checkmark" id="lviv" name="city"
+                                               value="Львів">
+                                        <span class="check-mark"></span>
+                                        <span class="">Львів</span>
+                                    </label>
+                                    <label for="kharkiv" class="label-checkmark">
+                                        <input type="radio" class="checkmark" id="kharkiv" name="city"
+                                               value="Харків">
+                                        <span class="check-mark"></span>
+                                        <span class="">Харків</span>
+                                    </label>
+                                    <label for="lutsk" class="label-checkmark">
+                                        <input type="radio" class="checkmark" id="lutsk" name="city"
+                                               value="Луцьк">
+                                        <span class="check-mark"></span>
+                                        <span class="">Луцьк</span>
+                                    </label>
+                                    <label for="uzhhorod" class="label-checkmark">
+                                        <input type="radio" class="checkmark" id="uzhhorod" name="city"
+                                               value="Ужгород">
+                                        <span class="check-mark"></span>
+                                        <span class="">Ужгород</span>
+                                    </label>
+                                    <label for="odesa" class="label-checkmark">
+                                        <input type="radio" class="checkmark" id="odesa" name="city"
+                                               value="Одеса">
+                                        <span class="check-mark"></span>
+                                        <span class="">Одеса</span>
+                                    </label>
+                                </div>
+                                <div class="another-city">
+                                    <a href="#" class="btn-city">Інше місто</a><span class="city"></span>
+                                </div>
+                                <div class="form__footer">
+                                    <button type="submit" class="btn_submit btn btn_main" >Відправити запит
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </form>
                 </div>
+                <div class="thanks-you-page">
+                    <div class="icon"></div>
+                    <h4 class="title-md">Ваш запит успішно прийнято</h4>
+                    <div class="text-sm">
+                        Будь ласка очікуйте. Протягом 15 хвилин наші менеджери з вами звяжуться для уточнення питань.
+                    </div>
+                    <button class="btn btn_stroke btn_close-thanks">Закрити вікно</button>
+
+                </div>
             </div>
-            <div class="backdrop" style="display: block; z-index: 300;"></div>
+            <div class="backdrop"></div>
             <!---------------------------------------------------------------->
 
             <div class="description">pages pagination</div>
@@ -1046,3 +1107,8 @@
 
 </body>
 </html>
+
+
+
+
+
