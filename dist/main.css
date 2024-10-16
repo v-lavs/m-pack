@@ -1328,6 +1328,22 @@ label.label-checkmark input {
   overflow: auto;
 }
 
+.sidebar__overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 200;
+  pointer-events: none;
+}
+
+.sidebar__overlay.show,
+.sidebar__overlay.el-visible {
+  background: rgba(0, 0, 0, 0.45);
+}
+
 .sidebar__item {
   padding: 16px 24px;
   border-bottom: 1px solid #F3F3F3;

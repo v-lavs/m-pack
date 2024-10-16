@@ -3,14 +3,14 @@
 * */
 
 // CUSTOM SCRIPTS
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
 
 // MOBILE MENU
     const sidebar = document.querySelector('.sidebar');
     const headerSbOp = document.querySelector('.header');
     const btnBurger = document.querySelector('.btn-burger');
     const menuLinks = document.querySelectorAll('.sidebar .menu__link');
-    const overlay = document.querySelector('.backdrop');
+    const overlay = document.querySelector('.sidebar__overlay');
     const btnCallSb = document.querySelector('.btn_call');
 
     btnBurger.addEventListener('click', function (e) {
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const closePopup = () => {
         popupCont.classList.remove('open_modal');
         backdrop.classList.remove('el-visible');
-        if(window.clearContactForm) {
+        if (window.clearContactForm) {
             window.clearContactForm();
         }
     }
@@ -312,6 +312,17 @@ document.addEventListener('DOMContentLoaded', function(){
             });
         })
     }
+//    SIDEBAR HOVER OVERLAY
+    document.querySelectorAll('.sidebar__nav .dropdown').forEach(function (element) {
+        element.addEventListener('mouseenter', function () {
+            document.querySelector('.sidebar__overlay').classList.add('show');
+        });
+
+        element.addEventListener('mouseleave', function () {
+            document.querySelector('.sidebar__overlay').classList.remove('show');
+        });
+    });
+
 });
 
 
