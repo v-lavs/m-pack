@@ -3,8 +3,7 @@
 * */
 
 // CUSTOM SCRIPTS
-
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function(){
 
 // MOBILE MENU
     const sidebar = document.querySelector('.sidebar');
@@ -200,6 +199,9 @@ $(document).ready(function () {
     const closePopup = () => {
         popupCont.classList.remove('open_modal');
         backdrop.classList.remove('el-visible');
+        if(window.clearContactForm) {
+            window.clearContactForm();
+        }
     }
 
     contactsClose.addEventListener('click', closePopup);
@@ -208,6 +210,7 @@ $(document).ready(function () {
 
 //    MULTI STEP FORM
     const msForm = document.querySelector('.multi-step-form');
+
     if (msForm) {
         let activeIndex = 0;
         const stepsCircle = msForm.querySelectorAll('.progress-step');
@@ -216,36 +219,59 @@ $(document).ready(function () {
         const btnsNext = msForm.querySelectorAll('.btn_next');
         const prevBtns = msForm.querySelectorAll('.form__nav-link');
 
+        const thYouPage = msForm.querySelector('.thanks-you-page');
+
         stepsCircle[activeIndex].classList.add('progress-step_active');
         stepContent[activeIndex].classList.add('active');
         prevBtns[activeIndex].classList.add('show');
 
+        const goToStep = (activeIndex) => {
+            stepContent.forEach(el => el.classList.remove('active'))
+
+            stepsCircle.forEach((el, index) => {
+                if (index > activeIndex) {
+                    el.classList.remove('progress-step_active')
+                } else {
+                    el.classList.add('progress-step_active')
+                }
+            })
+
+            prevBtns.forEach((el, index) => {
+                if (index > activeIndex) {
+                    el.classList.remove('show');
+                } else {
+                    el.classList.add('show');
+                }
+            })
+
+            const activeContent = stepContent[activeIndex];
+            if (activeContent) {
+                activeContent.classList.add('active')
+            }
+        }
+
+        window.clearContactForm = () => {
+            msForm.reset();
+            activeIndex = 0;
+            goToStep(activeIndex);
+            thYouPage.classList.remove('show');
+        }
+
+
         btnsNext.forEach(btn => btn.addEventListener(
             'click', (e) => {
-                if(activeIndex + 1 < stepContent.length) {
-                    activeIndex = activeIndex + 1;
-                    stepContent.forEach(el => el.classList.remove('active'))
-
-                    const activeContent = stepContent[activeIndex];
-                    const activeCircle = stepsCircle[activeIndex];
-                    if (activeContent) {
-                        activeContent.classList.add('active')
-                    }
-                    if (activeCircle) {
-                        activeCircle.classList.add('progress-step_active')
-                    }
-                    prevBtns.forEach((el, index) => {
-                        if (index <= activeIndex) {
-                            el.classList.add('show');
-                        } else {
-                            el.classList.remove('show');
-                        }
-                    })
+                activeIndex = activeIndex + 1;
+                if (activeIndex < stepContent.length) {
+                    goToStep(activeIndex);
                 }
 
-                if(e.target.type === 'submit') {
-                    msForm.reset();
-                    closePopup();
+                if (e.target.type === 'submit') {
+                    e.preventDefault();
+
+                    thYouPage.classList.add('show');
+                    setTimeout(() => {
+                        closePopup();
+                    }, 3000)
                 }
             }
         ));
@@ -254,44 +280,32 @@ $(document).ready(function () {
             'click', (e) => {
                 activeIndex = Array.from(prevBtns).findIndex(el => el === e.target);
 
-                stepContent.forEach(el => el.classList.remove('active'))
-
-                stepsCircle.forEach((el, index) => {
-                    if (index > activeIndex) {
-                        el.classList.remove('progress-step_active')
-                    } else {
-                        el.classList.add('progress-step_active')
-                    }
-                })
-
-                prevBtns.forEach((el, index) => {
-                    if (index > activeIndex) {
-                        el.classList.remove('show');
-                    } else {
-                        el.classList.add('show');
-                    }
-                })
-
-                const activeContent = stepContent[activeIndex];
-                if (activeContent) {
-                    activeContent.classList.add('active')
-                }
+                goToStep(activeIndex);
             }
         ));
 
         msForm.querySelectorAll('.js-form-field').forEach(el => {
-            el.addEventListener('input', (e)=> {
+            el.addEventListener('input', (e) => {
                 const activeSetControls = stepContent[activeIndex].querySelectorAll('.js-form-field');
                 const submitBtn = stepContent[activeIndex].querySelector('.btn_next');
 
                 let disabled = true;
-                if(activeIndex === 0){
-                    disabled = Array.from(activeSetControls).filter(el => el.hasAttribute('required')).some(el => el.value ==='');
-                } else if(activeIndex === 1) {
+                if (activeIndex === 0) {
+                    disabled = Array.from(activeSetControls).filter(el => el.hasAttribute('required')).some(el => el.value === '');
+                } else if (activeIndex === 1) {
                     disabled = !Array.from(stepContent[activeIndex].querySelectorAll('[type="checkbox"]')).some(el => el.checked)
-                } else if(activeIndex === 2) {
+                } else if (activeIndex === 2) {
+                    const otherCity = msForm.querySelector('[name="other_city"]');
+                    if (otherCity === e.target) {
+                        stepContent[activeIndex].querySelectorAll('[type="radio"]').forEach(el => el.checked = false)
+                    } else {
+                        otherCity.value = '';
+                    }
+
                     disabled = !Array.from(stepContent[activeIndex].querySelectorAll('[type="radio"]')).some(el => el.checked) &&
-                        msForm.querySelector('[name="other_city"]').value === '';
+                        otherCity.value === '';
+
+                    console.log(msForm.querySelector('[name="other_city"]'))
                 }
 
                 submitBtn.disabled = disabled

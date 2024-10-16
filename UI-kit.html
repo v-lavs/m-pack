@@ -790,6 +790,7 @@
                             <span data-stepId="2" class="progress-step">2</span>
                             <span data-stepId="3" class="progress-step">3</span>
                         </div>
+
                         <div class="form__content">
                             <div class="popup__nav">
                                 <a href="#" data-index="0" class="form__nav-link">Контактні дані</a>
@@ -809,7 +810,7 @@
                                                required/>
                                     </label>
                                     <label for="phone">
-                                        <input class="input js-form-field" type="email" name="email" id="phone"
+                                        <input class="input js-form-field" type="tel" name="email" id="phone"
                                                placeholder="Номер телефону"
                                                required/>
                                     </label>
@@ -888,7 +889,7 @@
                                     </label>
                                 </div>
 
-                                <input type="input" class="input" name="other_city" placeholder="Інше місто">
+                                <input type="text" class="input js-form-field" name="other_city" placeholder="Інше місто">
 
                                 <div class="form__footer">
                                     <button type="submit" class="btn_next btn_submit btn btn_main" disabled>
@@ -897,17 +898,19 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="thanks-you-page">
+                            <div class="icon"></div>
+                            <h4 class="title-md">Ваш запит успішно прийнято</h4>
+                            <div class="text-sm">
+                                Будь ласка очікуйте. Протягом 15 хвилин наші менеджери з вами звяжуться для уточнення питань.
+                            </div>
+                            <button class="btn btn_stroke btn_close-thanks">Закрити вікно</button>
+                        </div>
                     </form>
-                </div>
-                <div class="thanks-you-page">
-                    <div class="icon"></div>
-                    <h4 class="title-md">Ваш запит успішно прийнято</h4>
-                    <div class="text-sm">
-                        Будь ласка очікуйте. Протягом 15 хвилин наші менеджери з вами звяжуться для уточнення питань.
-                    </div>
-                    <button class="btn btn_stroke btn_close-thanks">Закрити вікно</button>
 
                 </div>
+
             </div>
             <div class="backdrop"></div>
             <!---------------------------------------------------------------->
