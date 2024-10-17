@@ -194,15 +194,7 @@
     background-image: url(../assets/img/slider-arrow-grey.svg);
   }
 }
-.baguetteBox-button#next-button,
-.baguetteBox-button#previous-button{
-  height: 44px;
-  border-radius: 50%;
-}
-.baguetteBox-button#next-button svg,
-.baguetteBox-button#previous-button svg{
-  transform: translateY(-15%) scale(.25);
-}
+
 @include respond-to($sm){
   .slider-gallery2{
     padding-bottom: 70px;
@@ -213,4 +205,25 @@
       transform: none;
     }
   }
+}
+
+.baguetteBox-button#next-button,
+.baguetteBox-button#previous-button{
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(116, 139, 134, .5);
+}
+.baguetteBox-button#next-button svg,
+.baguetteBox-button#previous-button svg{
+  transform: translateY(-15%) scale(.25);
+}
+.baguetteBox-button#close-button {
+  width: 24px;
+  height: 24px;
+}
+.baguetteBox-button svg {
+  transform: scale(.75);
+}
+.baguetteBox-button:focus, .baguetteBox-button:hover {
+  background-color: rgba(116, 139, 134, .9);
 }

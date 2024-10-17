@@ -656,11 +656,26 @@ body {
 .baguetteBox-button#previous-button {
   height: 44px;
   border-radius: 50%;
+  background-color: rgba(116, 139, 134, 0.5);
 }
 
 .baguetteBox-button#next-button svg,
 .baguetteBox-button#previous-button svg {
   transform: translateY(-15%) scale(0.25);
+}
+
+.baguetteBox-button#close-button {
+  width: 24px;
+  height: 24px;
+}
+
+.baguetteBox-button svg {
+  transform: scale(0.75);
+}
+
+.baguetteBox-button:focus,
+.baguetteBox-button:hover {
+  background-color: rgba(116, 139, 134, 0.9);
 }
 
 .accordion {
