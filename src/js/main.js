@@ -136,37 +136,50 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     if (document.querySelector('.slider-4-col')) {
         const slider4Col = new Swiper('.slider-4-col', {
-            slidesPerView: 4,
+            slidesPerView: 1,
             pagination: {
                 el: '.slider-4-col .swiper-pagination',
                 clickable: true,
             },
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: ".slider-gallery2 .swiper-button-next",
+                prevEl: ".slider-gallery2 .swiper-button-prev",
             },
             breakpoints: {
                 577: {
-                    slidesPerView: 3,
+                    slidesPerView: 2,
                     spaceBetween: 16
                 },
                 767: {
+                    slidesPerView: 3,
+                    spaceBetween: 16
+                },
+                991: {
                     slidesPerView: 4,
                     spaceBetween: 16
                 }
             },
         });
     }
+    if (document.querySelector('.slider-gallery2')) {
+        const sliderGallery2 = new Swiper('.slider-gallery2 ', {
+            spaceBetween: 16,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+        });
+    }
     window.addEventListener('load', function () {
-        if ($('.gallery').length > 0) {
-            $('.gallery a').click(function (e) {
-                e.preventDefault();
-            });
+        if (document.querySelector('.gallery')) {
             baguetteBox.run('.gallery', {});
         }
-    })
+        if (document.querySelector('.gallery2')) {
 
-
+            baguetteBox.run('.gallery2', {});
+        }
+    });
     //TABS
     const tabLinks = document.querySelectorAll('.tabs__nav-link');
     const tabContents = document.querySelectorAll('.tab-content');

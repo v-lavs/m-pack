@@ -526,6 +526,12 @@ body {
   padding-bottom: 72px;
 }
 
+.swiper-slide img {
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+}
+
 .wrap-green-slider {
   background-color: #F7FBF6;
   padding: 24px;
@@ -599,6 +605,62 @@ body {
   font-weight: 500;
   color: #6A6A6A;
   margin-bottom: 8px;
+}
+
+.slider-gallery2 {
+  padding-bottom: 0;
+}
+
+.slider-gallery2 .img-wrap {
+  padding-top: 43.25%;
+  min-height: 320px;
+  position: relative;
+}
+
+.slider-gallery2 .swiper-slide img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.slider-gallery2 .swiper-button-next,
+.slider-gallery2 .swiper-button-prev {
+  width: 64px;
+  height: 64px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: auto;
+  bottom: auto;
+  background-color: #F7FBF6;
+  border-radius: 50%;
+  color: #6A6A6A;
+}
+
+.slider-gallery2 .swiper-button-prev {
+  left: 0;
+  right: auto;
+}
+
+.slider-gallery2 .swiper-button-prev:before,
+.slider-gallery2 .swiper-button-next:before {
+  background-image: url(../assets/img/slider-arrow-grey.svg);
+}
+
+.baguetteBox-button#next-button,
+.baguetteBox-button#previous-button {
+  height: 44px;
+  border-radius: 50%;
+}
+
+.baguetteBox-button#next-button svg,
+.baguetteBox-button#previous-button svg {
+  transform: translateY(-15%) scale(0.25);
 }
 
 .accordion {
