@@ -643,7 +643,7 @@ body {
 }
 
 .slider-gallery2 .swiper-button-prev {
-  left: 0;
+  left: 20px;
   right: auto;
 }
 
@@ -1910,6 +1910,17 @@ label.label-checkmark input {
 }
 
 @media only screen and (max-width: 576px) {
+  .slider-gallery2 {
+    padding-bottom: 70px;
+  }
+
+  .slider-gallery2 .swiper-button-next,
+  .slider-gallery2 .swiper-button-prev {
+    top: auto;
+    bottom: 0;
+    transform: none;
+  }
+
   .list-col2__item {
     width: 100%;
   }
