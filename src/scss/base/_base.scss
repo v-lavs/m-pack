@@ -104,28 +104,57 @@ body {
   }
 }
 
+.list-with-counter {
+  .list__item {
+    position: relative;
+    display: flex;
+    min-height: 32px;
+    align-items: center;
+    padding-left: 48px;
+    counter-increment: section;
+    margin-bottom: 16px;
 
-
-@include respond-to($xl) {
-
-}
-
-@include respond-to($lg) {
-  .wrapper {
-    padding-left: 0;
+    &:before {
+      content: counter(section, decimal-leading-zero);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #FFFFFF;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      left: 0;
+      top: 0;
+      font-size: 12px;
+      line-height: 16px;
+      border-radius: 50%;
+      letter-spacing: 0.005em;
+      color: #45655D;
+      border: 1px solid #748B86;
+    }
   }
-  .main {
-    padding-top: 80px;
-  }
 }
 
-@include respond-to($sm) {
-
-}
-
-@include respond-to($xs) {
-
-}
+//@include respond-to($xl) {
+//
+//}
+//
+//@include respond-to($lg) {
+//  .wrapper {
+//    padding-left: 0;
+//  }
+//  .main {
+//    padding-top: 80px;
+//  }
+//}
+//
+//@include respond-to($sm) {
+//
+//}
+//
+//@include respond-to($xs) {
+//
+//}
 
 
 
