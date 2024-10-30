@@ -113,7 +113,7 @@ a:hover {
 }
 
 body {
-  font: 400 16px/1.4 "e-Ukraine", sans-serif;
+  font: 400 16px/1.5 "e-Ukraine", sans-serif;
   color: #2e3540;
   background-color: #FFFFFF;
   scroll-behavior: smooth;
@@ -260,7 +260,7 @@ body {
 
 /* new style 25.10.24  */
 
-.heading._withe_bg,
+.heading_withe_bg,
 .box-text_bottom {
   display: flex;
   align-items: flex-end;
@@ -293,26 +293,12 @@ body {
   margin-bottom: 8px;
 }
 
-.heading._withe_bg .text_bottom h2:last-child {
+.heading_withe_bg .text_bottom h2:last-child {
   margin-bottom: 0;
 }
 
-.v_block-tags {
-  background-color: transparent;
-}
-
-.v_tags__item {
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0.005em;
-  color: #FFFFFF;
-  text-align: center;
-  padding: 15px 16px;
-  background-color: transparent;
-  border: 1px solid #FFFFFF;
-  border-radius: 100px;
+.heading_withe_bg .gdlr-core-pbf-column-content {
+  margin-left: 0;
 }
 
 .menu {
@@ -736,7 +722,81 @@ body {
 }
 
 .accordion {
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.accordion .open-panel {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  background-color: #F7FBF6;
+}
+
+.accordion .open-panel:after,
+.accordion .open-panel:before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  top: 50%;
+  background-color: #6A6A6A;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.accordion .open-panel:after {
+  width: 14px;
+  height: 2px;
+}
+
+.accordion .open-panel:before {
+  width: 2px;
+  height: 14px;
+  transition: opacity .35s;
+}
+
+.accordion .panel {
   width: 100%;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+}
+
+.accordion .panel__heading {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  position: relative;
+  transition: .7s;
+}
+
+.accordion .panel__title {
+  font-size: 24px;
+  font-weight: 400;
+  color: #6A6A6A;
+  padding-right: 94px;
+}
+
+.accordion .panel-collapse {
+  padding-top: 8px;
+  padding-right: 94px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.accordion .panel-collapse__body p {
+  color: #6A6A6A;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.accordion .panel__heading.open .open-panel:before {
+  opacity: 0;
 }
 
 .pagination {

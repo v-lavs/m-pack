@@ -336,6 +336,23 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    document.querySelectorAll('#accordion .panel__heading').forEach((heading) => {
+        heading.addEventListener('click', function () {
+            const isOpen = this.classList.contains('open');
+            const allPanels = document.querySelectorAll('#accordion .panel__heading');
+            const allContents = document.querySelectorAll('.panel-collapse');
+
+            allPanels.forEach(panel => panel.classList.remove('open'));
+            allContents.forEach(content => content.style.maxHeight = null);
+
+            if (!isOpen) {
+                this.classList.add('open');
+                const panelContent = this.nextElementSibling;
+                panelContent.style.maxHeight = panelContent.scrollHeight + 'px';
+            }
+        });
+    });
+
 });
 
 
