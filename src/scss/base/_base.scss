@@ -151,6 +151,17 @@ body {
   z-index: 1;
 }
 
+.list-icon-v.gdlr-core-icon-list-item ul li{
+  display: flex;
+  align-items: center;
+}
+.list-icon-v.gdlr-core-icon-list-item .gdlr-core-icon-list-image{
+  flex-shrink: 0;
+}
+.gdlr-core-pbf-wrapper.counter-about-v {
+  color: #fff;
+}
+
 //@include respond-to($xl) {
 //
 //}
