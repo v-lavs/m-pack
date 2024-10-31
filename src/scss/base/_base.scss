@@ -200,3 +200,8 @@ body {
   }
 }
 
+@include respond-to($lg) {
+  .wrapper{
+    padding-left: 0;
+  }
+}
