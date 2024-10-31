@@ -129,21 +129,11 @@
       &:hover {
         color: #C1E1B5;
       }
-
     }
-
     svg {
       width: 100%;
       height: auto;
     }
-  }
-
-}
-
-
-@include respond-to($lg) {
-  .footer {
-
   }
 }
 
