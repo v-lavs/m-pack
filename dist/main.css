@@ -218,7 +218,7 @@ body {
   height: 24px;
 }
 
-.list-with-counter .list__item {
+.list-with-counter ul li {
   position: relative;
   display: flex;
   min-height: 32px;
@@ -228,7 +228,7 @@ body {
   margin-bottom: 16px;
 }
 
-.list-with-counter .list__item:before {
+.list-with-counter ul li:before {
   content: counter(section, decimal-leading-zero);
   display: flex;
   justify-content: center;

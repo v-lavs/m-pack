@@ -105,7 +105,7 @@ body {
 }
 
 .list-with-counter {
-  .list__item {
+  ul li{
     position: relative;
     display: flex;
     min-height: 32px;
@@ -211,3 +211,4 @@ body {
     padding-left: 0;
   }
 }
+
