@@ -1,66 +1,111 @@
 /* new style 25.10.24  */
 
 .heading_withe_bg,
-.box-text_bottom{
-  display:flex;
+.box-text_bottom {
+  display: flex;
   align-items: flex-end;
 }
 
-.box-text_bottom  .gdlr-core-pbf-column-content {
-  flex-grow:1;
-}
-
-.box-text_bottom  .grid__text h3{
+.box-text_bottom .grid__text h3 {
   font-size: 22px;
   line-height: 28px;
-  margin-bottom:4px;
-}
-.box-text_bottom  .grid__text p{
-  margin-bottom:0;
+  margin-bottom: 4px;
 }
 
-.realfactory-body p:last-of-type{
-  margin-bottom:0;
+.box-text_bottom .grid__text p {
+  margin-bottom: 0;
 }
 
-.realfactory-body  h2{
-  font-weight:400;
-  margin-bottom:16px;
+.realfactory-body p:last-of-type {
+  margin-bottom: 0;
 }
 
-.realfactory-body .heading_withe_bg h2{
-  margin-bottom:8px;
+.realfactory-body h2 {
+  font-weight: 400;
+  margin-bottom: 16px;
 }
-.heading_withe_bg .text_bottom h2:last-child{
-  margin-bottom:0;
+
+.realfactory-body .heading_withe_bg h2 {
+  margin-bottom: 8px;
 }
-.heading_withe_bg .gdlr-core-pbf-column-content{
-  margin-left:0;
+
+.heading_withe_bg .text_bottom h2:last-child {
+  margin-bottom: 0;
 }
+
+.heading_withe_bg .gdlr-core-pbf-column-content {
+  margin-left: 0;
+}
+
 .gdlr-core-left-align.btn-text-al .gdlr-core-content {
   text-align: center;
 }
+
 @media only screen and (max-width: 767px) {
   .footer-top-block .ftb-text h4,
   .realfactory-body h2,
   .realfactory-body .heading_withe_bg h2 {
-    font-size: 24px!important;
+    font-size: 24px !important;
   }
   .page-title {
-    font-size:32px;
+    font-size: 32px;
   }
   .page-title.small-title {
     font-size: 24px;
     line-height: 32px;
   }
-  .page__header .text{
+  .page__header .text {
     font-size: 16px;
     line-height: 24px;
   }
   .counter-about-v .gdlr-core-counter-item {
     text-align: center;
   }
-  .counter_v .gdlr-core-pbf-column-content{
+  .counter_v .gdlr-core-pbf-column-content {
     margin-left: auto;
   }
+}
+
+.gdlr-core-pbf-column-content-margin.heading_withe_bg {
+  position: relative;
+}
+
+.gdlr-core-pbf-column-content-margin.heading_withe_bg:before {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(6, 6, 6, .65);
+  transition: 1s;
+  z-index: 1;
+}
+
+.gdlr-core-pbf-column-content-margin.heading_withe_bg .gdlr-core-pbf-column-content {
+  position: relative;
+  z-index: 2;
+}
+
+.box-text_bottom {
+  position: relative;
+}
+
+.box-text_bottom:before {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(6, 6, 6, .65);
+  transition: 1s;
+  z-index: 1;
+}
+.box-text_bottom .gdlr-core-pbf-column-content {
+  flex-grow: 1;
+  position: relative;
+  z-index: 1;
 }
