@@ -114,7 +114,7 @@ a:hover {
 
 body {
   font: 400 16px/1.5 "e-Ukraine", sans-serif;
-  color: #2e3540;
+  color: #6A6A6A;
   background-color: #FFFFFF;
   scroll-behavior: smooth;
 }
@@ -2134,6 +2134,36 @@ label.label-checkmark input {
   .copyright {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-top-block .ftb-text h4,
+  .realfactory-body h2,
+  .realfactory-body .heading_withe_bg h2 {
+    font-size: 24px !important;
+  }
+
+  .page-title {
+    font-size: 32px;
+  }
+
+  .page-title.small-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .page__header .text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .counter-about-v .gdlr-core-counter-item {
+    text-align: center;
+  }
+
+  .counter_v .gdlr-core-pbf-column-content {
+    margin-left: auto;
   }
 }
 
