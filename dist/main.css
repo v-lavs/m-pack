@@ -401,6 +401,10 @@ body {
   margin-left: 0;
 }
 
+.gdlr-core-left-align.btn-text-al .gdlr-core-content {
+  text-align: center;
+}
+
 .menu {
   padding-top: 8px;
   padding-bottom: 8px;
@@ -1750,7 +1754,7 @@ label.label-checkmark input {
   right: 0;
   bottom: 0;
   top: 0;
-  background-color: rgba(6, 6, 6, 0.45);
+  background-color: rgba(6, 6, 6, 0.65);
   transition: 1s;
   z-index: 1;
 }
