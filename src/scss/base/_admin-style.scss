@@ -64,6 +64,13 @@
   .counter_v .gdlr-core-pbf-column-content {
     margin-left: auto;
   }
+  .gdlr-core-icon-list-item.list-img-v ul li {
+    display: flex;
+    flex-direction: column;
+  }
+  .gdlr-core-icon-list-item.list-img-v .gdlr-core-icon-list-caption {
+    font-size: 16px;
+  }
 }
 
 .gdlr-core-pbf-column-content-margin.heading_withe_bg {
@@ -104,8 +111,20 @@
   transition: 1s;
   z-index: 1;
 }
+
 .box-text_bottom .gdlr-core-pbf-column-content {
   flex-grow: 1;
   position: relative;
   z-index: 1;
+}
+
+.gdlr-core-icon-list-item.list-img-v ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-dynamic-content{
+  ul{
+    list-style-type:square;
+  }
 }

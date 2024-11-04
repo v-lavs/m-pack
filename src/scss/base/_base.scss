@@ -105,7 +105,7 @@ body {
 }
 
 .list-with-counter {
-  ul li{
+  ul li {
     position: relative;
     display: flex;
     min-height: 32px;
@@ -211,4 +211,44 @@ body {
     padding-left: 0;
   }
 }
+.dynamic-content strong{
+  font-weight:500;
+}
+.dynamic-content ol {
+  position: relative;
+  padding-left: 24px;
+  counter-reset: list;
+}
 
+.dynamic-content ol li:before {
+  position: absolute;
+  left: 4px;
+  counter-increment: list;
+  content: counters(list, '. ') '.';
+}
+
+.dynamic-content ol,
+.dynamic-content ul {
+  margin-bottom:24px;
+}
+
+.dynamic-content ol:last-child,
+.dynamic-content ul:last-child {
+  margin-bottom:0;
+}
+.dynamic-content ul > li {
+  position: relative;
+  padding-left: 24px;
+}
+
+.dynamic-content ul li:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #6A6A6A;
+  left: 4px;
+  top: 9px;
+}
