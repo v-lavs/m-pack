@@ -5,6 +5,42 @@
 // CUSTOM SCRIPTS
 document.addEventListener('DOMContentLoaded', function () {
 
+// SCROLL TO ANCHOR
+    function smoothScrollToAnchor(selector, headerSelector, headerPageSelector) {
+        document.querySelectorAll(selector).forEach((element) => {
+            element.addEventListener('click', function (event) {
+                const anchor = this.getAttribute('href');
+
+                if (anchor.startsWith('#') && anchor !== '#') {
+                    event.preventDefault();
+                    console.log(anchor);
+                    const targetElement = document.querySelector(anchor);
+                    const headerElement = document.querySelector(headerSelector);
+                    const headerPageElement = document.querySelector(headerPageSelector);
+                    const headerHeight = headerElement ? headerElement.offsetHeight : 0;
+                    const headerPageHeight = headerPageElement ? headerPageElement.offsetHeight : 0;
+
+                    if (targetElement) {
+                        function getElementOffsetTop(element) {
+                            const rect = element.getBoundingClientRect();
+                            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                            return rect.top + scrollTop;
+                        }
+                        const targetPosition = getElementOffsetTop(targetElement) - headerHeight - headerPageHeight;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    }
+
+    smoothScrollToAnchor('.scroll-to-anchor a', '.header', '.page__header');
+
+
 // MOBILE MENU
     const sidebar = document.querySelector('.sidebar');
     const headerSbOp = document.querySelector('.header');
@@ -67,12 +103,14 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener("scroll", () => {
         updateStickyBannerOffset()
 
-        if (window.scrollY > 0) {
-            bannerThumb.classList.add("hide-thumb");
-            bannerTitle.classList.add("small-title");
-        } else {
-            bannerThumb.classList.remove("hide-thumb");
-            bannerTitle.classList.remove("small-title");
+        if (bannerThumb && bannerTitle) {
+            if (window.scrollY > 0) {
+                bannerThumb.classList.add("hide-thumb");
+                bannerTitle.classList.add("small-title");
+            } else {
+                bannerThumb.classList.remove("hide-thumb");
+                bannerTitle.classList.remove("small-title");
+            }
         }
     });
 

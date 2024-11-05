@@ -362,6 +362,27 @@ body {
   top: 9px;
 }
 
+.scroll-to-anchor ul li {
+  margin-bottom: 8px;
+}
+
+.scroll-to-anchor ul li:last-child {
+  margin-bottom: 0;
+}
+
+.scroll-to-anchor ul li:before {
+  width: 8px;
+  height: 8px;
+  border-radius: 0;
+  left: 0;
+  top: 7px;
+  background-color: #F3F5F5;
+}
+
+.scroll-to-anchor a:hover {
+  color: #52B95F;
+}
+
 .display-lg {
   font-size: 45px;
   line-height: 52px;
@@ -497,6 +518,11 @@ body {
 
 .article-dynamic-content ul {
   list-style-type: square;
+}
+
+.gdlr-core-pbf-column-content-margin.gdlr-core-js.hotspot {
+  width: 30%;
+  margin: 0 auto;
 }
 
 .menu {
