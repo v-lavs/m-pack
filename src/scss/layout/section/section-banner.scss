@@ -26,8 +26,8 @@
       z-index: 1;
     }
 
-    &.hide-thumb:before {
-      background-color: $medium-green;
+    &.elephant-green-hide:before {
+      display: none;
     }
   }
 }

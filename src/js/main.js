@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateStickyBannerOffset() {
         const pageBanner = document.querySelector('.section-banner');
+
         if (pageBanner) {
             const bannerH = pageBanner.offsetHeight;
             const stickyH = stickyElement.offsetHeight;

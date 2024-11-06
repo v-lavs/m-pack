@@ -1883,8 +1883,8 @@ label.label-checkmark input {
   z-index: 1;
 }
 
-.section-banner__thumb.hide-thumb:before {
-  background-color: #27A737;
+.section-banner__thumb.elephant-green-hide:before {
+  display: none;
 }
 
 .section-banner__thumb img,
