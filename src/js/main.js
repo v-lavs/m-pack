@@ -74,29 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 //STICKY HEADER PAGE
-//     const stickyElement = document.querySelector('.page__header');
-//     let stickyOffset = 0;
-//
-//     function updateStickyBannerOffset() {
-//         const pageBanner = document.querySelector('.section-banner');
-//
-//         if (pageBanner) {
-//             const bannerH = pageBanner.offsetHeight;
-//             const stickyH = stickyElement.offsetHeight;
-//
-//             stickyOffset = bannerH - stickyH;
-//
-//             if (window.pageYOffset >= stickyOffset) {
-//                 stickyElement.classList.add('sticky');
-//                 stickyOffset = stickyElement.offsetTop;
-//             } else {
-//                 stickyElement.classList.remove('sticky');
-//             }
-//         }
-//     }
-//
-//     window.addEventListener('resize', updateStickyBannerOffset);
-//     window.addEventListener('load', updateStickyBannerOffset);
+
     const stickyElement = document.querySelector('.page__header');
     let stickyOffset = 0;
 
