@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
         pagination: {
             el: '.swiper-info .swiper-pagination',
             clickable: true,
+            dynamicBullets: true,
         },
     });
 

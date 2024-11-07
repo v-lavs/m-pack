@@ -18,7 +18,14 @@
 .swiper-pagination-bullet-active {
   background-color: $medium-green;
 }
-
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
+  left: 0;
+  transform: none;
+}
+.swiper-pagination-bullets.swiper-pagination-bullets-dynamic > .swiper-pagination-bullet{
+  opacity: 1;
+}
 //navigation slider
 
 .swiper-button-next,
