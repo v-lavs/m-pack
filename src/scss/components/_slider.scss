@@ -18,14 +18,17 @@
 .swiper-pagination-bullet-active {
   background-color: $medium-green;
 }
-.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
-.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
+
+.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   left: 0;
   transform: none;
 }
-.swiper-pagination-bullets.swiper-pagination-bullets-dynamic > .swiper-pagination-bullet{
+
+.swiper-pagination-bullets.swiper-pagination-bullets-dynamic > .swiper-pagination-bullet {
   opacity: 1;
 }
+
 //navigation slider
 
 .swiper-button-next,
@@ -160,6 +163,7 @@
 
 .slider-gallery2 {
   padding-bottom: 0;
+
   .img-wrap {
     padding-top: 43.25%;
     min-height: 320px;
@@ -202,11 +206,25 @@
   }
 }
 
-@include respond-to($sm){
-  .slider-gallery2{
+@media only screen and (max-width: 767px) {
+  .swiper-button-next, .swiper-button-prev {
+    margin-top: 14px;
+  }
+  .swiper {
+    padding-bottom: 46px;
+  }
+  .realfactory-body h2.products__title.title-md{
+    font-weight:400;
+    font-size:16px!important;
+  }
+}
+
+@include respond-to($sm) {
+  .slider-gallery2 {
     padding-bottom: 70px;
+
     .swiper-button-next,
-    .swiper-button-prev{
+    .swiper-button-prev {
       top: auto;
       bottom: 0;
       transform: none;
@@ -215,22 +233,26 @@
 }
 
 .baguetteBox-button#next-button,
-.baguetteBox-button#previous-button{
+.baguetteBox-button#previous-button {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(116, 139, 134, .5);
 }
+
 .baguetteBox-button#next-button svg,
-.baguetteBox-button#previous-button svg{
+.baguetteBox-button#previous-button svg {
   transform: translateY(-15%) scale(.25);
 }
+
 .baguetteBox-button#close-button {
   width: 24px;
   height: 24px;
 }
+
 .baguetteBox-button svg {
   transform: scale(.75);
 }
+
 .baguetteBox-button:focus, .baguetteBox-button:hover {
   background-color: rgba(116, 139, 134, .9);
 }
