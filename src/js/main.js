@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                             return rect.top + scrollTop;
                         }
+
                         const targetPosition = getElementOffsetTop(targetElement) - headerHeight - headerPageHeight;
 
                         window.scrollTo({
@@ -235,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
             tabContents.forEach(content => content.classList.remove('active'));
             link.classList.add('active');
 
-            const targetId = link.getAttribute('href').substring(1);
+            const targetId = link.getAttribute('dataTarget').substring(1);
             document.getElementById(targetId).classList.add('active');
         });
     });
@@ -395,6 +396,26 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+    //TABLE COLLAPSE ROW
+    if (document.querySelector('.tech-charact__row')) {
+        const maxVisibleRows = 5;
+        const rows = document.querySelectorAll('.tech-charact__row');
+        const showMoreBtn = document.querySelector('.btn_more');
 
+        if (rows.length > maxVisibleRows) {
+            showMoreBtn.style.display = 'block';
+
+            rows.forEach((row, index) => {
+                if (index >= maxVisibleRows) {
+                    row.style.display = 'none';
+                }
+            });
+            showMoreBtn.addEventListener('click', function () {
+                rows.forEach(row => row.style.display = '');
+
+                showMoreBtn.style.display = 'none';
+            });
+        }
+    }
 });
 
