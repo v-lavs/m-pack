@@ -170,3 +170,24 @@
   font-size: 24px;
   width: 24px;
 }
+@media only screen and (max-width: 767px) {
+  body .gdlr-core-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .green-slider .swiper-slide {
+    padding-left: 0;
+    padding-top: 47px;
+  }
+  .gdlr-core-flexslider .flex-direction-nav li {
+    position: static;
+    margin: 0;
+  }
+  .gdlr-core-flexslider .flex-direction-nav {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0 32px;
+  }
+}
+
