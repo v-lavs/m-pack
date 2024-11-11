@@ -226,11 +226,32 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     //TABS
     const tabLinks = document.querySelectorAll('.tabs__nav-link');
-    const tabContents = document.querySelectorAll('.tab-content');
+
+    function findParent(el, parentClassName) {
+        if (!el) return document.body;
+        // Start from the current element
+        let ignoreClickOutside = el.classList.contains(parentClassName);
+        let parentEl = el.parentElement;
+
+        // Loop until we reach the top of the DOM
+        while (!ignoreClickOutside && parentEl) {
+            // Move up to the parent element
+            ignoreClickOutside = parentEl.classList.contains(parentClassName);
+            if (!ignoreClickOutside) {
+                parentEl = parentEl.parentElement;
+            }
+        }
+
+        return parentEl;
+    }
 
     tabLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
+            const parent = findParent(e.target, 'tabs');
+
+            const tabLinks = parent.querySelectorAll('.tabs__nav-link');
+            const tabContents = parent.querySelectorAll('.tab-content');
 
             tabLinks.forEach(link => link.classList.remove('active'));
             tabContents.forEach(content => content.classList.remove('active'));
