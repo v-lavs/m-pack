@@ -2111,6 +2111,7 @@ label.label-checkmark input {
 .post__meta {
   font-weight: 500;
   padding-bottom: 16px;
+  color: #060606;
 }
 
 .post__meta-item {
@@ -2143,6 +2144,7 @@ label.label-checkmark input {
 .post__title {
   color: #060606;
   transition: .35s;
+  margin-bottom: 0 !important;
 }
 
 .post__link {
