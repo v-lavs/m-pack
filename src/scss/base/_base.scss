@@ -203,6 +203,13 @@ body {
   .btn {
     width: 100%;
     max-width: 362px;
+
+    &:hover {
+      background-color:  #7DCA87;
+    }
+    &:active{
+      background-color: #83C36A;
+    }
   }
 }
 
@@ -211,9 +218,11 @@ body {
     padding-left: 0;
   }
 }
-.dynamic-content strong{
-  font-weight:500;
+
+.dynamic-content strong {
+  font-weight: 500;
 }
+
 .dynamic-content ol {
   position: relative;
   padding-left: 24px;
@@ -229,13 +238,14 @@ body {
 
 .dynamic-content ol,
 .dynamic-content ul {
-  margin-bottom:24px;
+  margin-bottom: 24px;
 }
 
 .dynamic-content ol:last-child,
 .dynamic-content ul:last-child {
-  margin-bottom:0;
+  margin-bottom: 0;
 }
+
 .dynamic-content ul > li {
   position: relative;
   padding-left: 24px;
@@ -253,13 +263,15 @@ body {
   top: 9px;
 }
 
-.scroll-to-anchor ul li{
+.scroll-to-anchor ul li {
   margin-bottom: 8px;
 }
-.scroll-to-anchor ul li:last-child{
+
+.scroll-to-anchor ul li:last-child {
   margin-bottom: 0;
 }
-.scroll-to-anchor ul li:before{
+
+.scroll-to-anchor ul li:before {
   width: 8px;
   height: 8px;
   border-radius: 0;
@@ -268,6 +280,6 @@ body {
   background-color: #F3F5F5;
 }
 
-.scroll-to-anchor a:hover{
+.scroll-to-anchor a:hover {
   color: #52B95F;
 }

@@ -318,6 +318,14 @@ body {
   max-width: 362px;
 }
 
+.footer-top-block .btn:hover {
+  background-color: #7DCA87;
+}
+
+.footer-top-block .btn:active {
+  background-color: #83C36A;
+}
+
 .dynamic-content strong {
   font-weight: 500;
 }
