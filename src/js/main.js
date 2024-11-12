@@ -224,6 +224,19 @@ document.addEventListener('DOMContentLoaded', function () {
     //         baguetteBox.run('.gallery2', {});
     //     }
     // });
+
+
+//     jQuery('body').on('click', '.tabs__nav-link', function(){
+//         console.log('good connection');
+
+//         jQuery(this).siblings('.tabs__nav-link').removeClass('active');
+//         jQuery(this).parent().parent().find('.tabs__content .tab-content').removeClass('active');
+
+//         jQuery(this).addClass('active');
+
+//         let targetId = jQuery(this).attr('dataTarget');
+//         jQuery(targetId).addClass('active');
+//     });
     //TABS
     const tabLinks = document.querySelectorAll('.tabs__nav-link');
 
