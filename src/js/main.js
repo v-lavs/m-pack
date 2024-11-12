@@ -186,8 +186,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 clickable: true,
             },
             navigation: {
-                nextEl: ".slider-gallery2 .swiper-button-next",
-                prevEl: ".slider-gallery2 .swiper-button-prev",
+                nextEl: ".slider-4-col .swiper-button-next",
+                prevEl: ".slider-4-col .swiper-button-prev",
             },
             breakpoints: {
                 577: {
@@ -209,21 +209,21 @@ document.addEventListener('DOMContentLoaded', function () {
         const sliderGallery2 = new Swiper('.slider-gallery2 ', {
             spaceBetween: 16,
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: ".slider-gallery2 .swiper-button-next",
+                prevEl: ".slider-gallery2 .swiper-button-prev",
             },
 
         });
     }
-    window.addEventListener('load', function () {
-        if (document.querySelector('.gallery')) {
-            baguetteBox.run('.gallery', {});
-        }
-        if (document.querySelector('.gallery2')) {
-
-            baguetteBox.run('.gallery2', {});
-        }
-    });
+    // window.addEventListener('load', function () {
+    //     if (document.querySelector('.gallery')) {
+    //         baguetteBox.run('.gallery', {});
+    //     }
+    //     if (document.querySelector('.gallery2')) {
+    //
+    //         baguetteBox.run('.gallery2', {});
+    //     }
+    // });
     //TABS
     const tabLinks = document.querySelectorAll('.tabs__nav-link');
 

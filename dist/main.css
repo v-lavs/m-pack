@@ -970,30 +970,15 @@ body {
   background-image: url(../assets/img/slider-arrow-grey.svg);
 }
 
-.baguetteBox-button#next-button,
-.baguetteBox-button#previous-button {
-  height: 44px;
-  border-radius: 50%;
-  background-color: rgba(116, 139, 134, 0.5);
+.slider-4-col .wrap-img {
+  display: flex;
 }
 
-.baguetteBox-button#next-button svg,
-.baguetteBox-button#previous-button svg {
-  transform: translateY(-15%) scale(0.25);
-}
-
-.baguetteBox-button#close-button {
-  width: 24px;
-  height: 24px;
-}
-
-.baguetteBox-button svg {
-  transform: scale(0.75);
-}
-
-.baguetteBox-button:focus,
-.baguetteBox-button:hover {
-  background-color: rgba(116, 139, 134, 0.9);
+.slider-4-col .swiper-slide img {
+  width: auto;
+  height: 120px;
+  margin: 0 auto;
+  display: inline-block;
 }
 
 .accordion {
