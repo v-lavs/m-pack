@@ -277,27 +277,73 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // POPUP
-    const popupCont = document.querySelector(".popup_contacts");
-    const btnCall = document.querySelector(".btn_call");
-    const contactsClose = document.querySelector('.popup_contacts .popup_close');
-    const backdrop = document.querySelector('.backdrop');
+//     const popupCont = document.querySelector(".popup_contacts");
+//     const btnCall = document.querySelector(".btn_call");
+//     const contactsClose = document.querySelector('.popup_close');
+//     const backdrop = document.querySelector('.backdrop');
+//
+//     btnCall.addEventListener('click', () => {
+//         popupCont.classList.add('open_modal');
+//         backdrop.classList.toggle('el-visible');
+//     });
+//
+//     const closePopup = () => {
+//         popupCont.classList.remove('open_modal');
+//         backdrop.classList.remove('el-visible');
+//         if (window.clearContactForm) {
+//             window.clearContactForm();
+//         }
+//     }
+//
+//     contactsClose.addEventListener('click', closePopup);
+//     backdrop.addEventListener('click', closePopup);
+//
+//     const popupLoc = document.querySelector(".popup_location");
+//     const triggerPopup = document.querySelector(".trigger-popup");
+//     const locClose = document.querySelector('.popup_close');
+//     const backdropL = document.querySelector('.backdrop');
+//
+//     triggerPopup.addEventListener('click', () => {
+//         popupLoc.classList.add('open_modal');
+//         backdropL.classList.toggle('el-visible');
+//     });
+//
+//     const closeLocPopup = () => {
+//         popupLoc.classList.remove('open_modal');
+//         backdropL.classList.remove('el-visible');
+//     }
+//
+//     popupLoc.addEventListener('click', closeLocPopup);
+//     backdropL.addEventListener('click', closeLocPopup);
+    const initPopup = (popupSelector, triggerSelector, backdropSelector) => {
+        const popup = document.querySelector(popupSelector);
+        const trigger = document.querySelector(triggerSelector);
+        const backdrop = document.querySelector('.backdrop');
+        const closeButton = popup.querySelector('.popup_close');
 
-    btnCall.addEventListener('click', () => {
-        popupCont.classList.add('open_modal');
-        backdrop.classList.toggle('el-visible');
-    });
-
-    const closePopup = () => {
-        popupCont.classList.remove('open_modal');
-        backdrop.classList.remove('el-visible');
-        if (window.clearContactForm) {
-            window.clearContactForm();
+        if (!popup || !trigger || !backdrop || !closeButton) {
+            console.warn("Один з елементів не знайдено", popupSelector, triggerSelector, backdropSelector);
+            return;
         }
-    }
+        const openPopup = () => {
+            popup.classList.add('open_modal');
+            backdrop.classList.add('el-visible');
+        };
 
-    contactsClose.addEventListener('click', closePopup);
-    backdrop.addEventListener('click', closePopup);
+        const closePopup = () => {
+            popup.classList.remove('open_modal');
+            backdrop.classList.remove('el-visible');
+            if (window.clearContactForm) {
+                window.clearContactForm();
+            }
+        };
+        trigger.addEventListener('click', openPopup);
+        closeButton.addEventListener('click', closePopup);
+        backdrop.addEventListener('click', closePopup);
+    };
 
+    initPopup('.popup_contacts', '.btn_call', '.backdrop');
+    initPopup('.popup_location', '.trigger-popup', '.backdrop');
 
 //    MULTI STEP FORM
     const msForm = document.querySelector('.multi-step-form');
@@ -403,6 +449,13 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         })
     }
+
+    const btnClosThanks = document.querySelector('.btn_close-thanks');
+
+    btnClosThanks.addEventListener('click', function () {
+        document.querySelector('.popup_contacts').classList.remove('open_modal');
+        document.querySelector('.backdrop').classList.remove('el-visible');
+    });
 //    SIDEBAR HOVER OVERLAY
     document.querySelectorAll('.sidebar__nav .dropdown').forEach(function (element) {
         element.addEventListener('mouseenter', function () {

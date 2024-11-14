@@ -1597,10 +1597,6 @@ body {
   color: #9B9B9B;
 }
 
-.popup__wrap-map {
-  background-color: sandybrown;
-}
-
 .popup__wrap-map svg {
   display: block;
   height: 100%;
