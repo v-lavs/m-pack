@@ -112,11 +112,16 @@ a:hover {
   text-decoration: none;
 }
 
+ul li {
+  letter-spacing: 0.0015em;
+}
+
 body {
   font: 400 16px/1.5 "e-Ukraine", sans-serif;
   color: #6A6A6A;
   background-color: #FFFFFF;
   scroll-behavior: smooth;
+  letter-spacing: 0.005em;
 }
 
 .wrapper {
@@ -570,6 +575,15 @@ body {
 .gdlr-core-flexslider .flex-direction-nav li a i {
   font-size: 24px;
   width: 24px;
+}
+
+.gdlr-core-page-builder-body p {
+  margin-bottom: 8px;
+}
+
+.gdlr-core-title-item .gdlr-core-title-item-title {
+  letter-spacing: 0;
+  line-height: 1.25;
 }
 
 .menu {
@@ -1515,8 +1529,83 @@ body {
 }
 
 .popup_location {
-  width: 740px;
+  max-width: 740px;
+  width: 100%;
   height: 472px;
+}
+
+.popup_location .popup__content {
+  display: flex;
+}
+
+.popup_location .left-side {
+  width: 36%;
+  max-width: 244px;
+  margin-right: 16px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.popup_location .right-side {
+  width: 64%;
+}
+
+.popup_location .btn {
+  width: 100%;
+}
+
+.popup_location .location-list {
+  height: 336px;
+  overflow: auto;
+}
+
+.popup_location .location-item a {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.001em;
+  padding: 14px 16px;
+  transition: .35s;
+}
+
+.popup_location .location-item a:hover {
+  background-color: #F7FBF6;
+  color: #52B95F;
+}
+
+.popup__map-info {
+  display: flex;
+  padding: 16px 0;
+}
+
+.popup__map-info .location__info {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.001em;
+  color: #383838;
+  flex-grow: 1;
+}
+
+.popup__map-info .location__contacts {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.0025em;
+  margin-left: 16px;
+  width: 64%;
+  color: #9B9B9B;
+}
+
+.popup__wrap-map {
+  background-color: sandybrown;
+}
+
+.popup__wrap-map svg {
+  display: block;
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
 }
 
 .form {

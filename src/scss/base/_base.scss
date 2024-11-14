@@ -1,8 +1,13 @@
+ul li{
+  letter-spacing: 0.0015em;
+}
+
 body {
   font: 400 16px/1.5 $main-font;
   color: #6A6A6A;
   background-color: #FFFFFF;
   scroll-behavior: smooth;
+  letter-spacing: 0.005em;
 }
 
 .wrapper {

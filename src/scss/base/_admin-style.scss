@@ -170,6 +170,14 @@
   font-size: 24px;
   width: 24px;
 }
+.gdlr-core-page-builder-body p{
+  margin-bottom:8px;
+}
+.gdlr-core-title-item .gdlr-core-title-item-title{
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
 @media only screen and (max-width: 767px) {
   body .gdlr-core-container {
     padding-left: 0;
