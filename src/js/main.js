@@ -504,5 +504,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
+
 });
 

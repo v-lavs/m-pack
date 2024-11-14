@@ -586,6 +586,40 @@ body {
   line-height: 1.25;
 }
 
+.gdlr-core-button-item.gdlr-core-item-pdlr.gdlr-core-item-pdb.gdlr-core-center-align.btn-play_v {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.gdlr-core-button-item.gdlr-core-item-pdlr.gdlr-core-item-pdb.gdlr-core-center-align.btn-play_v a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.gdlr-core-button-item.gdlr-core-item-pdlr.gdlr-core-item-pdb.gdlr-core-center-align.btn-play_v a:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 0 7px 11px;
+  border-color: transparent transparent transparent #FFFFFF;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
 .menu {
   padding-top: 8px;
   padding-bottom: 8px;
