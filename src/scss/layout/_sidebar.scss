@@ -9,13 +9,13 @@
   color: #9B9B9B;
   line-height: 20px;
   letter-spacing: 0.0025em;
-  padding-bottom: 88px;
+  padding-bottom: 32px;
   height: 100vh;
   z-index: 200;
   padding-top: 82px;
 
   &__inner {
-    max-height: calc(100vh - 154px);
+    max-height: calc(100vh - 100px);
     overflow: auto;
   }
 
@@ -25,12 +25,13 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background:rgba(0,0,0, 0);
+    background: rgba(0, 0, 0, 0);
     z-index: 200;
     pointer-events: none;
+
     &.show,
-    &.el-visible{
-      background:rgba(0,0,0, .45);
+    &.el-visible {
+      background: rgba(0, 0, 0, .45);
     }
   }
 
@@ -54,12 +55,9 @@
   }
 
   &__footer {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    padding-top: 16px;
     background-color: #fff;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #F3F3F3;
   }
 
   .btn_call {

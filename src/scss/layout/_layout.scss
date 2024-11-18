@@ -1,13 +1,14 @@
 
 .container {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
 
 @media screen and (min-width: 1281px){
-  max-width: 1340px;
-  padding: 0 120px;
+  max-width: 1200px;
+  padding: 0 15px;
 }
   @include respond-to($xl) {
+    width: 100%;
     max-width: 800px;
     padding: 0 30px;
 
@@ -20,7 +21,6 @@
     padding: 0 16px;
   }
 }
-
 
 
 
