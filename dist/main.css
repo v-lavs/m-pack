@@ -620,6 +620,11 @@ body {
   z-index: 1;
 }
 
+.page-title {
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
 .menu {
   padding-top: 8px;
   padding-bottom: 8px;
@@ -683,13 +688,13 @@ body {
 
 .sub-menu {
   position: fixed;
-  width: 300px;
+  width: 340px;
   background: #FFFFFF;
   padding: 16px 0;
   top: 0;
   bottom: 0;
   left: 0;
-  transform: translateX(100%);
+  transform: translateX(calc(100% - 40px));
   visibility: hidden;
   opacity: 0;
   transition: all 0.35s ease;

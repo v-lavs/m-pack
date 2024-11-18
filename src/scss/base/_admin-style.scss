@@ -237,3 +237,9 @@
   transform: translate(-50%, -50%);
   z-index: 1;
 }
+
+.page-title {
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
