@@ -243,24 +243,25 @@
   transition-timing-function: ease-in-out;
 }
 
-/* Для Webkit-браузерів */
+
+/* Для Webkit-браузерів*/
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #bfe8c5;
-  border-radius: 10px;
+  background: #7DCA87;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7DCA87;;
+  background:#27A737;
 }
 
 /* Для Firefox */
 html {
   scrollbar-width: thin;
-  scrollbar-color:#bfe8c5;
+  scrollbar-color: #7DCA87;
 }
+
 
 
