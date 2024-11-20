@@ -287,19 +287,8 @@ const  thumbNavBlock = document.querySelectorAll('.product-feature__nav');
             });
         } else {
          if (thumbNavBlock) {
-             thumbNavBlock.style.display = 'none';
+             tabThumbNav.forEach(block => block.style.display = 'none');
          }
-
-         // const targetId = link.getAttribute('data-target').replace('#', '');
-         // const targetElement = document.getElementById(targetId);
-
-         // if (targetElement) {
-         //
-         //     const mobileThumb = targetElement.querySelector('.product-feature__thumb-mob img');
-         //     if (mobileThumb) {
-         //         mobileThumb.src = link.getAttribute('data-src');
-         //     }
-         // }
      }
     });
 
