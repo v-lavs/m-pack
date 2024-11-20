@@ -2635,7 +2635,11 @@ label.label-checkmark input {
     width: 100%;
     height: 220px;
     margin-bottom: 24px;
-    cursor: none;
+    cursor: default;
+  }
+
+  .product-feature__thumb-mob:hover {
+    border: none;
   }
 
   .product-feature .feature-content {
