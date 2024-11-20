@@ -220,7 +220,6 @@
   transform: translate(-50%, -50%);
   z-index: 1;
   background-color: rgba(255,255,255, .15);
-
 }
 
 .gdlr-core-button-item.gdlr-core-item-pdlr.gdlr-core-item-pdb.gdlr-core-center-align.btn-play_v a:before{
@@ -250,18 +249,36 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #7DCA87;
+  background:#7DCA87;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background:#27A737;
 }
 
+
 /* Для Firefox */
+.sidebar__inner,
+.sub-menu,
 html {
   scrollbar-width: thin;
-  scrollbar-color: #7DCA87;
+  scrollbar-color: #7DCA87 #F4FBF5;
 }
 
+.gdlr-core-gallery-item .gdlr-core-gallery-list img {
+  max-width: none;
+  width: 100%;
+}
+
+.gdlr-core-gallery-item .gdlr-core-gallery-list a {
+  width: 100%;
+}
+
+.gallery_new .gdlr-core-page-builder-body img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 

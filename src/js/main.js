@@ -215,28 +215,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         });
     }
-    // window.addEventListener('load', function () {
-    //     if (document.querySelector('.gallery')) {
-    //         baguetteBox.run('.gallery', {});
-    //     }
-    //     if (document.querySelector('.gallery2')) {
-    //
-    //         baguetteBox.run('.gallery2', {});
-    //     }
-    // });
 
+    jQuery('body').on('click', '.product-feature__thumb', function(){
 
-//     jQuery('body').on('click', '.tabs__nav-link', function(){
-//         console.log('good connection');
+        jQuery(this).siblings('.product-feature__thumb').removeClass('active');
+        jQuery(this).parent().parent().find('.product-feature__content .tab-content').removeClass('active');
 
-//         jQuery(this).siblings('.tabs__nav-link').removeClass('active');
-//         jQuery(this).parent().parent().find('.tabs__content .tab-content').removeClass('active');
+        jQuery(this).addClass('active');
 
-//         jQuery(this).addClass('active');
+        let targetId = jQuery(this).attr('dataTarget');
+        jQuery(targetId).addClass('active');
+    });
 
-//         let targetId = jQuery(this).attr('dataTarget');
-//         jQuery(targetId).addClass('active');
-//     });
     //TABS
     const tabLinks = document.querySelectorAll('.tabs__nav-link');
 
@@ -274,7 +264,31 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById(targetId).classList.add('active');
         });
     });
+//----------------------------------------------------
+    //BLOCK FEATURE PRODUCT
+const  thumbNav = document.querySelectorAll('.product-feature__nav');
+    const tabThumbNav = document.querySelectorAll('.product-feature__thumb');
 
+    tabThumbNav.forEach(link => {
+     if(window.innerWidth >767)   {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const parent = findParent(e.target, 'product-feature');
+
+                const tabThumbNav = parent.querySelectorAll('.product-feature__thumb');
+                const tabContents = parent.querySelectorAll('.feature-content');
+
+                tabThumbNav.forEach(link => link.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                link.classList.add('active');
+
+                const targetId = link.getAttribute('dataTarget').substring(1);
+                document.getElementById(targetId).classList.add('active');
+            });
+        }
+    });
+
+//-------------------------------------------------------
 
 // POPUP
 //     const popupCont = document.querySelector(".popup_contacts");
