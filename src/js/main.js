@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 //----------------------------------------------------
     //BLOCK FEATURE PRODUCT
-const  thumbNav = document.querySelectorAll('.product-feature__nav');
+const  thumbNavBlock = document.querySelectorAll('.product-feature__nav');
     const tabThumbNav = document.querySelectorAll('.product-feature__thumb');
 
     tabThumbNav.forEach(link => {
@@ -285,7 +285,23 @@ const  thumbNav = document.querySelectorAll('.product-feature__nav');
                 const targetId = link.getAttribute('dataTarget').substring(1);
                 document.getElementById(targetId).classList.add('active');
             });
-        }
+        } else {
+         if (thumbNavBlock) {
+             thumbNavBlock.style.display = 'none'; // Ховаємо навігацію
+         }
+
+         const targetId = link.getAttribute('data-target').replace('#', '');
+         const targetElement = document.getElementById(targetId);
+
+         if (targetElement) {
+             // Оновлюємо джерело мобільного зображення
+             const mobileThumb = targetElement.querySelector('.product-feature__thumb-mob img');
+             if (mobileThumb) {
+                 mobileThumb.src = link.getAttribute('data-src'); // Оновлюємо src
+                 mobileThumb.alt = link.querySelector('img').alt || 'Product Image'; // Оновлюємо alt
+             }
+         }
+     }
     });
 
 //-------------------------------------------------------
