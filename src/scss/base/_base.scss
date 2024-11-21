@@ -1,4 +1,4 @@
-ul li{
+ul li {
   letter-spacing: 0.0015em;
 }
 
@@ -112,12 +112,15 @@ body {
 .list-with-counter {
   ul li {
     position: relative;
-    display: flex;
     min-height: 32px;
     align-items: center;
     padding-left: 48px;
     counter-increment: section;
     margin-bottom: 16px;
+
+    strong {
+      font-weight: 500;
+    }
 
     &:before {
       content: counter(section, decimal-leading-zero);
@@ -210,9 +213,10 @@ body {
     max-width: 362px;
 
     &:hover {
-      background-color:  #7DCA87;
+      background-color: #7DCA87;
     }
-    &:active{
+
+    &:active {
       background-color: #83C36A;
     }
   }
