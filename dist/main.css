@@ -1330,10 +1330,12 @@ html {
 .block-img-text .title-md {
   margin-bottom: 8px;
   font-weight: 500;
+  letter-spacing: 0.0015em;
 }
 
 .block-img-text .text-md {
   padding: 12px 0;
+  letter-spacing: -0.025em;
 }
 
 .block-img-text .wrap-img {
