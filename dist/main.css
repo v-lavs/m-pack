@@ -227,12 +227,17 @@ body {
 
 .list-with-counter ul li {
   position: relative;
-  display: flex;
   min-height: 32px;
   align-items: center;
   padding-left: 48px;
   counter-increment: section;
   margin-bottom: 16px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.list-with-counter ul li strong {
+  font-weight: 500;
 }
 
 .list-with-counter ul li:before {
@@ -1324,6 +1329,7 @@ html {
 
 .block-img-text .title-md {
   margin-bottom: 8px;
+  font-weight: 500;
 }
 
 .block-img-text .text-md {
