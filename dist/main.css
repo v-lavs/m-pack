@@ -1840,6 +1840,45 @@ label.label-checkmark input {
   z-index: 2;
 }
 
+.bl-bg-full {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  min-height: 320px;
+  padding: 100px 32px 32px;
+}
+
+.bl-bg-full__img {
+  position: absolute;
+  left: calc(50% + 300px);
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: calc(100vw + 300px);
+}
+
+.bl-bg-full__img:before {
+  position: absolute;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.65);
+  display: block;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.bl-bg-full__content {
+  position: relative;
+  color: #FFFFFF;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
