@@ -2249,7 +2249,7 @@ label.label-checkmark input {
 }
 
 .products__item {
-  width: 50%;
+  width: 33%;
   padding-left: 8px;
   padding-right: 8px;
   margin-bottom: 16px;
@@ -2560,6 +2560,10 @@ label.label-checkmark input {
   .copyright {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .products__item {
+    width: 50%;
   }
 }
 
