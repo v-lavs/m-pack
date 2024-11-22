@@ -2083,7 +2083,7 @@ label.label-checkmark input {
 
 .sidebar__footer {
   background-color: #fff;
-  padding-bottom: 16px;
+  padding: 16px 0;
   border-bottom: 1px solid #F3F3F3;
 }
 
