@@ -455,15 +455,6 @@
                 <div class="swiper-button-next"></div>
             </div>
             <!---------------------------------------------------------------->
-            <div class="description" style="background-color: darkgreen; color: whitesmoke" > block full bg</div>
-
-<div class="bl-bg-full">
-    <div class="bl-bg-full__img" style="background-image: url(assets/img/07.jpg);"></div>
-    <div class="bl-bg-full__content">
-        <h2 class="headline-lg">Як правильно обрати упаковку: топ-5 рекомендацій від «Модерн Пак»</h2>
-    </div>
-</div>
-            <!---------------------------------------------------------------->
             <div class="description" > green-bg slider</div>
 
             <div class="wrap-green-slider">
@@ -1698,6 +1689,55 @@
 </html>
 
 
+<style>
+    .parent:has(.child) {
+        /* Видаляємо зайві стилі */
+        property: initial;
+    }
+</style>
 
 
+<script>
+    document.querySelectorAll('.parent').forEach(parent => {
+        parent.addEventListener('animationend', () => {
+            if (parent.querySelector('.child')) {
+                parent.classList.remove('зайвий-клас');
+            }
+        });
+    });
+//--------------------------------------------------------------
 
+    const parentContainer = document.querySelector('.main-wrapper'); // Змінити, якщо GoodLayers генерує в іншому блоці
+
+    if (parentContainer) {
+        const observer = new MutationObserver(mutations => {
+            mutations.forEach(mutation => {
+                if (mutation.type === 'childList') {
+                    // Якщо з'явився дочірній елемент .child
+                    const parents = parentContainer.querySelectorAll('.parent');
+                    parents.forEach(parent => {
+                        if (parent.querySelector('.child')) {
+                            parent.classList.remove('зайвий-клас'); // Або змінюємо властивість
+                        }
+                    });
+                }
+            });
+        });
+
+        observer.observe(parentContainer, {
+            childList: true,  // Стежимо за додаванням чи видаленням дочірніх елементів
+            subtree: true     // Враховуємо дочірні елементи
+        });
+    }
+//----------------------------------------------------------
+    // Виклик після білдера
+    setTimeout(() => {
+        const parents = document.querySelectorAll('.parent');
+        parents.forEach(parent => {
+            if (parent.querySelector('.child')) {
+                parent.classList.remove('зайвий-клас');
+            }
+        });
+    }, 1000); // Затримка, щоб білдер завершив роботу
+
+</script>

@@ -281,4 +281,49 @@ html {
   object-fit: cover;
 }
 
+// bg-full
+@media screen and (min-width: 1100px) {
+  .gdlr-core-page-builder-body:has(.full-bg) {
+    overflow: initial;
+  }
+  .full-bg .gdlr-core-pbf-background-wrap{
+    top: 0px;
+    right:100vw;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    overflow: visible;
+  }
+}
 
+.gdlr-core-pbf-wrapper.full-bg .gdlr-core-pbf-background-wrap:before{
+  position: absolute;
+  content: '';
+  background-color: rgba(0, 0, 0, .65);
+  display: block;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 0;
+}
+.full-bg .full-bg__content{
+  display: flex;
+  align-items: flex-end;
+}
+.full-bg__content .gdlr-core-pbf-column-content{
+  width:100%;
+}
+.full-bg__content .text_bottom h2{
+  font-size:32px;
+  margin-bottom: 8px;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+@media screen and (max-width: 767px) {
+  .full-bg__content .text_bottom h2{
+    font-size: 24px!important;
+  }
+}
