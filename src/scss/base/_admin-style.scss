@@ -383,6 +383,10 @@ html {
   top: 22px;
   z-index: 1;
 }
+.privacy-policy .main{
+  padding-bottom: 32px;
+}
+
 @media screen and (max-width: 767px) {
   .map{
     grid-template-columns: 1fr;
