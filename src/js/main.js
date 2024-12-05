@@ -153,7 +153,6 @@ document.addEventListener('DOMContentLoaded', function () {
         pagination: {
             el: '.swiper-info .swiper-pagination',
             clickable: true,
-            dynamicBullets: true,
         },
     });
 
@@ -162,6 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
             pagination: {
                 el: '.product-slider .swiper-pagination',
                 clickable: true,
+                dynamicBullets: true,
             },
             navigation: {
                 nextEl: ".swiper-button-next",
