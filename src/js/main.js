@@ -156,8 +156,8 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
-    if (document.querySelector('#product-slider')) {
-        const productSlider = new Swiper('#product-slider ', {
+    if (document.querySelector('.product-slider')) {
+        const productSlider = new Swiper('.product-slider ', {
             pagination: {
                 el: '.product-slider .swiper-pagination',
                 clickable: true,
@@ -175,29 +175,29 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
     }
-    if (document.querySelector('#product-slider-3col')) {
-        const productSlider_3col = new Swiper('#product-slider-3col ', {
-            pagination: {
-                el: '.product-slider .swiper-pagination',
-                clickable: true,
-                dynamicBullets: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                577: {
-                    slidesPerView: 2,
-                    spaceBetween: 16
-                },
-                991: {
-                    slidesPerView: 3,
-                    spaceBetween: 16
-                }
-            },
-        });
-    }
+    // if (document.querySelector('#product-slider-3col')) {
+    //     const productSlider_3col = new Swiper('#product-slider-3col ', {
+    //         pagination: {
+    //             el: '.product-slider .swiper-pagination',
+    //             clickable: true,
+    //             dynamicBullets: true,
+    //         },
+    //         navigation: {
+    //             nextEl: ".swiper-button-next",
+    //             prevEl: ".swiper-button-prev",
+    //         },
+    //         breakpoints: {
+    //             577: {
+    //                 slidesPerView: 2,
+    //                 spaceBetween: 16
+    //             },
+    //             991: {
+    //                 slidesPerView: 3,
+    //                 spaceBetween: 16
+    //             }
+    //         },
+    //     });
+    // }
     if (document.querySelector('.cards-slider')) {
         const cardSlider = new Swiper('.cards-slider ', {
             pagination: {
