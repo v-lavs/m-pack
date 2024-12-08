@@ -16,6 +16,8 @@
       opacity: 1;
       visibility: visible;
 
+      transform: translateX(calc(100% - 100px));
+      transition:  0.35s ease-in-out;
     }
   }
 
@@ -67,11 +69,14 @@
   padding: 16px 0;
   top: 0;
   bottom: 0;
-  left: 0;
+  //left: 0;
+  left: 60px;
   transform: translateX(calc(100% - 40px));
   visibility: hidden;
   opacity: 0;
-  transition: all 0.35s ease;
+  //transition: all 0.35s ease;
+  transition:  0.12s ease-out;
+
   cursor: default;
   height: 100vh;
   overflow: auto;

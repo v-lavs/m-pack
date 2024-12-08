@@ -28,6 +28,7 @@
     background: rgba(0, 0, 0, 0);
     z-index: 200;
     pointer-events: none;
+    transition: .35s;
 
     &.show,
     &.el-visible {
@@ -38,6 +39,10 @@
   &__item {
     padding: 16px 24px;
     border-bottom: 1px solid #F3F3F3;
+  }
+
+  &__item:has(.menu_top) {
+    padding-right: 0;
   }
 
   &__nav {

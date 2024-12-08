@@ -175,29 +175,6 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
     }
-    // if (document.querySelector('#product-slider-3col')) {
-    //     const productSlider_3col = new Swiper('#product-slider-3col ', {
-    //         pagination: {
-    //             el: '.product-slider .swiper-pagination',
-    //             clickable: true,
-    //             dynamicBullets: true,
-    //         },
-    //         navigation: {
-    //             nextEl: ".swiper-button-next",
-    //             prevEl: ".swiper-button-prev",
-    //         },
-    //         breakpoints: {
-    //             577: {
-    //                 slidesPerView: 2,
-    //                 spaceBetween: 16
-    //             },
-    //             991: {
-    //                 slidesPerView: 3,
-    //                 spaceBetween: 16
-    //             }
-    //         },
-    //     });
-    // }
     if (document.querySelector('.cards-slider')) {
         const cardSlider = new Swiper('.cards-slider ', {
             pagination: {
@@ -363,6 +340,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
         const openPopup = () => {
+
             popup.classList.add('open_modal');
             backdrop.classList.add('el-visible');
         };
@@ -380,6 +358,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     initPopup('.popup_contacts', '.btn_call', '.backdrop');
+    initPopup('.popup_contacts', '.btn_call_footer', '.backdrop');
     initPopup('.popup_location', '.trigger-popup', '.backdrop');
 
 //    MULTI STEP FORM
