@@ -871,6 +871,14 @@ html {
   visibility: visible;
 }
 
+.sub-menu,
+.third-menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: none !important;
+}
+
 .dropdown {
   position: relative;
 }
@@ -904,7 +912,6 @@ html {
 .sub-menu {
   position: fixed;
   width: 340px;
-  background: transparent;
   padding: 16px 0;
   top: 0;
   bottom: 0;
@@ -921,7 +928,7 @@ html {
 
 .third-menu-container > .menu__item,
 .sub-menu > .menu__item {
-  padding: 0 16px 0 24px;
+  padding: 8px 16px 8px 24px;
   background-color: #FFFFFF;
 }
 
@@ -966,6 +973,16 @@ html {
 
 .third-menu-container .sub-menu-third > li {
   padding: 14px 24px;
+}
+
+.third-menu-container > .menu__item:first-of-type,
+.sub-menu > .menu__item:first-of-type {
+  padding-top: 8px;
+}
+
+.third-menu-container > .menu__item:last-of-type,
+.sub-menu > .menu__item:last-of-type {
+  padding-bottom: 8px;
 }
 
 .btn {
