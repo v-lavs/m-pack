@@ -12,7 +12,7 @@
     color: $black;
     background-color: #FFFFFF;
 
-       &:hover > .sub-menu {
+    &:hover > .sub-menu {
       z-index: 1;
       opacity: 1;
       visibility: visible;
@@ -32,11 +32,21 @@
   }
 
 }
-.sub-menu.active{
+
+.sub-menu.active {
   z-index: 1;
   opacity: 1;
   visibility: visible;
 }
+
+.sub-menu,
+.third-menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: none;
+}
+
 .dropdown {
   position: relative;
 
