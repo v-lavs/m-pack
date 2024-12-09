@@ -462,6 +462,7 @@ html {
   line-height: 28px;
   margin-bottom: 4px;
 }
+
 @media screen and (max-width: 991px) {
   .full-bg.full-bg-2 .full-bg__content .gdlr-core-pbf-background-wrap {
     width: 50vw;
@@ -488,4 +489,8 @@ html {
   .full-bg.full-bg-2 .gdlr-core-container{
     max-width: 100%!important;
   }
+}
+
+.gdlr-core-pbf-section:first-child {
+  padding-top: 32px;
 }

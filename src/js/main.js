@@ -522,6 +522,5 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
-
 });
 

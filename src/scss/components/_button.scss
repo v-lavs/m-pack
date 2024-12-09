@@ -82,6 +82,11 @@
   &_more,
   &_call {
     max-width: 326px;
-
+  }
+  &_round{
+    border-right: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
   }
 }

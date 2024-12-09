@@ -828,6 +828,10 @@ html {
   margin-bottom: 4px;
 }
 
+.gdlr-core-pbf-section:first-child {
+  padding-top: 32px;
+}
+
 .menu {
   padding-top: 8px;
   padding-bottom: 8px;
@@ -841,6 +845,7 @@ html {
   letter-spacing: 0.001em;
   padding: 14px 24px 14px 0;
   color: #383838;
+  background-color: #FFFFFF;
 }
 
 .menu__item:hover > .sub-menu {
@@ -858,6 +863,12 @@ html {
 .menu__link:hover,
 .menu__link:focus {
   color: #27A737;
+}
+
+.sub-menu.active {
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
 }
 
 .dropdown {
@@ -889,10 +900,11 @@ html {
   border-color: transparent transparent transparent #52b95f;
 }
 
+.third-menu-container,
 .sub-menu {
   position: fixed;
   width: 340px;
-  background: #FFFFFF;
+  background: transparent;
   padding: 16px 0;
   top: 0;
   bottom: 0;
@@ -907,15 +919,20 @@ html {
   z-index: -1;
 }
 
+.third-menu-container > .menu__item,
 .sub-menu > .menu__item {
   padding: 0 16px 0 24px;
+  background-color: #FFFFFF;
 }
 
+.third-menu-container > .menu__item:hover .wrap-img,
+.third-menu-container > .menu__item:focus .wrap-img,
 .sub-menu > .menu__item:hover .wrap-img,
 .sub-menu > .menu__item:focus .wrap-img {
   opacity: 1;
 }
 
+.third-menu-container .wrap-img,
 .sub-menu .wrap-img {
   display: block;
   width: 64px;
@@ -925,12 +942,14 @@ html {
   transition: .35s;
 }
 
+.third-menu-container img,
 .sub-menu img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+.third-menu-container .menu__link,
 .sub-menu .menu__link {
   font-weight: 400;
   display: flex;
@@ -938,9 +957,15 @@ html {
   align-items: center;
 }
 
+.third-menu-container .menu__link:hover,
+.third-menu-container .menu__link:focus,
 .sub-menu .menu__link:hover,
 .sub-menu .menu__link:focus {
   color: #52B95F;
+}
+
+.third-menu-container .sub-menu-third > li {
+  padding: 14px 24px;
 }
 
 .btn {
@@ -1030,6 +1055,13 @@ html {
 .btn_more,
 .btn_call {
   max-width: 326px;
+}
+
+.btn_round {
+  border-right: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,
