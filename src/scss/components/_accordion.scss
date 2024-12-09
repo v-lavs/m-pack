@@ -80,3 +80,16 @@
 .accordion .panel:last-child{
   margin-bottom:0;
 }
+
+@include respond-to($sm){
+  .accordion .panel__title {
+    font-size:18px;
+  }
+  .accordion .panel-collapse__body p{
+    font-size: 14px;
+  }
+  .accordion .open-panel{
+    width: 50px;
+    height: 50px;
+  }
+}

@@ -362,6 +362,12 @@ html {
   grid-area: 1 / 6 / 1 / 9;
   border: none !important;
   max-width: 272px;
+  background-color: #FFFFFF;
+  position: relative;
+  z-index: 1;
+  right: 0;
+  left: auto !important;
+  top: 0 !important;
 }
 
 .mapTooltip .country {
@@ -379,7 +385,12 @@ html {
   font-weight: 400;
   line-height: 20px;
 }
-
+.mapTooltip .map-info.contacts{
+  margin-bottom: 16px;
+}
+.mapTooltip .map-info.contacts:last-of-type{
+  margin-bottom: 0;
+}
 .mapTooltip .country:before {
   position: absolute;
   content: '';
@@ -413,8 +424,6 @@ html {
   }
 }
 
-
-//.full-bg.full-bg-2 .full-bg__content-right,
 .full-bg.full-bg-2 .full-bg__content {
   position: relative;
   height: 100%;
@@ -424,7 +433,6 @@ html {
   content: none;
 }
 
-//.full-bg.full-bg-2 .full-bg__content-right .gdlr-core-pbf-background-wrap:before,
 .full-bg.full-bg-2 .full-bg__content .gdlr-core-pbf-background-wrap:before {
   position: absolute;
   content: '';

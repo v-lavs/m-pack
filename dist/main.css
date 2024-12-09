@@ -403,6 +403,83 @@ body {
   color: #52B95F;
 }
 
+.wrap-round {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  z-index: 1000;
+}
+
+.round,
+.wrap-round .btn,
+.round__close {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0;
+  transition: .35s;
+  z-index: 1;
+}
+
+.round svg,
+.wrap-round .btn svg,
+.round__close svg {
+  width: 32px;
+  height: 32px;
+}
+
+.wrap-round .btn {
+  opacity: 0;
+}
+
+.wrap-round .btn,
+.round {
+  background-color: #27A737;
+  border: 1px solid  #27A737;
+  color: #fff;
+}
+
+.wrap-round .btn:hover,
+.round:hover {
+  transform: scale(1.1);
+}
+
+.wrap-round.active .cont_main {
+  transform: translateY(calc(-200% - 32px));
+  opacity: 1;
+}
+
+.wrap-round.active .round {
+  opacity: 0;
+}
+
+.wrap-round.active .call_main {
+  transform: translateY(calc(-100% - 16px));
+  opacity: 1;
+}
+
+.round__close {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 50%;
+  border: 1px solid #27A737;
+  background-color: #FFFFFF;
+  box-shadow: none;
+}
+
 .display-lg {
   font-size: 45px;
   line-height: 52px;
@@ -742,6 +819,12 @@ html {
   grid-area: 1 / 6 / 1 / 9;
   border: none !important;
   max-width: 272px;
+  background-color: #FFFFFF;
+  position: relative;
+  z-index: 1;
+  right: 0;
+  left: auto !important;
+  top: 0 !important;
 }
 
 .mapTooltip .country {
@@ -758,6 +841,14 @@ html {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
+}
+
+.mapTooltip .map-info.contacts {
+  margin-bottom: 16px;
+}
+
+.mapTooltip .map-info.contacts:last-of-type {
+  margin-bottom: 0;
 }
 
 .mapTooltip .country:before {
@@ -1072,13 +1163,6 @@ html {
 .btn_more,
 .btn_call {
   max-width: 326px;
-}
-
-.btn_round {
-  border-right: 50%;
-  width: 60px;
-  height: 60px;
-  background-color: #fff;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,
@@ -2954,6 +3038,25 @@ label.label-checkmark input {
 }
 
 @media only screen and (max-width: 576px) {
+  .wrap-round {
+    right: 16px;
+  }
+
+  .wrap-round,
+  .round,
+  .wrap-round .btn,
+  .round__close {
+    width: 50px;
+    height: 50px;
+  }
+
+  .round svg,
+  .wrap-round .btn svg,
+  .round__close svg {
+    width: 24px;
+    height: 24px;
+  }
+
   .slider-gallery2 {
     padding-bottom: 70px;
   }
@@ -2965,12 +3068,54 @@ label.label-checkmark input {
     transform: none;
   }
 
+  .accordion .panel__title {
+    font-size: 18px;
+  }
+
+  .accordion .panel-collapse__body p {
+    font-size: 14px;
+  }
+
+  .accordion .open-panel {
+    width: 50px;
+    height: 50px;
+  }
+
   .list-col2__item {
     width: 100%;
   }
 
   .block-img-text .text-md {
     font-size: 12px;
+  }
+
+  .popup__header h3 {
+    font-size: calc(18px + 2.4vw);
+  }
+
+  .popup__map-info {
+    display: block;
+  }
+
+  .popup__map-info .location__info {
+    margin-bottom: 8px;
+  }
+
+  .popup__map-info .location__contacts {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .popup.popup_location {
+    padding: 32px 16px;
+  }
+
+  .popup_location .location-item a {
+    padding-left: 0;
+  }
+
+  .popup__wrap-map svg {
+    max-width: 100%;
   }
 
   .container {

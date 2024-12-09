@@ -522,5 +522,13 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
+
+    //BTN-FIXED MAIN
+    const roundBtn = document.querySelector('.round');
+    const fixedBlock = document.querySelector('.wrap-round');
+
+    roundBtn.addEventListener('click', function (){
+        fixedBlock.classList.toggle('active');
+    })
 });
 

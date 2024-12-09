@@ -316,3 +316,28 @@
     }
 }
 
+@include respond-to($sm){
+  .popup__header h3 {
+    font-size: calc(18px + 2.4vw);
+  }
+  .popup__map-info {
+    display: block;
+  }
+  .popup__map-info .location__info {
+    margin-bottom: 8px;
+  }
+  .popup__map-info .location__contacts{
+    margin-left: 0;
+    width: 100%;
+  }
+  .popup.popup_location{
+    padding: 32px 16px;
+  }
+  .popup_location .location-item a{
+    padding-left: 0;
+  }
+  .popup__wrap-map svg {
+    max-width: 100%;
+  }
+}
+
