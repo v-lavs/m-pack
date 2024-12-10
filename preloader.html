@@ -6,101 +6,93 @@
 </head>
 <body>
 <style>
-  /* Базові стилі для кіл */
-  .circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: blue;
-    opacity: 0; /* Початково приховані */
-    transform: scale(0); /* Початково зменшені */
-    animation: fadeInScale 1s forwards, pulse 0.5s infinite alternate cubic-bezier(0.42, 0, 0.58, 1);
-  }
-
-  /* Анімація для появи */
-  @keyframes fadeInScale {
-    0% {
-      opacity: 0;
-      transform: scale(0);
+    .preloader {
+        width: 100%;
+        height: 100%;
+        background-color: #FFFFFF;
+        z-index: 10;
+        position: absolute;
     }
-    100% {
-      opacity: 1;
-      transform: scale(1);
+
+    .circleWrap {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        animation: fadeIn 1s ease-in forwards;
     }
-  }
 
-  /* Анімація для пульсації */
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-      box-shadow: none;
+    .circle {
+        border-radius: 190px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        transform: scale(0); /* Initial scale is 0 */
+        animation: fadeIn 1s ease-in forwards, pulse .5s ease-out 0.8s infinite alternate;
     }
-    100% {
-      transform: scale(1.2);
-      box-shadow: 0 25px 25px rgba(0, 0, 0, 0.4);
+
+    .circle1 {
+        background-color:#27A737;
+        width: 240px;
+        height: 240px;
+        margin-top: -120px;
+        margin-left: -120px;
+        animation-delay: 0s;
     }
-  }
 
-  /* Додаємо затримку для stagger-ефекту */
-  /*.circle:nth-child(1) {*/
-  /*  animation-delay: 0s, 1s;*/
-  /*}*/
-  /*.circle:nth-child(2) {*/
-  /*  animation-delay: 0.2s, 1.2s;*/
-  /*}*/
-  /*.circle:nth-child(3) {*/
-  /*  animation-delay: 0.4s, 1.4s;*/
-  /*}*/
-  .preloader {
-    width: 100%;
-    height: 100%;
-    background-color: #3e3c41;
-    z-index: 10;
-    position: absolute;
-  }
+    .circle2 {
+        background-color: #52B95F;
+        width: 170px;
+        height: 170px;
+        margin-top: -85px;
+        margin-left: -85px;
+        animation-delay: 0.2s;
+    }
 
-  .circle {
-    border-radius: 190px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    opacity: 0;
-  }
+    .circle3 {
+        background-color: #9f88d6;
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+        margin-left: -50px;
+        animation-delay: 0.4s;
+    }
 
-  .circle1 {
-    background-color: #7752d5;
-    width: 240px;
-    height: 240px;
-    margin-top: -120px;
-    margin-left: -120px;
-    animation-delay: 0s, 1s;
-  }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: scale(0);
+        }
+        20% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
 
-  .circle2 {
-    background-color: #8362d9;
-    width: 170px;
-    height: 170px;
-    margin-top: -85px;
-    margin-left: -85px;
-    animation-delay: 0.2s, 1.2s;
-  }
-
-  .circle3 {
-    background-color: #9f88d6;
-    width: 100px;
-    height: 100px;
-    margin-top: -50px;
-    margin-left: -50px;
-    animation-delay: 0.4s, 1.4s;
-  }
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        100% {
+            transform: scale(1.2);
+            box-shadow: 0 25px 25px rgba(0, 0, 0, 0.4);
+        }
+    }
 </style>
 
 
 <div class="preloader">
-  <div class="circle circle1"></div>
-  <div class="circle circle2"></div>
-  <div class="circle circle3"></div>
+    <div class="circleWrap">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+    </div>
 </div>
 
 </body>
