@@ -74,38 +74,45 @@
   visibility: hidden;
   opacity: 0;
   transition: all 0.35s ease;
-  transform: translateX(calc(100% - 40px));
   height: 100vh;
   background: none;
   z-index: -1;
+  pointer-events: none;
 
   &.active {
     z-index: 1;
     opacity: 1;
     visibility: visible;
+    pointer-events: all;
   }
 }
-
+.second-menu-container{
+  transform: translateX(calc(100% - 40px));
+}
+.third-menu-container{
+  transform: translateX(100%);
+}
+.sub-menu-third,
 .sub-menu {
   width: 100%;
   padding: 16px 0;
-  visibility: hidden;
-  opacity: 0;
+  //visibility: hidden;
+  //opacity: 0;
   transition: all 0.35s ease;
   cursor: default;
   max-height: 100vh;
   overflow: auto;
   background-color: #FFFFFF;
-  z-index: -1;
+  //z-index: -1;
 
-  &.active {
-    z-index: 1;
-    opacity: 1;
-    visibility: visible;
-  }
+  //&.active {
+  //  z-index: 1;
+  //  opacity: 1;
+  //  visibility: visible;
+  //}
 
   > .menu__item {
-    padding: 8px 16px 8px 24px;
+    padding: 8px 24px;
     background-color: #FFFFFF;
 
     &:hover .wrap-img,
@@ -141,20 +148,9 @@
     }
   }
 }
-
-//.third-menu-container .sub-menu-third > li {
-//  padding: 24px!important;
-//}
-
-//.third-menu-container > .menu__item:first-of-type,
-//.sub-menu > .menu__item:first-of-type{
-//  padding-top: 16px!important;
-//}
-
-//.third-menu-container > .menu__item:last-of-type,
-//.sub-menu > .menu__item:last-of-type{
-//  padding-bottom: 16px!important;
-//}
+.menu__item > .second-menu-container .sub-menu .menu__item > ul.sub-menu{
+  display:none;
+}
 
 @include respond-to($lg) {
   .dropdown > .menu__link:before,

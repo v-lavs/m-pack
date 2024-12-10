@@ -831,7 +831,7 @@ html {
   top: 0 !important;
 }
 
-.mapTooltip .country {
+.mapTooltip .country b {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -847,27 +847,48 @@ html {
   line-height: 20px;
 }
 
-.mapTooltip .map-info.contacts {
-  margin-bottom: 16px;
+.address_office,
+.address_warehouse {
+  display: block;
+  position: relative;
+  margin-bottom: 8px;
 }
 
-.mapTooltip .map-info.contacts:last-of-type {
+.address_office:last-of-type,
+.address_warehouse:last-of-type {
   margin-bottom: 0;
 }
 
-.mapTooltip .country:before {
+.address_office:before,
+.address_warehouse:before {
   position: absolute;
   content: '';
   display: block;
-  background-image: url(/wp-content/uploads/2024/12/my-location.svg);
   width: 24px;
   height: 24px;
   background-repeat: no-repeat;
   background-size: 24px 24px;
   background-position: center;
   right: -30px;
-  top: 22px;
+  top: -3px;
   z-index: 1;
+}
+
+.address_office:before {
+  background-image: url(/wp-content/uploads/2024/12/my-location.svg);
+}
+
+.address_warehouse:before {
+  background-image: url(/wp-content/themes/realfactory-child/assets/img/Garage-home.svg);
+  top: -3px;
+}
+
+.mapTooltip .map-info.contacts {
+  margin-bottom: 16px;
+}
+
+.mapTooltip .map-info.contacts:last-of-type {
+  margin-bottom: 0;
 }
 
 .privacy-policy .main {
@@ -1002,10 +1023,10 @@ html {
   visibility: hidden;
   opacity: 0;
   transition: all 0.35s ease;
-  transform: translateX(calc(100% - 40px));
   height: 100vh;
   background: none;
   z-index: -1;
+  pointer-events: none;
 }
 
 .second-menu-container.active,
@@ -1013,37 +1034,42 @@ html {
   z-index: 1;
   opacity: 1;
   visibility: visible;
+  pointer-events: all;
 }
 
+.second-menu-container {
+  transform: translateX(calc(100% - 40px));
+}
+
+.third-menu-container {
+  transform: translateX(100%);
+}
+
+.sub-menu-third,
 .sub-menu {
   width: 100%;
   padding: 16px 0;
-  visibility: hidden;
-  opacity: 0;
   transition: all 0.35s ease;
   cursor: default;
   max-height: 100vh;
   overflow: auto;
   background-color: #FFFFFF;
-  z-index: -1;
 }
 
-.sub-menu.active {
-  z-index: 1;
-  opacity: 1;
-  visibility: visible;
-}
-
+.sub-menu-third > .menu__item,
 .sub-menu > .menu__item {
-  padding: 8px 16px 8px 24px;
+  padding: 8px 24px;
   background-color: #FFFFFF;
 }
 
+.sub-menu-third > .menu__item:hover .wrap-img,
+.sub-menu-third > .menu__item:focus .wrap-img,
 .sub-menu > .menu__item:hover .wrap-img,
 .sub-menu > .menu__item:focus .wrap-img {
   opacity: 1;
 }
 
+.sub-menu-third .wrap-img,
 .sub-menu .wrap-img {
   display: block;
   width: 64px;
@@ -1053,12 +1079,14 @@ html {
   transition: .35s;
 }
 
+.sub-menu-third img,
 .sub-menu img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+.sub-menu-third .menu__link,
 .sub-menu .menu__link {
   font-weight: 400;
   display: flex;
@@ -1066,9 +1094,15 @@ html {
   align-items: center;
 }
 
+.sub-menu-third .menu__link:hover,
+.sub-menu-third .menu__link:focus,
 .sub-menu .menu__link:hover,
 .sub-menu .menu__link:focus {
   color: #52B95F;
+}
+
+.menu__item > .second-menu-container .sub-menu .menu__item > ul.sub-menu {
+  display: none;
 }
 
 .btn {
@@ -2126,30 +2160,6 @@ label.label-checkmark input {
   z-index: 2;
 }
 
-.third-menu-container {
-  position: fixed;
-  width: 340px;
-  background: #FFFFFF;
-  padding: 16px 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  transform: translateX(calc(200% - 40px));
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.35s ease;
-  cursor: default;
-  height: 100vh;
-  overflow: auto;
-  z-index: -1;
-}
-
-.third-menu-container.show-block {
-  opacity: 1;
-  visibility: visible;
-  z-index: 110;
-}
-
 .container {
   width: 80%;
   margin: 0 auto;
@@ -2998,16 +3008,10 @@ label.label-checkmark input {
   }
 
   .map {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 60px;
-  }
-
-  .map svg {
-    grid-area: 1 / 1 / 2 / 2;
+    display: block;
   }
 
   .mapTooltip {
-    grid-area: 2 / 1 / 3 / 2;
     min-height: 50px;
   }
 
