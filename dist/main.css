@@ -2997,6 +2997,11 @@ label.label-checkmark input {
     font-size: 24px !important;
   }
 
+  .gdlr-core-icon-list-item.list-img-v ul li a {
+    display: flex;
+    flex-direction: column;
+  }
+
   .map {
     grid-template-columns: 1fr;
     grid-template-rows: auto 60px;

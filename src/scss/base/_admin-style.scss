@@ -335,6 +335,10 @@ html {
   .full-bg__content .text_bottom h2 {
     font-size: 24px !important;
   }
+  .gdlr-core-icon-list-item.list-img-v ul li a{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .wp-block-heading {
