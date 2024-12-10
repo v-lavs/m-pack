@@ -137,12 +137,12 @@
 
 .third-menu-container > .menu__item:first-of-type,
 .sub-menu > .menu__item:first-of-type{
-  padding-top: 8px;
+  padding-top: 16px!important;
 }
 
 .third-menu-container > .menu__item:last-of-type,
 .sub-menu > .menu__item:last-of-type{
-  padding-bottom: 8px;
+  padding-bottom: 16px!important;
 }
 
 @include respond-to($lg) {

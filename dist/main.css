@@ -730,6 +730,9 @@ body {
 
 /* Для Firefox */
 
+.popup,
+.third-menu-container,
+.sub-menu-third,
 .sidebar__inner,
 .sub-menu,
 html {
@@ -821,6 +824,7 @@ html {
   max-width: 272px;
   background-color: #FFFFFF;
   position: relative;
+  height: min-content;
   z-index: 1;
   right: 0;
   left: auto !important;
@@ -1068,12 +1072,12 @@ html {
 
 .third-menu-container > .menu__item:first-of-type,
 .sub-menu > .menu__item:first-of-type {
-  padding-top: 8px;
+  padding-top: 16px !important;
 }
 
 .third-menu-container > .menu__item:last-of-type,
 .sub-menu > .menu__item:last-of-type {
-  padding-bottom: 8px;
+  padding-bottom: 16px !important;
 }
 
 .btn {

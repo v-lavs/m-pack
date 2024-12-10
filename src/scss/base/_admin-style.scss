@@ -266,6 +266,9 @@
 
 
 /* Для Firefox */
+.popup,
+.third-menu-container,
+.sub-menu-third,
 .sidebar__inner,
 .sub-menu,
 html {
@@ -368,6 +371,7 @@ html {
   max-width: 272px;
   background-color: #FFFFFF;
   position: relative;
+  height: min-content;
   z-index: 1;
   right: 0;
   left: auto !important;
