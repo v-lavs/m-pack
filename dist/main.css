@@ -971,7 +971,6 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: none !important;
 }
 
 .dropdown {
@@ -1018,6 +1017,7 @@ html {
   cursor: default;
   height: 100vh;
   overflow: auto;
+  background: none;
   z-index: -1;
 }
 
@@ -1067,15 +1067,13 @@ html {
 }
 
 .third-menu-container .sub-menu-third > li {
-  padding: 14px 24px;
+  padding: 24px !important;
 }
 
-.third-menu-container > .menu__item:first-of-type,
 .sub-menu > .menu__item:first-of-type {
   padding-top: 16px !important;
 }
 
-.third-menu-container > .menu__item:last-of-type,
 .sub-menu > .menu__item:last-of-type {
   padding-bottom: 16px !important;
 }
