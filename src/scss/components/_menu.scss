@@ -77,14 +77,17 @@
   height: 100vh;
   background: none;
   z-index: -1;
-  pointer-events: none;
-
   &.active {
     z-index: 1;
     opacity: 1;
     visibility: visible;
-    pointer-events: all;
   }
+}
+.second-menu-container{
+  pointer-events: none;
+}
+.second-menu-container.active{
+  pointer-events: all;
 }
 .second-menu-container{
   transform: translateX(calc(100% - 40px));
@@ -96,20 +99,11 @@
 .sub-menu {
   width: 100%;
   padding: 16px 0;
-  //visibility: hidden;
-  //opacity: 0;
   transition: all 0.35s ease;
   cursor: default;
   max-height: 100vh;
   overflow: auto;
   background-color: #FFFFFF;
-  //z-index: -1;
-
-  //&.active {
-  //  z-index: 1;
-  //  opacity: 1;
-  //  visibility: visible;
-  //}
 
   > .menu__item {
     padding: 8px 24px;

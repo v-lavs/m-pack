@@ -103,6 +103,15 @@
 }
 
 @include respond-to($sm) {
+
+  .section-banner{
+    display: flex;
+    align-items:flex-end;
+  }
+  .page__header{
+    padding:16px 0;
+    position:static;
+  }
   .page__header .text {
     font-size: 16px;
     line-height: 24px;
@@ -113,8 +122,8 @@
     line-height: 40px;
 
     &.small-title {
-      font-size: 24px;
-      line-height: 32px;
+      font-size: 24px!important;
+      line-height: 32px!important;
     }
   }
 }
