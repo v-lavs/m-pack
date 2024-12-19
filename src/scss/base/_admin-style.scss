@@ -454,7 +454,9 @@ html {
   position: relative;
   height: 100%;
 }
+.full-bg.full-bg-2 .gdlr-core-pbf-background-wrap{
 
+}
 .full-bg.full-bg-2 .gdlr-core-pbf-background-wrap:before {
   content: none;
 }
@@ -470,6 +472,7 @@ html {
   top: 0;
   z-index: 0;
 }
+
 
 .full-bg.full-bg-2 .gdlr-core-pbf-wrapper-container, .full-bg.full-bg-2 .gdlr-core-container-custom {
   display: flex;
@@ -539,3 +542,11 @@ html {
 .gdlr-core-pbf-column-content-margin.gdlr-core-js.img-w50 {
   padding-top: 54%;
 }
+
+
+//---------------
+//@media screen   and  (min-width: 1281px) {
+//  .full-bg.full-bg-2  .full-bg__content .full-bg__content-left {
+//    aspect-ratio: 3 / 2;
+//  }
+//}
