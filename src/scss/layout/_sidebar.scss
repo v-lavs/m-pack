@@ -131,7 +131,7 @@
     width: 100%;
     transform: translateX(-100%);
     transition: .35s;
-
+    height: 100%;
     &.open {
       transform: translateX(0);
       z-index: 350;

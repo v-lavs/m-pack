@@ -131,6 +131,9 @@ body {
   width: 100%;
   overflow: hidden;
   padding-left: 300px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .backdrop {
@@ -421,13 +424,28 @@ body {
   color: #6A6A6A;
 }
 
+.to-top,
 .wrap-round {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   z-index: 1000;
+}
+
+.round,
+.wrap-round .btn,
+.round__close,
+.to-top {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0;
+  transition: .35s;
 }
 
 .round,
@@ -438,17 +456,10 @@ body {
   right: 0;
   bottom: 0;
   top: 0;
-  height: 60px;
-  width: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  padding: 0;
-  transition: .35s;
   z-index: 1;
 }
 
+.to-top svg,
 .round svg,
 .wrap-round .btn svg,
 .round__close svg {
@@ -460,10 +471,11 @@ body {
   opacity: 0;
 }
 
+.to-top,
 .wrap-round .btn,
 .round {
   background-color: #27A737;
-  border: 1px solid  #27A737;
+  border: 1px solid #27A737;
   color: #fff;
 }
 
@@ -481,9 +493,22 @@ body {
   opacity: 0;
 }
 
+.to-top {
+  transform: translateY(calc(-100% - 16px));
+  opacity: 0;
+}
+
+.to-top.show {
+  opacity: 1;
+}
+
 .wrap-round.active .call_main {
   transform: translateY(calc(-100% - 16px));
   opacity: 1;
+}
+
+.to-top:hover {
+  transform: translateY(calc(-100% - 16px)) scale(1.1);
 }
 
 .round__close {
@@ -1082,6 +1107,8 @@ html {
   transition: all 0.35s ease;
   height: 100vh;
   background: none;
+  margin-left: -15px;
+  padding-left: 15px;
   z-index: -1;
 }
 
@@ -1412,6 +1439,22 @@ html {
   font-weight: 500;
   color: #6A6A6A;
   margin-bottom: 8px;
+}
+
+.product-slider .products__title.title-md {
+  margin-bottom: 2px;
+  color: #383838;
+}
+
+.product-slider .products__content {
+  padding: 0 8px;
+}
+
+.product-slider .products__content p {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.005em;
+  margin-bottom: 0;
 }
 
 .slider-gallery2 {
@@ -1764,6 +1807,22 @@ html {
   font-weight: 500;
   color: #1A1F1A;
   padding-left: 0;
+}
+
+.tech-charact__col.value span:nth-child(1) {
+  color: #419DED;
+}
+
+.tech-charact__col.value span:nth-child(2) {
+  color: #EDBF41;
+}
+
+.tech-charact__col.value span:nth-child(3) {
+  color: #ED41A0;
+}
+
+.tech-charact__col.value span:nth-child(4) {
+  color: #41ED75;
 }
 
 .btn_more {
@@ -2238,6 +2297,7 @@ label.label-checkmark input {
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0.005em;
+  margin-top: auto;
 }
 
 .footer .flocation {
@@ -2916,6 +2976,7 @@ label.label-checkmark input {
     width: 100%;
     transform: translateX(-100%);
     transition: .35s;
+    height: 100%;
   }
 
   .sidebar.open {
@@ -2943,10 +3004,6 @@ label.label-checkmark input {
 }
 
 @media only screen and (max-width: 768px) {
-  .wrap-round {
-    bottom: 60px;
-  }
-
   .list-col2.block-img-text .list-col2__item {
     width: 100%;
   }
@@ -3113,10 +3170,12 @@ label.label-checkmark input {
 }
 
 @media only screen and (max-width: 576px) {
+  .to-top,
   .wrap-round {
     right: 16px;
   }
 
+  .to-top,
   .wrap-round,
   .round,
   .wrap-round .btn,
@@ -3125,6 +3184,7 @@ label.label-checkmark input {
     height: 50px;
   }
 
+  .to-top svg,
   .round svg,
   .wrap-round .btn svg,
   .round__close svg {

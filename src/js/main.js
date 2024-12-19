@@ -1,6 +1,7 @@
 /*
 * to include js file write: `//= include ./path-to-file`
 * */
+"use strict";
 
 // CUSTOM SCRIPTS
 document.addEventListener('DOMContentLoaded', function () {
@@ -133,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const bannerTitle = document.querySelector('.page-title');
 
     window.addEventListener("scroll", () => {
-        updateStickyBannerOffset()
+        updateStickyBannerOffset();
 
         if (bannerThumb && bannerTitle) {
             if (window.scrollY > 0) {
@@ -304,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 const tabThumbNav = parent.querySelectorAll('.product-feature__thumb');
                 const tabContents = parent.querySelectorAll('.feature-content');
-                if(tabThumbNav[0]){
+                if (tabThumbNav[0]) {
                     tabThumbNav[0].classList.add('active');
                 }
                 tabThumbNav.forEach(link => link.classList.remove('active'));
@@ -328,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // POPUP
     const initPopup = (popupSelector, triggerSelector, backdropSelector) => {
         const popup = document.querySelector(popupSelector);
-        if(popup == null)
+        if (popup == null)
             return false;
 
         const trigger = document.querySelector(triggerSelector);
@@ -340,7 +341,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
         const openPopup = () => {
-
+            event.preventDefault();
             popup.classList.add('open_modal');
             backdrop.classList.add('el-visible');
         };
@@ -360,6 +361,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initPopup('.popup_contacts', '.btn_call', '.backdrop');
     initPopup('.popup_contacts', '.btn_call_footer', '.backdrop');
     initPopup('.popup_location', '.trigger-popup', '.backdrop');
+    initPopup('.popup_contacts', '.call_main', '.backdrop');
 
 //    MULTI STEP FORM
     const msForm = document.querySelector('.multi-step-form');
@@ -527,8 +529,36 @@ document.addEventListener('DOMContentLoaded', function () {
     const roundBtn = document.querySelector('.round');
     const fixedBlock = document.querySelector('.wrap-round');
 
-    roundBtn.addEventListener('click', function (){
+    roundBtn.addEventListener('click', function () {
         fixedBlock.classList.toggle('active');
-    })
+    });
+
+    //    BACK TO TOP
+    (function () {
+        const goTopBtn = document.querySelector('.to-top');
+
+        function trackScroll() {
+            const scrolled = window.pageYOffset;
+            const coords = document.documentElement.clientHeight;
+
+            if (scrolled > coords) {
+                goTopBtn.classList.add('show');
+            } else {
+                goTopBtn.classList.remove('show');
+            }
+        }
+
+        function backToTop() {
+            if (window.pageYOffset > 0) {
+                window.scrollBy(0, -80);
+                setTimeout(backToTop, 10);
+            }
+        }
+
+        if (goTopBtn) {
+            window.addEventListener('scroll', trackScroll);
+            goTopBtn.addEventListener('click', backToTop);
+        }
+    })();
 });
 

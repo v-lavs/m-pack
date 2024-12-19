@@ -25,6 +25,21 @@
       color: #1A1F1A;
       padding-left: 0;
     }
+    &.value span {
+      &:nth-child(1) {
+        color: #419DED;
+      }
+      &:nth-child(2) {
+        color: #EDBF41;
+      }
+      &:nth-child(3) {
+        color: #ED41A0;
+      }
+      &:nth-child(4) {
+        color:#41ED75;
+      }
+
+    }
   }
 }
 

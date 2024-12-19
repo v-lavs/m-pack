@@ -76,6 +76,8 @@
   transition: all 0.35s ease;
   height: 100vh;
   background: none;
+  margin-left: -15px;
+  padding-left: 15px;
   z-index: -1;
   &.active {
     z-index: 1;
