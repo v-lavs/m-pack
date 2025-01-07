@@ -361,6 +361,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initPopup('.popup_contacts', '.btn_call', '.backdrop');
     initPopup('.popup_contacts', '.btn_call_footer', '.backdrop');
     initPopup('.popup_location', '.trigger-popup', '.backdrop');
+    initPopup('.popup_location', '.footer-trigger-popup', '.backdrop');
     initPopup('.popup_contacts', '.call_main', '.backdrop');
 
 //    MULTI STEP FORM

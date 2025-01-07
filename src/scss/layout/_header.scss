@@ -1,3 +1,6 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .header {
   position: fixed;
   left: 0;
@@ -11,7 +14,7 @@
   &__logo {
     max-width: 252px;
     display: block;
-    color: $medium-green;
+    color: variables.$medium-green;
     transition: .35s;
 
     svg {
@@ -20,11 +23,11 @@
     }
 
     &:hover {
-      color: $medium-green-80;
+      color: variables.$medium-green-80;
     }
 
     &:active {
-      color: $creative-green-100;
+      color: variables.$creative-green-100;
     }
   }
 
@@ -38,7 +41,7 @@
 }
 
 
-@include respond-to($lg) {
+@include mixins.respond-to(variables.$lg) {
   .header {
     display: flex;
     justify-content: space-between;

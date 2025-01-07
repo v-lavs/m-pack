@@ -1,15 +1,18 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .menu {
   padding-top: 8px;
   padding-bottom: 8px;
 
   &__item {
-    font-family: $main-font;
+    font-family: variables.$main-font;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 0.001em;
     padding: 14px 24px 14px 0;
-    color: $black;
+    color: variables.$black;
     background-color: #FFFFFF;
 
     &:hover > .sub-menu {
@@ -27,7 +30,7 @@
 
     &:hover,
     &:focus {
-      color: $medium-green;
+      color: variables.$medium-green;
     }
   }
 }
@@ -140,7 +143,7 @@
 
     &:hover,
     &:focus {
-      color: $medium-green-80;
+      color: variables.$medium-green-80;
     }
   }
 }
@@ -148,7 +151,7 @@
   display:none;
 }
 
-@include respond-to($lg) {
+@include mixins.respond-to(variables.$lg) {
   .dropdown > .menu__link:before,
   .sub-menu {
     display: none;

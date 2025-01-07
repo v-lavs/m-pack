@@ -1,9 +1,12 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 ul li {
   letter-spacing: 0.0015em;
 }
 
 body {
-  font: 400 16px/1.5 $main-font;
+  font: 400 16px/1.5 variables.$main-font;
   color: #6A6A6A;
   background-color: #FFFFFF;
   scroll-behavior: smooth;
@@ -94,11 +97,11 @@ body {
 
   &:hover,
   &:focus {
-    color: $medium-green-80;
+    color: variables.$medium-green-80;
   }
 
   &:active {
-    color: $creative-green-100;
+    color: variables.$creative-green-100;
   }
 
   &.link_whith-arrow {
@@ -227,7 +230,7 @@ body {
   }
 }
 
-@include respond-to($lg) {
+@include mixins.respond-to(variables.$lg) {
   .wrapper {
     padding-left: 0;
   }

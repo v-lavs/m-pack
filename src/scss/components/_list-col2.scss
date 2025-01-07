@@ -1,3 +1,6 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .list-col2 {
   display: flex;
   flex-wrap: wrap;
@@ -52,13 +55,13 @@
   }
 }
 
-@include respond-to($md) {
+@include mixins.respond-to(variables.$md) {
   .list-col2.block-img-text .list-col2__item {
     width: 100%;
   }
 }
 
-@include respond-to($sm) {
+@include mixins.respond-to(variables.$sm) {
   .list-col2__item {
     width: 100%;
   }

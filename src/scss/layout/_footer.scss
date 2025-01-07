@@ -1,3 +1,6 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .footer {
   color: #748B86;
   font-size: 12px;
@@ -64,7 +67,7 @@
   }
 
   &_top {
-    background-color: $serena-green-100;
+    background-color: variables.$serena-green-100;
     padding: 32px 0;
   }
 
@@ -80,7 +83,7 @@
   &__logo {
     display: inline-block;
     max-width: 184px;
-    color: $medium-green;
+    color: variables.$medium-green;
 
     svg {
       width: 100%;
@@ -88,16 +91,16 @@
     }
 
     &:hover {
-      color: $medium-green-80;
+      color: variables.$medium-green-80;
     }
 
     &:active {
-      color: $creative-green-100;
+      color: variables.$creative-green-100;
     }
   }
 
   &_bottom {
-    background-color: $modern-black-100;
+    background-color: variables.$modern-black-100;
   }
 }
 
@@ -105,7 +108,7 @@
   padding: 24px 23px;
   line-height: 18px;
   text-align: center;
-  color: $modern-black-5;
+  color: variables.$modern-black-5;
 }
 
 .social-bar {
@@ -137,7 +140,7 @@
   }
 }
 
-@include respond-to($md) {
+@include mixins.respond-to(variables.$md) {
   .footer__item {
     flex-wrap: wrap;
   }

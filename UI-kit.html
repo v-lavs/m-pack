@@ -471,6 +471,107 @@
             </div>
         </div>
         <!---------------------------------------------------------------->
+        <!------------------------------------------------------------------->
+
+        <div class="description">Full bg</div>
+
+        <div class="container">
+            <div class="full-bg-grid">
+                <div class="full-bg-grid__item part_left">
+                    <div class="full-bg-grid__img" style="background-image: url(assets/img/header.jpg);"></div>
+                    <div class="full-bg-grid__content">
+                        <h2> Власні виробництва</h2>
+                        <p>а всі напрямки упаковки</p>
+                    </div>
+                </div>
+                <div class="full-bg-grid__item part_right">
+                    <div class="full-bg-grid__img" style="background-image: url(assets/img/header.jpg);"></div>
+                    <div class="full-bg-grid__content">
+                        <h2>Більше 3000 + клієнтів</h2>
+                        <p>зростаємо разом</p>
+                    </div>
+                </div>
+                <div class="full-bg-grid__item part">
+                    <div class="full-bg-grid__img" style="background-image: url(assets/img/header.jpg);"></div>
+                    <div class="full-bg-grid__content">
+                        <h2>Всі види пакувальних матеріалів</h2>
+                        <p>рішення ваших потреб по пакуванню, в одному місці</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .full-bg-grid{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                color: #FFFFFF;
+            }
+            .full-bg-grid .part{
+                width: 100%;
+            }
+            .full-bg-grid .part_right,
+            .full-bg-grid .part_left{
+                width: 48%;
+            }
+            .full-bg-grid .part_left .full-bg-grid__img{
+                right: 0;
+                left: auto;
+            }
+            .full-bg-grid .part_right .full-bg-grid__img{
+                left: 0;
+                right: auto;
+            }
+            .full-bg-grid__item{
+                display: flex;
+                align-items: flex-end;
+                position: relative;
+                min-height: 320px;
+                padding: 100px 32px 32px;
+
+                color: #FFFFFF;
+            }
+            .full-bg-grid .part  .full-bg-grid__img{
+                position: absolute;
+                left: calc(50% + 300px);
+                transform: translateX(-50%);
+                top: 0;
+                bottom: 0;
+                z-index: 0;
+                width: calc(100vw + 316px);
+
+            }
+            .full-bg-grid  .full-bg-grid__img{
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                height: 100%;
+            }
+            .full-bg-grid__img:before{
+                position: absolute;
+                content: '';
+                background-color: rgba(0, 0, 0, .65);
+                display: block;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                z-index: 1;
+            }
+            .full-bg-grid .part_left  .full-bg-grid__img,
+            .full-bg-grid .part_right  .full-bg-grid__img{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                transform: none;
+                width: calc((100vw - 316px) / 2);
+            }
+            .full-bg-grid__content{
+                position: relative;
+                z-index: 1;
+            }
+        </style>
+        <!--------------------------------------------------------------->
         <div class="container">
             <div class="description">product card</div>
 
@@ -482,7 +583,7 @@
                     <h2 class="products__title title-md">Піддони</h2>
                 </a>
             </div>
-            <!---------------------------------------------------------------->
+            <!--      ------------------------------------------------------------------>
 
             <div class="description">product slider</div>
 
@@ -584,7 +685,9 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
-            <!--------------------------------------------------------------->
+
+
+
             <div class="description">card-text slider</div>
 
             <div class="swiper cards-slider">
@@ -1234,7 +1337,8 @@
                 </div>
                 <div class="tech-charact__row">
                     <div class="tech-charact__col name">Діаметр поворотної платформи</div>
-                    <div class="tech-charact__col value">1500 мм <span>1</span><span>2</span><span>3</span><span>4</span></div>
+                    <div class="tech-charact__col value">1500 мм
+                        <span>1</span><span>2</span><span>3</span><span>4</span></div>
                 </div>
                 <div class="tech-charact__row">
                     <div class="tech-charact__col name">Максимальне навантаження на платформу</div>
@@ -1497,7 +1601,7 @@
 
             </div>
             <div class="backdrop" style="display: block"></div>
-            <div class="popup popup_location open_modal">
+            <div  style="display: none;" class="popup popup_location open_modal">
                 <div class="popup__header">
                     <h3 class="popup__title">Оберіть місто</h3>
                     <button aria-label="Закрити попап" class="popup_close"></button>
@@ -1748,13 +1852,17 @@
     </div>
     <footer class="footer">
         <button type="button" class="to-top">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor">
+                <path d="M0 0h24v24H0V0z" fill="none"/>
+                <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+            </svg>
         </button>
         <div class="wrap-round">
             <a href="#" class="btn call_main">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <g clip-path="url(#clip0_1739_14735)">
-                        <path d="M17.93 16L19.56 14.37C16.79 11.35 16.79 6.81 19.56 3.63L17.93 2C14.03 5.89 14.02 11.95 17.93 16ZM22.92 10.95C22.08 9.77 22.08 8.24 22.92 7.06L21.24 5.37C19.22 7.39 19.22 10.44 21.24 12.64L22.92 10.95ZM9 13C11.21 13 13 11.21 13 9C13 6.79 11.21 5 9 5C6.79 5 5 6.79 5 9C5 11.21 6.79 13 9 13ZM15.39 15.56C13.71 14.7 11.53 14 9 14C6.47 14 4.29 14.7 2.61 15.56C1.61 16.07 1 17.1 1 18.22V21H17V18.22C17 17.1 16.39 16.07 15.39 15.56Z" fill="white"/>
+                        <path d="M17.93 16L19.56 14.37C16.79 11.35 16.79 6.81 19.56 3.63L17.93 2C14.03 5.89 14.02 11.95 17.93 16ZM22.92 10.95C22.08 9.77 22.08 8.24 22.92 7.06L21.24 5.37C19.22 7.39 19.22 10.44 21.24 12.64L22.92 10.95ZM9 13C11.21 13 13 11.21 13 9C13 6.79 11.21 5 9 5C6.79 5 5 6.79 5 9C5 11.21 6.79 13 9 13ZM15.39 15.56C13.71 14.7 11.53 14 9 14C6.47 14 4.29 14.7 2.61 15.56C1.61 16.07 1 17.1 1 18.22V21H17V18.22C17 17.1 16.39 16.07 15.39 15.56Z"
+                              fill="white"/>
                     </g>
                     <defs>
                         <clipPath id="clip0_1739_14735">
@@ -1766,7 +1874,8 @@
             <a href="tel:+380673738151" class="btn cont_main">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <g clip-path="url(#clip0_1739_14719)">
-                        <path d="M18.9999 12H20.9999C20.9999 7.03 16.9699 3 11.9999 3V5C15.8699 5 18.9999 8.13 18.9999 12ZM14.9999 12H16.9999C16.9999 9.24 14.7599 7 11.9999 7V9C13.6599 9 14.9999 10.34 14.9999 12ZM13.2099 17.37C10.3799 15.93 8.0599 13.62 6.6199 10.78L9.1499 8.25L8.5399 3H3.0299C2.4499 13.18 10.8199 21.55 20.9999 20.97V15.46L15.7299 14.85L13.2099 17.37Z" fill="white"/>
+                        <path d="M18.9999 12H20.9999C20.9999 7.03 16.9699 3 11.9999 3V5C15.8699 5 18.9999 8.13 18.9999 12ZM14.9999 12H16.9999C16.9999 9.24 14.7599 7 11.9999 7V9C13.6599 9 14.9999 10.34 14.9999 12ZM13.2099 17.37C10.3799 15.93 8.0599 13.62 6.6199 10.78L9.1499 8.25L8.5399 3H3.0299C2.4499 13.18 10.8199 21.55 20.9999 20.97V15.46L15.7299 14.85L13.2099 17.37Z"
+                              fill="white"/>
                     </g>
                     <defs>
                         <clipPath id="clip0_1739_14719">
@@ -1777,13 +1886,15 @@
             </a>
             <button type="button" class="round__close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#27A737"/>
+                    <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                          fill="#27A737"/>
                 </svg>
             </button>
             <button type="button" class="round">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <g clip-path="url(#clip0_1739_14732)">
-                        <path d="M20.9999 15.46L15.7299 14.85L13.2099 17.37C10.3799 15.93 8.0599 13.62 6.6199 10.78L9.1499 8.25L8.5399 3H3.0299C2.4499 13.18 10.8199 21.55 20.9999 20.97V15.46Z" fill="white"/>
+                        <path d="M20.9999 15.46L15.7299 14.85L13.2099 17.37C10.3799 15.93 8.0599 13.62 6.6199 10.78L9.1499 8.25L8.5399 3H3.0299C2.4499 13.18 10.8199 21.55 20.9999 20.97V15.46Z"
+                              fill="white"/>
                     </g>
                     <defs>
                         <clipPath id="clip0_1739_14732">

@@ -1,6 +1,8 @@
+@use "../utils/variables";
+
 .btn {
   display: inline-flex;
-  font-family: $main-font;
+  font-family: variables.$main-font;
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
@@ -14,68 +16,68 @@
   padding: 24px;
   height: 72px;
   &_main {
-    background: $medium-green;
-    color: $modern-black-5;
+    background: variables.$medium-green;
+    color: variables.$modern-black-5;
 
     &:hover,
     &:focus {
-      background-color: $medium-green-80;
-      color: $creative-green-5;
+      background-color: variables.$medium-green-80;
+      color: variables.$creative-green-5;
     }
 
     &:active {
-      background-color: $creative-green-100;
-      color: $creative-green-5;
+      background-color: variables.$creative-green-100;
+      color: variables.$creative-green-5;
     }
 
     &.disabled,
     &[disabled]{
-      color: $serena-green-40;
-      background-color: $serena-green-20;
+      color: variables.$serena-green-40;
+      background-color: variables.$serena-green-20;
     }
   }
 
   &_stroke {
-    border: 1px solid $medium-green;
-    color: $medium-green;
+    border: 1px solid variables.$medium-green;
+    color: variables.$medium-green;
     background-color: transparent;
     &:hover,
     &:focus {
-      border: 1px solid $medium-green-80;
-      color: $medium-green-80;
+      border: 1px solid variables.$medium-green-80;
+      color: variables.$medium-green-80;
     }
 
     &:active {
-      border: 1px solid $creative-green-100;
-      color: $creative-green-100;
+      border: 1px solid variables.$creative-green-100;
+      color: variables.$creative-green-100;
     }
 
     &:disabled,
     &[disabled]{
-      border: 1px solid $serena-green-40;
-      color: $modern-black-20;
+      border: 1px solid variables.$serena-green-40;
+      color: variables.$modern-black-20;
     }
   }
 
   &_light {
-    background-color: $creative-green-5;
-    color: $serena-green-60;
+    background-color: variables.$creative-green-5;
+    color: variables.$serena-green-60;
 
     &:hover,
     &:focus {
-      background-color: $creative-green-5;
-      color: $serena-green-40;
+      background-color: variables.$creative-green-5;
+      color: variables.$serena-green-40;
     }
 
     &:active {
-      background-color: $creative-green-20;
-      color: $creative-green-100;
+      background-color: variables.$creative-green-20;
+      color: variables.$creative-green-100;
     }
 
     &:disabled,
     &[disabled]{
-      background-color: $serena-green-5;
-      color: $serena-green-20;
+      background-color: variables.$serena-green-5;
+      color: variables.$serena-green-20;
     }
   }
 

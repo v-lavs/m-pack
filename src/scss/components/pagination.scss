@@ -1,3 +1,5 @@
+@use "../utils/variables";
+
 .pagination {
   display: flex;
   gap: 16px;
@@ -33,19 +35,19 @@
 
     &:hover,
     &:focus {
-      color: $medium-green-80;
+      color: variables.$medium-green-80;
 
       .number {
-        color: $medium-green-80;
+        color: variables.$medium-green-80;
       }
     }
 
     &:active {
       .number {
-        color: $creative-green-100;
+        color: variables.$creative-green-100;
       }
 
-      color: $creative-green-100;
+      color: variables.$creative-green-100;
     }
   }
 

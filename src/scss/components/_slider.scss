@@ -1,3 +1,6 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 //pagination slider
 
 .swiper-horizontal > .swiper-pagination-bullets,
@@ -12,11 +15,11 @@
   height: 4px;
   margin: 0 8px 0 0 !important;
   border-radius: 0;
-  background-color: $medium-green-40;
+  background-color: variables.$medium-green-40;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: $medium-green;
+  background-color: variables.$medium-green;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
@@ -109,7 +112,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: $creative-green-100;
+      background-color: variables.$creative-green-100;
       position: absolute;
       width: 32px;
       height: 32px;
@@ -242,7 +245,7 @@
   }
 }
 
-@include respond-to($sm) {
+@include mixins.respond-to(variables.$sm) {
   .slider-gallery2 {
     padding-bottom: 70px;
 

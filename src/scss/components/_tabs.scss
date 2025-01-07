@@ -1,3 +1,5 @@
+@use "../utils/variables";
+
 .tabs {
   width: 100%;
 
@@ -12,7 +14,7 @@
     background: rosybrown;
     top: 0;
     width: 100%;
-    background: $white;
+    background: variables.$white;
     opacity: 0;
     z-index: 1;
 
@@ -30,7 +32,7 @@
 
   &__nav-link {
     display: inline-block;
-    color: $serena-green-80;
+    color: variables.$serena-green-80;
     border: 1px solid #A2B2AE;
     border-radius: 8px;
     margin-right: 4px;
@@ -42,14 +44,14 @@
       display: none!important;
     }
     &:hover {
-      color: $serena-green-40;
-      background-color: $creative-green-5;
+      color: variables.$serena-green-40;
+      background-color: variables.$creative-green-5;
     }
 
     &.active {
-      background-color: $medium-green;
+      background-color: variables.$medium-green;
       color: #F3F3F3;
-      border-color: $medium-green;
+      border-color: variables.$medium-green;
     }
   }
 }

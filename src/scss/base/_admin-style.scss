@@ -542,11 +542,32 @@ html {
 .gdlr-core-pbf-column-content-margin.gdlr-core-js.img-w50 {
   padding-top: 54%;
 }
+.gdlr-core-load-more-wrap .gdlr-core-load-more {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.0015em;
+  text-transform: initial;
+}
+.gdlr-core-pbf-wrapper.full-bg.full-bottom .gdlr-core-pbf-background-wrap:before,
+.gdlr-core-pbf-wrapper.full-bg .gdlr-core-pbf-background-wrap:before {
+  position: absolute;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.65);
+  display: block;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 0;
+}
+.full-bg__content .gdlr-core-pbf-column-content {
+  width: 100%;
+  position:relative;
+  z-index:1;
+}
 
-
-//---------------
-//@media screen   and  (min-width: 1281px) {
-//  .full-bg.full-bg-2  .full-bg__content .full-bg__content-left {
-//    aspect-ratio: 3 / 2;
-//  }
-//}
+.bg-section-intro .gdlr-core-pbf-background {
+  background-repeat: no-repeat;
+  background-size: contain !important;
+}

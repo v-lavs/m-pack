@@ -1,3 +1,6 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -13,6 +16,7 @@
   height: 100vh;
   z-index: 200;
   padding-top: 82px;
+  overflow: hidden;
 
   &__inner {
     max-height: calc(100vh - 100px);
@@ -125,13 +129,14 @@
   }
 }
 
-@include respond-to($lg) {
+@include mixins.respond-to(variables.$lg) {
   .sidebar {
     max-width: 360px;
     width: 100%;
     transform: translateX(-100%);
     transition: .35s;
     height: 100%;
+
     &.open {
       transform: translateX(0);
       z-index: 350;

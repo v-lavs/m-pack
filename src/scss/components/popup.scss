@@ -1,3 +1,6 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .popup {
   position: fixed;
   left: 50%;
@@ -75,8 +78,8 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: $serena-green-40;
-  color: $white;
+  background-color: variables.$serena-green-40;
+  color: variables.$white;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -88,7 +91,7 @@
 }
 
 .progress-step_active {
-  background-color: $serena-green-80;
+  background-color: variables.$serena-green-80;
 }
 
 
@@ -97,7 +100,7 @@
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0.001em;
-  color: $modern-black-60;
+  color: variables.$modern-black-60;
   margin-bottom: 16px;
 }
 
@@ -158,7 +161,7 @@
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 0.001em;
-    color: $modern-black-40;
+    color: variables.$modern-black-40;
     padding: 14px 16px;
     border: 1px solid #F3F3F3
   }
@@ -195,7 +198,7 @@
   bottom: 0;
   top: 0;
   background-color: #FFFFFF;
-  color: $modern-black-80;
+  color: variables.$modern-black-80;
   padding: 32px;
   text-align: center;
   z-index: 10;
@@ -212,7 +215,7 @@
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-color: $medium-green;
+    background-color: variables.$medium-green;
     margin-bottom: 24px;
     margin-top: auto;
   }
@@ -227,15 +230,15 @@
     margin-bottom: auto;
   }
 }
-
-#3step .input {
+//#3step .input,
+.form__step_3 .input {
   margin: 8px 0;
 }
 
 .popup_location {
   max-width: 740px;
   width: 100%;
-  height: 472px;
+  height: auto;
 
   .popup__content {
     display: flex;
@@ -316,7 +319,7 @@
     }
 }
 
-@include respond-to($sm){
+@include mixins.respond-to(variables.$sm){
   .popup__header h3 {
     font-size: calc(18px + 2.4vw);
   }

@@ -1,8 +1,11 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
 .section-banner {
   position: relative;
   min-height: 320px;
-  background-color: $medium-green;
-  color: $modern-black-5;
+  background-color: variables.$medium-green;
+  color: variables.$modern-black-5;
 
   &__thumb {
     position: absolute;
@@ -56,7 +59,7 @@
   text-align: left;
   font-size: 24px;
   line-height: 32px;
-  color: $modern-black-5;
+  color: variables.$modern-black-5;
   z-index: 2;
 
   &.sticky {
@@ -65,7 +68,7 @@
     bottom: auto;
     z-index: 100;
     transition: position 1s;
-    background-color: $medium-green;
+    background-color: variables.$medium-green;
   }
 
   .text {
@@ -93,7 +96,7 @@
   margin-top: 0;
 }
 
-@include respond-to($lg) {
+@include mixins.respond-to(variables.$lg) {
   .page__header {
     width: 100%;
   }
@@ -102,7 +105,7 @@
   }
 }
 
-@include respond-to($sm) {
+@include mixins.respond-to(variables.$sm) {
 
   .section-banner{
     display: flex;

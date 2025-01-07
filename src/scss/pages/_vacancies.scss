@@ -1,3 +1,6 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .vacancy {
   display: flex;
   padding: 32px 0;
@@ -11,7 +14,7 @@
   .col-right {
     max-width: 283px;
     width: 60%;
-    color: $serena-green-60;
+    color: variables.$serena-green-60;
     text-align: center;
     padding-left: 16px;
   }
@@ -25,13 +28,13 @@
   }
 
   &__name {
-    color: $modern-black-80;
+    color: variables.$modern-black-80;
     margin-bottom: 16px;
     font-weight: 400;
   }
 
   &__requirements {
-    color: $serena-green-60;
+    color: variables.$serena-green-60;
   }
 
   &__req-item {
@@ -46,7 +49,7 @@
       display: block;
       width: 4px;
       height: 4px;
-      background-color: $serena-green-5;
+      background-color: variables.$serena-green-5;
       top: 50%;
       transform: translateY(-50%);
       right: 8px;
@@ -59,7 +62,7 @@
   }
 }
 
-@include respond-to($sm) {
+@include mixins.respond-to(variables.$sm) {
   .vacancy {
     flex-wrap: wrap;
     .col-right{

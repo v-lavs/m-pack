@@ -1,5 +1,7 @@
+@use "../utils/variables";
+
 .form {
-  color: $modern-black-60;
+  color: variables.$modern-black-60;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
@@ -17,7 +19,7 @@
   }
 
   ::placeholder {
-    color: $modern-black-40;
+    color: variables.$modern-black-40;
   }
 }
 
@@ -40,7 +42,7 @@ label.label-checkmark {
     overflow: hidden;
     border: 1px solid #A2B2AE;
     border-radius: 8px;
-    color: $serena-green-80;
+    color: variables.$serena-green-80;
   }
 
   input {

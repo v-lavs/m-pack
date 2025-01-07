@@ -1,3 +1,6 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .accordion {
   overflow: hidden;
   margin-bottom: 32px;
@@ -81,7 +84,7 @@
   margin-bottom:0;
 }
 
-@include respond-to($sm){
+@include mixins.respond-to(variables.$sm){
   .accordion .panel__title {
     font-size:18px;
   }

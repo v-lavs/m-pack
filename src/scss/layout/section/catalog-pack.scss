@@ -1,3 +1,6 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -24,7 +27,7 @@
       }
 
       > .products__title {
-        color: $medium-green;
+        color: variables.$medium-green;
       }
     }
     &:active {
@@ -35,11 +38,11 @@
 
       > .products__thumb:after {
         opacity: 1;
-        background-color: $creative-green-100;
+        background-color: variables.$creative-green-100;
       }
 
       > .products__title {
-        color: $creative-green-100;
+        color: variables.$creative-green-100;
       }
     }
   }
@@ -56,7 +59,7 @@
       width: 72px;
       height: 72px;
       border-radius: 50%;
-      background-color: $medium-green;
+      background-color: variables.$medium-green;
       background-image: url(../assets/img/arrow-hover.svg);
       background-position: center;
       background-repeat: no-repeat;
@@ -102,19 +105,19 @@
   }
 }
 
-@include respond-to($lg) {
+@include mixins.respond-to(variables.$lg) {
   .products {
     &__thumb {
       padding-top: 52.5%;
     }
   }
 }
-@include respond-to($md){
+@include mixins.respond-to(variables.$md){
   .products__item{
     width: 50%;
   }
 }
-@include respond-to($sm) {
+@include mixins.respond-to(variables.$sm) {
   .products {
     &__item {
       width: 100%;
