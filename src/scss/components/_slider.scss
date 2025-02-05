@@ -177,6 +177,11 @@
   letter-spacing: 0.005em;
   margin-bottom: 0;
 }
+.product-slider .swiper-slide{
+  width: 50% !important;
+  max-width: 50%;
+  margin-right: 16px!important;
+}
 .slider-gallery2 {
   padding-bottom: 0;
 
@@ -255,5 +260,9 @@
       bottom: 0;
       transform: none;
     }
+  }
+  .product-slider .swiper-slide{
+    width: 100% !important;
+    max-width: 100%;
   }
 }

@@ -244,11 +244,6 @@
   z-index: 1;
 }
 
-.page-title {
-  transition: 0.3s;
-  transition-timing-function: ease-in-out;
-}
-
 
 /* Для Webkit-браузерів*/
 ::-webkit-scrollbar {
@@ -443,6 +438,7 @@ html {
 @media screen and (max-width: 767px) {
   .map {
     display: block;
+    padding-bottom: 90px;
   }
 
   .mapTooltip {

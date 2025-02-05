@@ -777,11 +777,6 @@ body {
   z-index: 1;
 }
 
-.page-title {
-  transition: 0.3s;
-  transition-timing-function: ease-in-out;
-}
-
 /* Для Webkit-браузерів*/
 
 ::-webkit-scrollbar {
@@ -1068,14 +1063,30 @@ html {
 }
 
 .menu__item {
+  position: relative;
   font-family: "e-Ukraine", sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0.001em;
-  padding: 14px 24px 14px 0;
+  padding: 7px 24px 0 0;
   color: #383838;
   background-color: #FFFFFF;
+}
+
+.menu__item:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: -24px;
+  z-index: -1;
+}
+
+.menu__item:hover:after {
+  background-color: #F4FBF5;
 }
 
 .menu__item:hover > .sub-menu {
@@ -1085,9 +1096,13 @@ html {
 }
 
 .menu__link {
+  position: relative;
   display: inline-block;
   transition: 0.35s;
   color: inherit;
+  padding-top: 7px;
+  padding-bottom: 14px;
+  z-index: 1;
 }
 
 .menu__link:hover,
@@ -1489,6 +1504,12 @@ html {
   margin-bottom: 0;
 }
 
+.product-slider .swiper-slide {
+  width: 50% !important;
+  max-width: 50%;
+  margin-right: 16px !important;
+}
+
 .slider-gallery2 {
   padding-bottom: 0;
 }
@@ -1758,6 +1779,10 @@ html {
   background-color: #27A737;
   color: #F3F3F3;
   border-color: #27A737;
+}
+
+.tabs__nav-link br {
+  display: none;
 }
 
 .list-col2 {
@@ -2099,6 +2124,7 @@ html {
   max-width: 740px;
   width: 100%;
   height: auto;
+  max-height: 90%;
 }
 
 .popup_location .popup__content {
@@ -3002,6 +3028,12 @@ label.label-checkmark input {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    transition: 0.5s;
+  }
+
+  .header .btn-burger.toggle-open {
+    background-image: url(../assets/img/Close1.svg);
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(324deg) brightness(108%) contrast(102%);
   }
 
   .sidebar {
@@ -3170,6 +3202,7 @@ label.label-checkmark input {
 
   .map {
     display: block;
+    padding-bottom: 90px;
   }
 
   .mapTooltip {
@@ -3238,6 +3271,11 @@ label.label-checkmark input {
     top: auto;
     bottom: 0;
     transform: none;
+  }
+
+  .product-slider .swiper-slide {
+    width: 100% !important;
+    max-width: 100%;
   }
 
   .accordion .panel__title {

@@ -471,122 +471,8 @@
             </div>
         </div>
         <!---------------------------------------------------------------->
-        <!------------------------------------------------------------------->
-
-        <div class="description">Full bg</div>
-
+        <div class="description">product slider</div>
         <div class="container">
-            <div class="full-bg-grid">
-                <div class="full-bg-grid__item part_left">
-                    <div class="full-bg-grid__img" style="background-image: url(assets/img/header.jpg);"></div>
-                    <div class="full-bg-grid__content">
-                        <h2> Власні виробництва</h2>
-                        <p>а всі напрямки упаковки</p>
-                    </div>
-                </div>
-                <div class="full-bg-grid__item part_right">
-                    <div class="full-bg-grid__img" style="background-image: url(assets/img/header.jpg);"></div>
-                    <div class="full-bg-grid__content">
-                        <h2>Більше 3000 + клієнтів</h2>
-                        <p>зростаємо разом</p>
-                    </div>
-                </div>
-                <div class="full-bg-grid__item part">
-                    <div class="full-bg-grid__img" style="background-image: url(assets/img/header.jpg);"></div>
-                    <div class="full-bg-grid__content">
-                        <h2>Всі види пакувальних матеріалів</h2>
-                        <p>рішення ваших потреб по пакуванню, в одному місці</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <style>
-            .full-bg-grid{
-                display: flex;
-                flex-wrap: wrap;
-                gap: 16px;
-                color: #FFFFFF;
-            }
-            .full-bg-grid .part{
-                width: 100%;
-            }
-            .full-bg-grid .part_right,
-            .full-bg-grid .part_left{
-                width: 48%;
-            }
-            .full-bg-grid .part_left .full-bg-grid__img{
-                right: 0;
-                left: auto;
-            }
-            .full-bg-grid .part_right .full-bg-grid__img{
-                left: 0;
-                right: auto;
-            }
-            .full-bg-grid__item{
-                display: flex;
-                align-items: flex-end;
-                position: relative;
-                min-height: 320px;
-                padding: 100px 32px 32px;
-
-                color: #FFFFFF;
-            }
-            .full-bg-grid .part  .full-bg-grid__img{
-                position: absolute;
-                left: calc(50% + 300px);
-                transform: translateX(-50%);
-                top: 0;
-                bottom: 0;
-                z-index: 0;
-                width: calc(100vw + 316px);
-
-            }
-            .full-bg-grid  .full-bg-grid__img{
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-                height: 100%;
-            }
-            .full-bg-grid__img:before{
-                position: absolute;
-                content: '';
-                background-color: rgba(0, 0, 0, .65);
-                display: block;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                top: 0;
-                z-index: 1;
-            }
-            .full-bg-grid .part_left  .full-bg-grid__img,
-            .full-bg-grid .part_right  .full-bg-grid__img{
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                transform: none;
-                width: calc((100vw - 316px) / 2);
-            }
-            .full-bg-grid__content{
-                position: relative;
-                z-index: 1;
-            }
-        </style>
-        <!--------------------------------------------------------------->
-        <div class="container">
-            <div class="description">product card</div>
-
-            <div class="products__item">
-                <a href="#" class="products__card">
-                    <div class="products__thumb">
-                        <img src="assets/img/pack-material/image-product.jpg" alt="Піддони">
-                    </div>
-                    <h2 class="products__title title-md">Піддони</h2>
-                </a>
-            </div>
-            <!--      ------------------------------------------------------------------>
-
-            <div class="description">product slider</div>
-
             <div id="product-slider" class="swiper product-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -685,7 +571,130 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
+        </div>
+        <!------------------------------------------------------------------->
 
+        <div class="description">Full bg</div>
+
+        <div class="container">
+            <div class="full-bg-grid">
+                <div class="full-bg-grid__item part_left">
+                    <div class="full-bg-grid__img" style="background-image: url(assets/img/header.jpg);"></div>
+                    <div class="full-bg-grid__content">
+                        <h2> Власні виробництва</h2>
+                        <p>а всі напрямки упаковки</p>
+                    </div>
+                </div>
+                <div class="full-bg-grid__item part_right">
+                    <div class="full-bg-grid__img" style="background-image: url(assets/img/header.jpg);"></div>
+                    <div class="full-bg-grid__content">
+                        <h2>Більше 3000 + клієнтів</h2>
+                        <p>зростаємо разом</p>
+                    </div>
+                </div>
+                <div class="full-bg-grid__item part">
+                    <div class="full-bg-grid__img" style="background-image: url(assets/img/header.jpg);"></div>
+                    <div class="full-bg-grid__content">
+                        <h2>Всі види пакувальних матеріалів</h2>
+                        <p>рішення ваших потреб по пакуванню, в одному місці</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .full-bg-grid {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                color: #FFFFFF;
+            }
+
+            .full-bg-grid .part {
+                width: 100%;
+            }
+
+            .full-bg-grid .part_right,
+            .full-bg-grid .part_left {
+                width: 48%;
+            }
+
+            .full-bg-grid .part_left .full-bg-grid__img {
+                right: 0;
+                left: auto;
+            }
+
+            .full-bg-grid .part_right .full-bg-grid__img {
+                left: 0;
+                right: auto;
+            }
+
+            .full-bg-grid__item {
+                display: flex;
+                align-items: flex-end;
+                position: relative;
+                min-height: 320px;
+                padding: 100px 32px 32px;
+
+                color: #FFFFFF;
+            }
+
+            .full-bg-grid .part .full-bg-grid__img {
+                position: absolute;
+                left: calc(50% + 300px);
+                transform: translateX(-50%);
+                top: 0;
+                bottom: 0;
+                z-index: 0;
+                width: calc(100vw + 316px);
+
+            }
+
+            .full-bg-grid .full-bg-grid__img {
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                height: 100%;
+            }
+
+            .full-bg-grid__img:before {
+                position: absolute;
+                content: '';
+                background-color: rgba(0, 0, 0, .65);
+                display: block;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                z-index: 1;
+            }
+
+            .full-bg-grid .part_left .full-bg-grid__img,
+            .full-bg-grid .part_right .full-bg-grid__img {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                transform: none;
+                width: calc((100vw - 316px) / 2);
+            }
+
+            .full-bg-grid__content {
+                position: relative;
+                z-index: 1;
+            }
+        </style>
+        <!--------------------------------------------------------------->
+        <div class="container">
+            <div class="description">product card</div>
+
+            <div class="products__item">
+                <a href="#" class="products__card">
+                    <div class="products__thumb">
+                        <img src="assets/img/pack-material/image-product.jpg" alt="Піддони">
+                    </div>
+                    <h2 class="products__title title-md">Піддони</h2>
+                </a>
+            </div>
+            <!--      ------------------------------------------------------------------>
 
 
             <div class="description">card-text slider</div>
@@ -1601,7 +1610,7 @@
 
             </div>
             <div class="backdrop" style="display: block"></div>
-            <div  style="display: none;" class="popup popup_location open_modal">
+            <div style="display: none;" class="popup popup_location open_modal">
                 <div class="popup__header">
                     <h3 class="popup__title">Оберіть місто</h3>
                     <button aria-label="Закрити попап" class="popup_close"></button>
